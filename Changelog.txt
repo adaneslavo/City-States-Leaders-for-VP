@@ -1,0 +1,126 @@
+Changelog:
+v8:
+- added compatibility with: Tibet, Flanders and Durrani civilizations,.
+- slightly corrected Peter Kenilorea's icon,
+- Balkh?
+
+v7.1:
+- tweaked main file,
+- changed naming of some folders and files.
+
+v7:
+- mod numeration changed: now starts from v7.
+- added compatibility with Canada civilization.
+
+v7m6:
+- added shade to Yahya, cleaned sharp picture frames,
+- "Roman province of Athos" is now "the Roman province of Athos",
+- deleted old block statement from main file,
+- text fixes.
+
+v7m5:
+- leaders:
+	- reverted leader changes for Singapore,
+	- renamed "Picts" to "the Pictish Confederation",
+	- reworked art for Yahya from Sheba.
+- texts:
+	- fixed some texts,
+	- added over 40 more text options,
+	- modified some texts to be more compatible between each other. No more rude greeting and humble gift!
+
+v7m4:
+- fixed bug with heavy tribute showing only enslaving worker option.
+
+v7m3:
+- substituted/tweaked:
+	- Malacca leader: now Sultan Parameswara from Malacca,
+	- Singapore leader: now Sir Thomas Stamford Raffles from Singapore,
+	- "the Kingdom of Madagascar" is now "Madagascar",
+	- "the Olmec" is now "the Olmecs".
+- fixed:
+	- error caused by relics of gold gifts,
+	- buttons alignment,
+	- protection tooltip help.
+- changed:
+	- added back background images,
+	- decreased font to fit more resources (2 wide lines),
+	- moved few things around in UI,
+	- added two colours (for luxuries and strategics) to differentiate them in CS menu,
+	- reworked and moved "close" and "find on map" buttons,
+	- reworked all main action buttons (font, size),
+	- modified tooltip help text for protection,
+	- changed personality icons.
+- added:
+	- totally new greeting text generator:
+		- currently in database: 5 different texts for each personality, 5 for each trait and 5 for each bonus,
+		- frienship texts split between personalities. 2 variants for each one; no info about relationship value in those texts (to be consistent with rest where this value is also not present),
+		- standard greeting texts with known CSs are now randomized too. 5 versions for each personality plus 5 versions for protected city states.
+- cleaned the code in xml file,
+- moved files to new folders,
+- added credits.txt file instead of credits in main file.
+
+v7m2:
+- changed:
+	- Odenso leader: now Baron Carl Gustaf Mannerheim - military oriented leader,
+	- "Athos" now is "Roman province of Athos".
+- fixed:
+	- tarcisiocm name now with lower case letters.
+- tweaked:
+	- UI:
+		- marriage info smaller, moved to the right of status bar,
+		- added influence per turn meter from CityStateStatusHelper.lua; added rounding,
+		- adjusted spaces between texts, status texts and status meter,
+		- moved CSs info tab up to the place where "Married" info was before,
+		- added spaces between "Influence" icons,
+		- moved down action buttons to make space for more resurces (texts were overlaping),
+		- changed colour for afraid status in protection info.
+- added:
+	- block conditions (Suzerainty, no-EUI CBP),
+	- dependency conditions (CBP, CSD).
+
+v7m:
+- compatibility:
+	- added compatibility for 17 new CSs from UCS and 4 additional civilizations mods,
+	- added art for 17 new CSs from UCS: 
+		- Gedemo (Chevak, Leluh),
+		- Hypereon (Odenso),
+		- janboruta (Laconia, Gwynedd, Yangcheng, Muscat),
+		- Leugi (Muisca),
+		- Mosile (Armagh, Clermont, Honduras, Phanoteus, Santo Domingo, Managua, Douala, Granada), 
+		- TPangolin (old one for Wellington moved to Auckland).
+	- added art for 4 new CSs substituted by civilizations mods (Israel, Sumer, The Timurids and The Papal States):
+		- adan_eslavo (Sanaa instead of Samarkand),
+		- janboruta (Karyes instead of Vatican City),
+		- Firebug (Skara Brae instead of Ur),
+		- tarcisiocm (Balkh instead of Jerusalem).
+- fixes:
+	- fixed issue with ARTPACK error in db.log - simplified code: now only modern country name option,
+	- modified/fixed some values from sql table with basic CSs data.
+- text changes:
+	- recovered long name for leaders, but without suffix (f.e. "Prince Vlad III from Wallachia"),
+	- changed "of" to "from" before place name.
+- code changes:
+	- added dependency from whole VP pack; now every peace of VP is required,
+	- added reference from UCS; deleted old references,
+	- added reference from Israel, Sumer, The Timurids and The Papal States mods,
+	- cut modern names, short modern names and suffixes from sql table; cleaned the table code,
+	- cut "bnw" and "g+k" checks in lua; now only bnw compatible,
+	- compared with current VP version (9-25-3) and added missing parts of code:
+		- added "Marriage", "Contender" and "Protection" info from VP:
+			- modified protection code to say "You" if the player is also protecting particular CS,
+			- added additional colouring showing approach toward active player from ones pledging protection.
+		- updated greeting text logic,
+		- added marriage logic and buttons,
+		- small code changes,
+		- deleted unused new greeting texts from xml file,
+		- deleted gold gift from lua and xml code,
+		- deleted old Austrian buyout from lua and xml,
+	- deleted "CityStateGreetingPopup.lua" file (unnecessary with VP).
+- art changes:
+	- cut unnecessary gk and vanilla art; left only ones that can be used later,
+	- merged leader art folders,
+	- created new folder for backgrounds.
+- UI:
+	- fixed some alignment issues.
+
+

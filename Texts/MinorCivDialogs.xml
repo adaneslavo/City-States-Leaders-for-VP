@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 11/24/2013 10:24:12 PM -->
+<GameData>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_POP_CSTATE_RESOURCES_CSL">
+			<Text>RESOURCES:</Text>
+		</Row>
+		
+		<!-- Personality texts -->
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_FRIENDLY_1">
+			<Text>Greetings great leader. We represent [COLOR_CYAN]{1_civ}[ENDCOLOR]. We earnestly hope that we can forge a strong and lasting peace with your mighty empire.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_FRIENDLY_2">
+			<Text>Welcome to [COLOR_CYAN]{1_civ}[ENDCOLOR]! We awaited a strong partner for such a long time!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_FRIENDLY_3">
+			<Text>Pleased to meet you. Enjoy the kindness of [COLOR_CYAN]{1_civ}[ENDCOLOR]. We earnestly seek your guidance.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_FRIENDLY_4">
+			<Text>Hallelujah! We heard about your mighty empire in [COLOR_CYAN]{1_civ}[ENDCOLOR]. Make yourself at home.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_FRIENDLY_5">
+			<Text>Greetings from [COLOR_CYAN]{1_civ}[ENDCOLOR]! We would like to create strong partnership with your country!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_FRIENDLY_6">
+			<Text>Come in! We heard many stories about you. We are glad you visited [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_FRIENDLY_7">
+			<Text>Nice to see such a mighty ruler in [COLOR_CYAN]{1_civ}[ENDCOLOR]. I hope you have big plans for us!</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_NEUTRAL_1">
+			<Text>Greetings. We are the people of [COLOR_CYAN]{1_civ}[ENDCOLOR]. Treat us fairly and we shall have peace.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_NEUTRAL_2">
+			<Text>Hello passerby. You entered the territory of [COLOR_CYAN]{1_civ}[ENDCOLOR]. We do not want any problems.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_NEUTRAL_3">
+			<Text>Good day. Nation of [COLOR_CYAN]{1_civ}[ENDCOLOR] is open for new contacts. Be kind and we will get back at you.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_NEUTRAL_4">
+			<Text>Greetings stranger. What are you looking for in [COLOR_CYAN]{1_civ}[ENDCOLOR]?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_NEUTRAL_5">
+			<Text>Hello! We did not expect any guests in [COLOR_CYAN]{1_civ}[ENDCOLOR]. What we can do for you?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_NEUTRAL_6">
+			<Text>Hi! We can see you are very tired after long journey to [COLOR_CYAN]{1_civ}[ENDCOLOR]. Can we do something for you?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_NEUTRAL_7">
+			<Text>Greetings traveler. How did you find [COLOR_CYAN]{1_civ}[ENDCOLOR]? We have been avoiding any contacts so far.</Text>
+		</Row>
+		
+		
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_HOSTILE_1">
+			<Text>Halt, Stranger! We are the mighty people of [COLOR_CYAN]{1_civ}[ENDCOLOR]. Trifle with us at your peril! If you earn the privilege.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_HOSTILE_2">
+			<Text>Whoa! Do not try to start war with [COLOR_CYAN]{1_civ}[ENDCOLOR]. We know how to defend our people!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_HOSTILE_3">
+			<Text>Don't move stranger! We heard many stories about your kind in [COLOR_CYAN]{1_civ}[ENDCOLOR]!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_HOSTILE_4">
+			<Text>Mhmmm, so you say that you want to befriend with [COLOR_CYAN]{1_civ}[ENDCOLOR], huh? That's very nice of you, but we don't trust any strangers!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_HOSTILE_5">
+			<Text>What a coincidence! Our fortune-teller foresaw the coming of the end of the world. Is this your purpose in [COLOR_CYAN]{1_civ}[ENDCOLOR]?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_HOSTILE_6">
+			<Text>Well, well. We think, you have no interests in [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_HOSTILE_7">
+			<Text>Oh, gods! That's just what we needed! Bloodthirsty king of the world in [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
+		
+		<!--<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_1">
+			<Text>Ahhhh... An omen told [COLOR_CYAN]{1_civ}[ENDCOLOR] that you would one day arrive. We shall do great things together - your empire and ours. We have seen it in the stars!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_2">
+			<Text>I2 [COLOR_CYAN]{1_civ}[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_3">
+			<Text>I3 [COLOR_CYAN]{1_civ}[ENDCOLOR]</Text>
+		</Row>-->
+		
+		<!-- Trait texts -->
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_CULTURED_1">
+			<Text>Different cultures can always benefit from each other.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_CULTURED_2">
+			<Text>Please, get to know our culture. It's important for us.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_CULTURED_3">
+			<Text>We can start cultural revolution in your country!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_CULTURED_4">
+			<Text>We are interested in exchanging some cultural artifacts. Do you have one?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_CULTURED_5">
+			<Text>Every culture is interesting. We want to know more about yours, too.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_CULTURED_6">
+			<Text>Strong culture is key to victory! And you want to conquest the world, right?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_CULTURED_7">
+			<Text>We want you to adopt our culture? Are you ok with that?</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MILITARISTIC_1">
+			<Text>We have great military knowledge. You can increase the strength of your army.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MILITARISTIC_2">
+			<Text>Glorious battles are our way of life!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MILITARISTIC_3">
+			<Text>We can train special units for you. Come and check them out!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MILITARISTIC_4">
+			<Text>We studied arts of war. We can teach some unique techniques.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MILITARISTIC_5">
+			<Text>What about starting some war?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MILITARISTIC_6">
+			<Text>We heard you trained the greatest army in the world. We kinda like it.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MILITARISTIC_7">
+			<Text>Sometimes war is pointless. We can show you when.</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MARITIME_1">
+			<Text>We can help accelerate your civilization&apos;s growth.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MARITIME_2">
+			<Text>We can provide enough food to feed your people.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MARITIME_3">
+			<Text>We can see your people starving! We can help them.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MARITIME_4">
+			<Text>We had good harvests this year, and we can share some resources with you.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MARITIME_5">
+			<Text>Do you want to look at our food reserves?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MARITIME_6">
+			<Text>We like exchanging things. We can provide you as much food as you want.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MARITIME_7">
+			<Text>Check our fruits! Taste our vegetables! Smell our fish! Enjoy our spices!</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MERCANTILE_1">
+			<Text>We have many luxuries that can make your citizens happy.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MERCANTILE_2">
+			<Text>Our riches can shame any mighty leader.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MERCANTILE_3">
+			<Text>If you look for some luxuries, then you came to the right place!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MERCANTILE_4">
+			<Text>We have enough gold to make anyone happy. Even such leader like you!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MERCANTILE_5">
+			<Text>Luxuries, luxuries and once more luxuries! That's the key to co-existence.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MERCANTILE_6">
+			<Text>The only thing, making people happy is money. Anyone who deny that should be exiled.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MERCANTILE_7">
+			<Text>Our guilds, banks, mints or markets make dreams possible. What are your dreams?</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_RELIGIOUS_1">
+			<Text>We can help nurture your religious traditions.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_RELIGIOUS_2">
+			<Text>Pray in our temples, and maybe gods will forgive you your sins!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_RELIGIOUS_3">
+			<Text>If you are looking for forgiveness, then you came to the right place. Pray and repent.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_RELIGIOUS_4">
+			<Text>Our sacred places are open for your people, and everyone who wants to pray.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_RELIGIOUS_5">
+			<Text>We can talk to gods! Take this into account!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_RELIGIOUS_6">
+			<Text>We are religious capital of the world. Anyone who deny that is a heretic and must burn on a stake!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_RELIGIOUS_7">
+			<Text>Do you want to confess your sins?</Text>
+		</Row>
+		
+		<!-- Bonus texts -->
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_GOLD_1">
+			<Text>We amassed some gold in our treasure. {1_Value} [ICON_GOLD] Gold for you from our nation.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_GOLD_2">
+			<Text>Everyone needs money! Grab this {1_Value} [ICON_GOLD] Gold and go!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_GOLD_3">
+			<Text>This {1_Value} [ICON_GOLD] Gold should help you.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_GOLD_4">
+			<Text>Please, use this {1_Value} [ICON_GOLD] Gold wisely!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_GOLD_5">
+			<Text>Don't forget to take {1_Value} [ICON_GOLD] Gold!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_GOLD_6">
+			<Text>We want to gift you {1_Value} [ICON_GOLD] Gold.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_GOLD_7">
+			<Text>We are in the good mood. {1_Value} [ICON_GOLD] Gold for you!</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_CULTURE_1">
+			<Text>We want to give you a piece of treasured art worth {1_Value} [ICON_CULTURE] Culture.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_CULTURE_2">
+			<Text>Our cultural artifacts will be nice addition to your office. We lay {1_Value} [ICON_CULTURE] Culture onto your hands.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_CULTURE_3">
+			<Text>{1_Value} [ICON_CULTURE] Culture is everything we have right now in our museums.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_CULTURE_4">
+			<Text>Admire our art! This {1_Value} [ICON_CULTURE] Culture is yours now.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_CULTURE_5">
+			<Text>We sculptured {1_Value} [ICON_CULTURE] Culture for you. Present it to your people!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_CULTURE_6">
+			<Text>We have some spare {1_Value} [ICON_CULTURE] Culture for you.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_CULTURE_7">
+			<Text>This {1_Value} [ICON_CULTURE] Culture should change your attitude towards us.</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_FOOD_1">
+			<Text>Take this cart filled with {1_Value} [ICON_FOOD] Food to boost your developement.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_FOOD_2">
+			<Text>Those containers with {1_Value} [ICON_FOOD] Food are prepared for your people. Feed them.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_FOOD_3">
+			<Text>Fresh {1_Value} [ICON_FOOD] Food from our market is available for you.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_FOOD_4">
+			<Text>Do you like local meals? {1_Value} [ICON_FOOD] Food is prepared for you to taste it.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_FOOD_5">
+			<Text>Maybe this {1_Value} [ICON_FOOD] Food will strengthen our relationship?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_FOOD_6">
+			<Text>We transported containers with {1_Value} [ICON_FOOD] Food to your hometown.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_FOOD_7">
+			<Text>{1_Value} [ICON_FOOD] Food is at your disposal. Share with your people!</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_FAITH_1">
+			<Text>Our religious artifacts are worth {1_Value} [ICON_PEACE] Faith. Take them, please.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_FAITH_2">
+			<Text>Gods sent you {1_Value} [ICON_PEACE] Faith!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_FAITH_3">
+			<Text>Our prophets pleased the gods, and they sent you {1_Value} [ICON_PEACE] Faith.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_FAITH_4">
+			<Text>Please, take this sacred cross worth {1_Value} [ICON_PEACE] Faith.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_FAITH_5">
+			<Text>We see a vague future with your participation. Maybe this {1_Value} [ICON_PEACE] Faith, will change your plans.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_FAITH_6">
+			<Text>Gods decided to send you {1_Value} [ICON_PEACE] Faith. Appreciate their kindness!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_FAITH_7">
+			<Text>We put in a word for you. Gods listened and transferred {1_Value} [ICON_PEACE] Faith.</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_UNIT_1">
+			<Text>We trained a [COLOR_CYAN]{1_Value}[ENDCOLOR] for you. Use his abilities wisely.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_UNIT_2">
+			<Text>[COLOR_CYAN]{1_Value}[ENDCOLOR] from our camp wants join you. He is available for your orders now.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_UNIT_3">
+			<Text>Fresh recruit for you: [COLOR_CYAN]{1_Value}[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_UNIT_4">
+			<Text>What about hiring one of our best [COLOR_CYAN]{1_Value}s[ENDCOLOR]?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_UNIT_5">
+			<Text>We want to join your coalition. Take this [COLOR_CYAN]{1_Value}[ENDCOLOR]. We would like to show you our devotion!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_UNIT_6">
+			<Text>[COLOR_CYAN]{1_Value}s[ENDCOLOR] can be really helpful. We prepared one for you.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_UNIT_7">
+			<Text>We've heard you need a [COLOR_CYAN]{1_Value}[ENDCOLOR]. We can provide you with one!</Text>
+		</Row>
+		
+		<!-- Frienship texts -->
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_FRIENDLY_1">
+			<Text>Welcome! Your appearance in [COLOR_CYAN]{1_civ}[ENDCOLOR] amazed us! Become our friend, please!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_FRIENDLY_2">
+			<Text>We are pleased to meet you! Unfortunately we did not expected anybody in [COLOR_CYAN]{1_civ}[ENDCOLOR] and we have nothing prepared as a gift. Forgive us!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_FRIENDLY_3">
+			<Text>Welcome to [COLOR_CYAN]{1_civ}[ENDCOLOR]!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_FRIENDLY_4">
+			<Text>Greetings mighty leader. You are in best place in the world - [COLOR_CYAN]{1_civ}[ENDCOLOR]. It's a shame we cannot give you anything.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_FRIENDLY_5">
+			<Text>What a wonderful day! Welcome to [COLOR_CYAN]{1_civ}[ENDCOLOR]! You should have announce your arrival. We weren't prepared.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_FRIENDLY_6">
+			<Text>Praise the day! Welcome to [COLOR_CYAN]{1_civ}[ENDCOLOR]! We would do some preparations, if only we knew...</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_FRIENDLY_7">
+			<Text>Praise the gods! We doubted someone will arrive to [COLOR_CYAN]{1_civ}[ENDCOLOR]. We spent anything we had to survive those harsh times.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_FRIENDLY_8">
+			<Text>Ayayay! What a surprise! We're sincerely sorry we cannot give you anything. Please, feel free in [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_NEUTRAL_1">
+			<Text>Greetings. We have nothing for you. Walk away from [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_NEUTRAL_2">
+			<Text>Hi. Friendship with [COLOR_CYAN]{1_civ}[ENDCOLOR] is all you can afford for now. Appreciate it!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_NEUTRAL_3">
+			<Text>Hello. You entered [COLOR_CYAN]{1_civ}[ENDCOLOR]. Be careful, we do not want any troubles.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_NEUTRAL_4">
+			<Text>Hi! You have nothing for [COLOR_CYAN]{1_civ}[ENDCOLOR], so we have nothing for you, too!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_NEUTRAL_5">
+			<Text>Good day. What are you looking for in [COLOR_CYAN]{1_civ}[ENDCOLOR]?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_NEUTRAL_6">
+			<Text>How do you do? Do you like [COLOR_CYAN]{1_civ}[ENDCOLOR]?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_NEUTRAL_7">
+			<Text>How are you doing? Travel through [COLOR_CYAN]{1_civ}[ENDCOLOR], and you will change your attitude towards our nation.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_NEUTRAL_8">
+			<Text>Good morning stranger. We want to tell you that [COLOR_CYAN]{1_civ}[ENDCOLOR] are not eager to be involved in any conflict.</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_HOSTILE_1">
+			<Text>Hi. Don't think you get anything from [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_HOSTILE_2">
+			<Text>Halt! Go away from [COLOR_CYAN]{1_civ}[ENDCOLOR]! We won't give you anything!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_HOSTILE_3">
+			<Text>Don't move! You are trespassing [COLOR_CYAN]{1_civ}[ENDCOLOR]! Turn around and go away!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_HOSTILE_4">
+			<Text>Huh, another usurper. What do you want from [COLOR_CYAN]{1_civ}[ENDCOLOR]?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_HOSTILE_5">
+			<Text>Well, well! Do you think [COLOR_CYAN]{1_civ}[ENDCOLOR] will kneel before you?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_HOSTILE_6">
+			<Text>Two steps back! We have orders to kill anyone approaching [COLOR_CYAN]{1_civ}[ENDCOLOR]. Do you want to die?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_HOSTILE_7">
+			<Text>Who are you? We did not expect anyone in [COLOR_CYAN]{1_civ}[ENDCOLOR]. It will be better if you go away.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_HOSTILE_8">
+			<Text>Who told you about [COLOR_CYAN]{1_civ}[ENDCOLOR]? We will kill him!</Text>
+		</Row>
+		
+		<!-- Nothing texts -->
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_NOTHING_1">
+			<Text>Just nothing.</Text>
+		</Row>
+		
+		
+		<!-- Visit texts -->
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_PROTECTED_1">
+			<Text>Here it is our protector. May the gods will be with you!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_PROTECTED_2">
+			<Text>Greetings our saviour! What we can do for your nation?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_PROTECTED_3">
+			<Text>Hello our friend! Everything all right with our agreement?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_PROTECTED_4">
+			<Text>Welcome again mighty ruler! We are happy to see you so powerful!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_PROTECTED_5">
+			<Text>Gods sent you to that place! We are so safe now!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_PROTECTED_6">
+			<Text>Welcome again! Long time no see. Do you want to continue our agreement?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_PROTECTED_7">
+			<Text>Greetings! It's been a while you offered your protection. Our people are frightened by local neighbours!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_PROTECTED_8">
+			<Text>Good to see you again! We have peace and prosperity under your wings!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_PROTECTED_9">
+			<Text>Hello again protector! We think about some wider coalition with our neighbours. You could visit them, too.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_PROTECTED_10">
+			<Text>Ha! We knew you would come soon! And no one believed. Your protection saves our lives!</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_FRIENDLY_1">
+			<Text>We're happy to see you again! What we can do for you?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_FRIENDLY_2">
+			<Text>Hello again! What brings you to us?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_FRIENDLY_3">
+			<Text>Greetings! We hope that our relationship is in best condition. Can we do something for you?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_FRIENDLY_4">
+			<Text>Good to see you! Do you want to talk?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_FRIENDLY_5">
+			<Text>What a coincidence! We wanted to talk with you.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_FRIENDLY_6">
+			<Text>Long time no see. Did you manage to fulfil our pleases?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_FRIENDLY_7">
+			<Text>Hello, how are you? Today is a good day to talk.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_FRIENDLY_8">
+			<Text>Nice to see you! Do you want something to eat? You seem to be exhausted. Tell us what happened.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_FRIENDLY_9">
+			<Text>Holy crap, you look like a ghost! What happened? Can we help you somehow?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_FRIENDLY_10">
+			<Text>Brothers and sisters welcome you again! What do you need?</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_NEUTRAL_1">
+			<Text>Hello. What brought you here again?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_NEUTRAL_2">
+			<Text>Good day emperor. Do you want something from us?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_NEUTRAL_3">
+			<Text>Hello again. We do not want any troubles. What problems bring you to our city?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_NEUTRAL_4">
+			<Text>Hello. We do what we must to do. Do you?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_NEUTRAL_5">
+			<Text>Greetings. Why such a mighty person visits our city?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_NEUTRAL_6">
+			<Text>Hi. I suppose you need something, again...</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_NEUTRAL_7">
+			<Text>Greetings. After your last action, we are not sure we want to cooperate with you. This may bring troubles on us!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_NEUTRAL_8">
+			<Text>Huh, you again. Our neighbours do not trust you. Why we should?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_NEUTRAL_9">
+			<Text>Good morning. How are you? Your presence here is questioned. What do you want from us this time?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_NEUTRAL_10">
+			<Text>Oh, my lord. I thought we understood each other last time. Do we need to explain everything to you again?</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_HOSTILE_1">
+			<Text>Arghh, it's you again! We hoped we will never see you anymore.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_HOSTILE_2">
+			<Text>Oh, it's you. Don't forget our relationship didn't change since our last meeting.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_HOSTILE_3">
+			<Text>Well, well, you need something from us? Again?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_HOSTILE_4">
+			<Text>Huh! You want some help from us? Forget!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_HOSTILE_5">
+			<Text>Stop! We warned you once! Next time we will kill you!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_HOSTILE_6">
+			<Text>Warning! You are stepping into restricted area! Identify yourself!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_HOSTILE_7">
+			<Text>Welcome to Joined Security Area! Do you have something to offer?</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_HOSTILE_8">
+			<Text>We created this secured area to protect our people from you. You've proven we were right.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_HOSTILE_9">
+			<Text>Don't move! Minefiled in front of you! We've told you to not to show yourself in here!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_HOSTILE_10">
+			<Text>We thought we can work together. How wrong we were! Better go!</Text>
+		</Row>
+	</Language_en_US>
+</GameData>
