@@ -2,7 +2,7 @@ Changelog:
 v8:
 - added compatibility with: Tibet, Flanders and Durrani civilizations,.
 - slightly corrected Peter Kenilorea's icon,
-- Balkh?
+- slightly corrected Demtrius I's icon.
 
 v7.1:
 - tweaked main file,
