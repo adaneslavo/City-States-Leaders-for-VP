@@ -1,16 +1,11 @@
--- modified by bc1 from 1.0.3.144 brave new world code
--- merge city state greeting so actions are available right away
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
--- City State Diplo Popup
---
--- Authors: Anton Strenger
--- modification to VP and simplification: adan_eslavo
+-- City State Diplo Popup (modified by adan_eslavo)
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
-include( "IconSupport" )
-include( "InfoTooltipInclude" )
-include( "CityStateStatusHelper" )
+include("IconSupport")
+include("InfoTooltipInclude")
+include("CityStateStatusHelper")
 
 local g_minorCivID = -1
 local g_minorCivTeamID = -1
@@ -31,6 +26,13 @@ local m_lastAction = kiNoAction
 local m_pendingAction = kiNoAction -- For bullying dialog popups
 local kiGreet = 9
 local questKillCamp = MinorCivQuestTypes.MINOR_CIV_QUEST_KILL_CAMP
+
+local iRandomPersonalityText
+local iRandomTraitText
+local iRandomBonusText
+local iRandomFrienshipText
+local iRandomVisitText
+
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 -- HANDLERS AND HELPERS
@@ -40,8 +42,8 @@ function SetButtonSize(textControl, buttonControl, animControl, buttonHL)
 	local sizeY = textControl:GetSizeY() + WordWrapOffset
 	
 	buttonControl:SetSizeY(sizeY)
-	animControl:SetSizeY(sizeY+WordWrapAnimOffset)
-	buttonHL:SetSizeY(sizeY+WordWrapAnimOffset)
+	animControl:SetSizeY(sizeY + WordWrapAnimOffset)
+	buttonHL:SetSizeY(sizeY + WordWrapAnimOffset)
 end
 
 function UpdateButtonStack()
@@ -57,7 +59,7 @@ function UpdateButtonStack()
 	Controls.ButtonScrollPanel:CalculateInternalSize()
 end
 
-function InputHandler( uiMsg, wParam, lParam )
+function InputHandler(uiMsg, wParam, lParam)
 	if uiMsg == KeyEvents.KeyDown then
 		if wParam == Keys.VK_ESCAPE or wParam == Keys.VK_RETURN then
 			if Controls.BullyConfirm:IsHidden() then
@@ -70,21 +72,28 @@ function InputHandler( uiMsg, wParam, lParam )
 		end
 	end
 end
-ContextPtr:SetInputHandler( InputHandler )
+ContextPtr:SetInputHandler(InputHandler)
 
-function ShowHideHandler( bIsHide, bInitState )
-	if( not bInitState ) then
+function ShowHideHandler(bIsHide, bInitState)
+	if not bInitState then
 		Controls.BackgroundImage:UnloadTexture();
 		
-		if( not bIsHide ) then
-			Events.SerialEventGameDataDirty.Add( OnDisplay )
-			Events.WarStateChanged.Add( OnDisplay )			-- bc1 hack to force refresh in vanilla when selecting peace / war
+		if not bIsHide then
+			Events.SerialEventGameDataDirty.Add(OnDisplay)
+			Events.WarStateChanged.Add(OnDisplay)			-- bc1 hack to force refresh in vanilla when selecting peace / war
+			
+			iRandomPersonalityText = tostring(math.random(7))
+			iRandomTraitText = tostring(math.random(7))
+			iRandomBonusText = tostring(math.random(7))
+			iRandomFrienshipText = tostring(math.random(8))
+			iRandomVisitText = tostring(math.random(10))
+
 			OnDisplay()
 			UI.incTurnTimerSemaphore()
-			Events.SerialEventGameMessagePopupShown( m_PopupInfo )
+			Events.SerialEventGameMessagePopupShown(m_PopupInfo)
 		else
-			Events.SerialEventGameDataDirty.Remove( OnDisplay )
-			Events.WarStateChanged.Remove( OnDisplay )
+			Events.SerialEventGameDataDirty.Remove(OnDisplay)
+			Events.WarStateChanged.Remove(OnDisplay)
 			UI.decTurnTimerSemaphore()
 			if m_PopupInfo then
 				Events.SerialEventGameMessagePopupProcessed.CallImmediate( m_PopupInfo.Type, 0 )
@@ -92,12 +101,12 @@ function ShowHideHandler( bIsHide, bInitState )
 		end
 	end
 end
-ContextPtr:SetShowHideHandler( ShowHideHandler )
+ContextPtr:SetShowHideHandler(ShowHideHandler)
 
 -------------------------------------------------
 -- On Event Received
 -------------------------------------------------
-function OnEventReceived( popupInfo )
+function OnEventReceived(popupInfo)
 	local bGreeting = popupInfo.Type == ButtonPopupTypes.BUTTONPOPUP_CITY_STATE_GREETING
 	local bMessage = popupInfo.Type == ButtonPopupTypes.BUTTONPOPUP_CITY_STATE_MESSAGE
 	local bDiplo = popupInfo.Type == ButtonPopupTypes.BUTTONPOPUP_CITY_STATE_DIPLO
@@ -119,14 +128,14 @@ function OnEventReceived( popupInfo )
 
 	m_isNewQuestAvailable = m_PopupInfo.Data2 == 1
 
-	UIManager:QueuePopup( ContextPtr, PopupPriority.CityStateDiplo )
+	UIManager:QueuePopup(ContextPtr, PopupPriority.CityStateDiplo)
 end
-Events.SerialEventGameMessagePopup.Add( OnEventReceived )
+Events.SerialEventGameMessagePopup.Add(OnEventReceived)
 
 -------------------------------------------------
 -- On Display
 -------------------------------------------------
-function OnDisplay( )
+function OnDisplay()
 	local activePlayerID = Game.GetActivePlayer()
 	local activePlayer = Players[activePlayerID]
 	local activeTeamID = Game.GetActiveTeam()
@@ -218,7 +227,7 @@ function OnDisplay( )
 	Controls.BackgroundImage:SetAlpha(0.65)
 
 	local iconColor = textColor
-	IconHookup( civInfo.PortraitIndex, 32, civInfo.AlphaIconAtlas, Controls.CivIcon )
+	IconHookup(civInfo.PortraitIndex, 32, civInfo.AlphaIconAtlas, Controls.CivIcon)
 	Controls.CivIcon:SetColor(iconColor)
 
 	local strStatusText = GetCityStateStatusText(activePlayerID, minorPlayerID)
@@ -435,10 +444,6 @@ function OnDisplay( )
 		if m_lastAction == kiGreet then
 			local bFirstMajorCiv = m_PopupInfo.Option1
 			local sRandPersonality1, sRandPersonality2, sRandTrait1, sRandTrait2, sRandBonus1, sRandBonus2, sRandFriendship, strGiftString = "", "", "", "", "", "", "", ""
-			local iRandomPersonalityText = tostring(math.random(7))
-			local iRandomTraitText = tostring(math.random(7))
-			local iRandomBonusText = tostring(math.random(7))
-			local iRandomFrienshipText = tostring(math.random(8))
 
 			if (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_FRIENDLY) then
 				sRandFriendship = string.format("TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_FRIENDLY_%s", iRandomFrienshipText)
@@ -452,9 +457,6 @@ function OnDisplay( )
 				sRandFriendship = string.format("TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_HOSTILE_%s", iRandomFrienshipText)
 				sRandPersonality1 = string.format("TXT_KEY_CITY_STATE_GREETING_HOSTILE_%s", iRandomPersonalityText)
 				sRandPersonality2 = Locale.Lookup(sRandPersonality1, leaderPlace)
-			--[[elseif (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_IRRATIONAL) then
-				sRandPersonality1 = string.format("TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_%s", iRandomPersonalityText)
-				sRandPersonality2 = Locale.Lookup(sRandPersonality1, leaderPlace)--]]
 			end
 
 			if m_PopupInfo.Text == "GOLD" then
@@ -527,7 +529,6 @@ function OnDisplay( )
 		-- Normal peaceful hello, with info about active quests
 		else
 			local iPersonality = minorPlayer:GetPersonality()
-			local iRandomVisitText = tostring(math.random(10))
 			
 			if minorPlayer:IsProtectedByMajor(activePlayerID) then
 				strText = Locale.ConvertTextKey(string.format("TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_PROTECTED_%s", iRandomVisitText))
@@ -537,8 +538,6 @@ function OnDisplay( )
 				strText = Locale.ConvertTextKey(string.format("TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_NEUTRAL_%s", iRandomVisitText))
 			elseif (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_HOSTILE) then
 				strText = Locale.ConvertTextKey(string.format("TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_HOSTILE_%s", iRandomVisitText))
-			--[[elseif (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_IRRATIONAL) then
-				strText = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL")--]]
 			end
 
 			local strQuestString = ""
@@ -699,7 +698,7 @@ function OnDisplay( )
 				strButtonLabel = "[COLOR_WARNING_TEXT]" .. strButtonLabel .. "[ENDCOLOR]"
 				strToolTip = Locale.ConvertTextKey("TXT_KEY_POP_CSTATE_MARRIAGE_DISABLED_TT", GameDefines.MINOR_CIV_BUYOUT_TURNS, iBuyoutCost)
 			end
-			--antonjs: todo: disable button entirely, in case bWar doesn't update in time for the callback to disallow buyout in wartime
+			
 			Controls.MarriageButton:SetHide(false)
 			Controls.MarriageAnim:SetHide(true)
 		else
@@ -913,7 +912,6 @@ Controls.QuestInfo:RegisterCallback( Mouse.eLClick, OnQuestInfoClicked )
 -- MAIN MENU
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
-
 ----------------------------------------------------------------
 -- Pledge
 ----------------------------------------------------------------
@@ -1137,7 +1135,6 @@ Controls.ExitGiveButton:RegisterCallback( Mouse.eLClick, OnCloseGive )
 -- TAKE MENU
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
-
 function PopulateTakeChoices()
 	local minorPlayer = Players[g_minorCivID]
 	local activePlayerID = Game.GetActivePlayer()
@@ -1259,7 +1256,6 @@ function BullyAction(action)
 	Controls.BullyConfirm:SetHide(false)
 	Controls.BGBlock:SetHide(true)
 end
-
 
 ----------------------------------------------------------------
 -- Take Gold
