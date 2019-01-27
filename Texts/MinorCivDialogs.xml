@@ -508,7 +508,7 @@
 			<Text>We've been building an army to protect our people from you.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_HOSTILE_9">
-			<Text>Don't move! We told you to not to show yourself in here!</Text>
+			<Text>Don't move! We told you to not to show yourself here!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_HOSTILE_10">
 			<Text>We thought we could work together. How wrong we were! Begone!</Text>
