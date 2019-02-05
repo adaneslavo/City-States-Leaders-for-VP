@@ -5,12 +5,12 @@
     <ProjectGuid>{426fb8f7-3ce1-488c-ac01-2afa6c26603b}</ProjectGuid>
     <Name>(ui) City-States Leaders for VP</Name>
     <Guid>5594cb50-a30e-4abf-a249-69704fc95da9</Guid>
-    <ModVersion>8</ModVersion>
+    <ModVersion>9</ModVersion>
     <Stability>Stable</Stability>
     <Teaser>Adds leader icons to city state screens, making it easier to remember who is who</Teaser>
     <Description>Adds leader icons to city state screens, making it easier to remember who is who. This is an modification to "City-States Leaders" by mihaifx and "City-State Leaders II" by Nutty.</Description>
     <Authors>Nutty, mihaifx, Gedemon, bc1, adan_eslavo</Authors>
-    <SpecialThanks>whoward69, JFD, Moriboe, Irkalla, bc1, janboruta, Leugi, sukritact, TPangolin, knightmare13, Tomatekh, LastSword, Gedemo, Urdnot_Scott, TarcisioCM, Firebug, Hypereon, pienappledan, Mosile</SpecialThanks>
+    <SpecialThanks>whoward69, JFD, Moriboe, Irkalla, bc1, janboruta, Leugi, sukritact, TPangolin, knightmare13, Tomatekh, LastSword, Gedemo, Urdnot_Scott, TarcisioCM, Firebug, Hypereon, pienappledan, Mosile, TranceBlossom</SpecialThanks>
     <AffectsSavedGames>true</AffectsSavedGames>
     <MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
     <SupportsSinglePlayer>true</SupportsSinglePlayer>

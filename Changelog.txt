@@ -1,6 +1,9 @@
 Changelog:
+v9:
+- text fixes (thanks to @TranceBlossom).
+
 v8:
-- added compatibility with: Tibet (ready for download), Flanders and Durrani civilizations,.
+- added compatibility with: Tibet (ready for download), Flanders and Durrani civilizations.
 - slightly corrected Peter Kenilorea's icon,
 - slightly corrected Demtrius I's icon,
 - fixed text bug.
