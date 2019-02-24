@@ -1,4 +1,10 @@
 Changelog:
+v10:
+- added compatibility to UCS v4 (9 new CSs):
+	- Danmacsch (Ambracia, Dodoma, Kigali, Nairobi),
+	- adan_eslavo (Djibouti, Faya, Quelimane, Sierra Leone, Surrey).
+- small corrections.
+
 v9:
 - text fixes (thanks to @TranceBlossom).
 
