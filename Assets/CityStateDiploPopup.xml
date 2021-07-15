@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Anton Strenger (Firaxis Games) -->
+<!-- modified and expanded by adan_eslavo -->
 <Context Font="TwCenMT20" ColorSet="Beige_Black_Alpha" FontStyle="Shadow">
 	<Box Style="BGBlock_ClearTopBar" ID="BGBlock"/>
 	

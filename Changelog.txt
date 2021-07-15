@@ -1,4 +1,7 @@
 Changelog:
+v11:
+- updated credits.
+
 v10:
 - added compatibility to UCS v4 (9 new CSs):
 	- Danmacsch (Ambracia, Dodoma, Kigali, Nairobi),
