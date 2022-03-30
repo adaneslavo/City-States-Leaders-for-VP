@@ -5,7 +5,7 @@
     <ProjectGuid>{426fb8f7-3ce1-488c-ac01-2afa6c26603b}</ProjectGuid>
     <Name>(ui) City-States Leaders for VP</Name>
     <Guid>5594cb50-a30e-4abf-a249-69704fc95da9</Guid>
-    <ModVersion>10</ModVersion>
+    <ModVersion>12</ModVersion>
     <Stability>Stable</Stability>
     <Teaser>Adds leader icons to city state screens, making it easier to remember who is who</Teaser>
     <Description>Adds leader icons to city state screens, making it easier to remember who is who. This is an modification to "City-States Leaders" by mihaifx and "City-State Leaders II" by Nutty.</Description>
@@ -24,13 +24,6 @@
         <Type>Mod</Type>
         <Name>Unique City-States</Name>
         <Id>b2eb6d1e-1fcb-4a0d-829c-51691aa3183a</Id>
-        <MinVersion>0</MinVersion>
-        <MaxVersion>999</MaxVersion>
-      </Association>
-      <Association>
-        <Type>Mod</Type>
-        <Name>Israel</Name>
-        <Id>35e27828-cf22-4aec-b087-08169fa4e431</Id>
         <MinVersion>0</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
@@ -69,6 +62,13 @@
         <MinVersion>0</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
+      <Association>
+        <Type>Mod</Type>
+        <Name>Israel</Name>
+        <Id>35e27828-cf22-4aec-b087-08169fa4e430</Id>
+        <MinVersion>0</MinVersion>
+        <MaxVersion>999</MaxVersion>
+      </Association>
     </ModReferences>
     <Homepage>http://https://forums.civfanatics.com/threads/city-states-leaders-for-vp.636763/</Homepage>
     <ModDependencies>
@@ -76,20 +76,6 @@
         <Type>Mod</Type>
         <Name>(2) Community Balance Overhaul</Name>
         <Id>8411a7a8-dad3-4622-a18e-fcc18324c799</Id>
-        <MinVersion>0</MinVersion>
-        <MaxVersion>999</MaxVersion>
-      </Association>
-      <Association>
-        <Type>Mod</Type>
-        <Name>(3) City-State Diplomacy</Name>
-        <Id>eead0050-1e3f-4178-a91f-26cf1881ac39</Id>
-        <MinVersion>0</MinVersion>
-        <MaxVersion>999</MaxVersion>
-      </Association>
-      <Association>
-        <Type>Mod</Type>
-        <Name>(5) More Luxuries - CBO Edition</Name>
-        <Id>be2d13ee-d18d-410e-8f04-7cd19cd99a98</Id>
         <MinVersion>0</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>

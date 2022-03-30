@@ -1,5 +1,6 @@
 Changelog:
 v11:
+- updated Israel compatibility and fixed its id in reference;
 - updated credits.
 
 v10:

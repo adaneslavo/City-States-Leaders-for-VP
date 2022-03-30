@@ -18,7 +18,7 @@ VALUES	('CSL-CIV-ISR', 	2),
 
 UPDATE COMMUNITY
 SET Value = '1'
-WHERE Type = 'CSL-CIV-ISR' AND EXISTS (SELECT * FROM Units WHERE Type='UNIT_ISRAEL_SHOPHET') AND NOT EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-CIV-ISR' AND Value= 0);
+WHERE Type = 'CSL-CIV-ISR' AND EXISTS (SELECT * FROM Units WHERE Type='UNIT_ISRAEL_MACCABEE') AND NOT EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-CIV-ISR' AND Value= 0);
 
 UPDATE COMMUNITY
 SET Value = '1'
@@ -71,6 +71,7 @@ WHERE Type = 'CSL-CIV-DUR' AND EXISTS (SELECT * FROM Units WHERE Type='UNIT_LS_J
 	WHERE Type = 'MINOR_CIV_VATICAN_CITY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-CIV-PAP' AND Value= 1);
 	
 	-- Canada: Quebec City ==> Honiara
+	--		   Vancouver ==> St. Johns
 	UPDATE MinorCivLeaders
 	SET LeaderIcon = 'honiara_leadericon.dds', LeaderPlace = 'Solomon Islands', LeaderName = 'Peter Kenilorea', LeaderTitle = 'Prime Minister sir',	LeaderArtistName = 'adan_eslavo'
 	WHERE Type = 'MINOR_CIV_QUEBEC_CITY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-CIV-CAN' AND Value= 1);
