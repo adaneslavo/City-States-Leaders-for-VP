@@ -2,6 +2,14 @@
 <!-- Created by ModBuddy on 11/24/2013 10:24:12 PM -->
 <GameData>
 	<Language_en_US>
+		<Update>
+			<Where Tag="TXT_KEY_POP_CSTATE_PROTECTED_BY" />
+			<Set Text="PROTECTED BY:" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_POP_CSTATE_LABEL_CONTENDER" />
+			<Set Text="CONTENDER:" />
+		</Update>
 		<Row Tag="TXT_KEY_POP_CSTATE_RESOURCES_CSL">
 			<Text>RESOURCES:</Text>
 		</Row>

@@ -1,4 +1,17 @@
 Changelog:
+v13:
+- added Sphere of Influence notification in CS popup window (ICON_LOCK in ALLY label);
+- updated some label headers in popup window (capital letters);
+- CONTENDER label: ==> added icon of contender;
+				   ==> added missing influence points to be an ally info;
+- corrected Y position of an ally icon in popup window (moved slightly up);
+- added Philippines by @pineappledan compatibility - Sun Yat-sen from the Republic of China (2 leader icons available);
+- added name changes for UCS ability titles, if civilization compatibility was enabled (for better flavour);
+- cleaned up some files.
+
+v12:
+- compatibility with VP 2.0.
+
 v11:
 - updated Israel compatibility and fixed its id in reference;
 - updated credits.

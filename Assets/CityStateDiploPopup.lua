@@ -323,8 +323,13 @@ function OnDisplay()
 		strAlly = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_NOBODY")
 	end
 	
-	strAlly = GetAllyText(activePlayerID, minorPlayerID)
-	strAllyTT = GetAllyToolTip(activePlayerID, minorPlayerID)
+	--strAlly = GetAllyText(activePlayerID, minorPlayerID)
+	--strAllyTT = GetAllyToolTip(activePlayerID, minorPlayerID)
+
+	if Game.IsResolutionPassed(GameInfoTypes.RESOLUTION_SPHERE_OF_INFLUENCE, minorPlayerID) then
+		strAlly = strAlly .. " [ICON_LOCKED]"
+		strAllyTT = strAllyTT .. "[NEWLINE][NEWLINE]This City-State is under the [COLOR_CYAN]Sphere of Influence[ENDCOLOR]."
+	end
 
 	Controls.AllyText:SetText(strAlly)
 	Controls.AllyIcon:SetToolTipString(strAllyTT)
@@ -347,7 +352,7 @@ function OnDisplay()
 	else
 		Controls.ProtectInfo:SetText(Locale.ConvertTextKey("TXT_KEY_CITY_STATE_NOBODY"))
 	end
-	
+
 	Controls.ProtectInfo:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_POP_CSTATE_PROTECTED_BY_TT"))
 	Controls.ProtectLabel:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_POP_CSTATE_PROTECTED_BY_TT"))
 	
@@ -730,20 +735,40 @@ end
 
 -- from CityStateStatusHelper.lua
 function GetContenderInfo(majorPlayerID, minorPlayerID)
-	local pMinor = Players[ minorPlayerID ]
+	local pMinor = Players[minorPlayerID]
 	if not pMinor then return "error" end
 	
 	local iContInfluence = 0
+	local eContender = -1
+	local iAllyInfluence = 0
 	local eAllyID = pMinor:GetAlly()
 	
 	for ePlayer = 0, GameDefines.MAX_MAJOR_CIVS - 1 do
 		if ePlayer ~= eAllyID then
 			local iInfluence = pMinor:GetMinorCivFriendshipWithMajor(ePlayer)
-			if iInfluence > iContInfluence then iContInfluence = iInfluence end
+
+			if iInfluence > iContInfluence then
+				iContInfluence = iInfluence
+				eContender = ePlayer
+			end
+		elseif ePlayer == eAllyID then
+			iAllyInfluence = pMinor:GetMinorCivFriendshipWithMajor(ePlayer)
 		end
 	end
 	
-	return tostring(iContInfluence).." [ICON_INFLUENCE]"
+	if iAllyInfluence == 0 then
+		iAllyInfluence = GameDefines.FRIENDSHIP_THRESHOLD_ALLIES
+	end
+
+	local iMissingInfluenceForContender = iAllyInfluence - iContInfluence
+
+	if eContender == -1 then
+		CivIconHookup(-1, 32, Controls.ContenderIcon, Controls.ContenderIconBG, Controls.ContenderIconShadow, false, true)
+	else
+		CivIconHookup(eContender, 32, Controls.ContenderIcon, Controls.ContenderIconBG, Controls.ContenderIconShadow, false, true)
+	end
+
+	return tostring(iContInfluence) .. " [ICON_INFLUENCE] (" .. iMissingInfluenceForContender .. " [ICON_INFLUENCE] to become an Ally)"
 end
 
 function getProtectingPlayers(iMinorCivID)
