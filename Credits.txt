@@ -119,3 +119,8 @@ Civilizations (4UC):
 	- Tibet: Lhasa ==> Sarnath: LastSword (Ashoka)
 	- Flanders: Brussels ==> Luxembourg: DJSHenninger (Ermesinde II)
 	- Durrani: Kabul ==> Thimphu: janboruta (Jigme Dorji Wangchuck)
+	
+UCS compatibility part 4:
+    - Taipei: @DJSHenninger (Sun Yat-sen)
+	- Taipei: @JakeWalrusWhale (Sun Yat-sen)
+	- Oc Eo: @Grant (Soma)

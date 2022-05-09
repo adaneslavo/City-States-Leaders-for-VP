@@ -1,4 +1,18 @@
 Changelog:
+v15:
+- added compatibility for new UCS City-States (Andorra, Canossa, Thimphu, Tintagel, Levuka);
+- adjusted numerous old leader icons to better fit the frame;
+- updated leader places, names and titles to be closer to historical realism;
+- replaced Nairobi with Levuka; added Nairobi leader as an alternative choice for Mombasa;
+- simplified SQL files.
+
+v14:
+- added compatiblity for new UCS City-States (Taipei, Óc Eo);
+- changed Auckland leader to Te Rauparaha;
+- prepared files for adding new UCS City-States;
+- changes to fit recent UCS update containing historical accuracy etc.;
+- added listing of all UCS bonuses applied from city-states (visible in any CS popup window);
+
 v13:
 - added Sphere of Influence notification in CS popup window (ICON_LOCK in ALLY label);
 - updated some label headers in popup window (capital letters);

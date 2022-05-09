@@ -33,6 +33,9 @@ local iRandomBonusText
 local iRandomFrienshipText
 local iRandomVisitText
 
+local table_insert = table.insert
+local table_concat = table.concat
+local L = Locale.ConvertTextKey
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 -- HANDLERS AND HELPERS
@@ -161,7 +164,7 @@ function OnDisplay()
 	local textColor = {x = primaryColor.x, y = primaryColor.y, z = primaryColor.z, w = 1}
 
 	-- Title
-	strTitle = Locale.ConvertTextKey("{"..strShortDescKey..":upper}")
+	strTitle = L("{"..strShortDescKey..":upper}")
 	Controls.TitleLabel:SetText(strTitle)
 	Controls.TitleLabel:SetColor(textColor, 0)
 
@@ -198,7 +201,7 @@ function OnDisplay()
 
 		if (leaderIcon ~= nil and leaderName ~= nil) then
 			if leaderPlace == nil then
-				leaderPlace = Locale.ConvertTextKey(strShortDescKey)
+				leaderPlace = L(strShortDescKey)
 			end
 			
 			if (leaderTitle ~= nil) then
@@ -244,19 +247,19 @@ function OnDisplay()
 	
 	if(minorPlayer:IsMarried(activePlayerID))then
 		Controls.MarriedButton:SetHide(false)
-		Controls.MarriedButton:SetText(Locale.ConvertTextKey("TXT_KEY_DIPLO_MAJOR_CIV_DIPLO_STATE_MARRIED_SMALL"))
-		Controls.MarriedButton:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_DIPLO_MAJOR_CIV_DIPLO_STATE_MARRIED_TT"))
+		Controls.MarriedButton:SetText(L("TXT_KEY_DIPLO_MAJOR_CIV_DIPLO_STATE_MARRIED_SMALL"))
+		Controls.MarriedButton:SetToolTipString(L("TXT_KEY_DIPLO_MAJOR_CIV_DIPLO_STATE_MARRIED_TT"))
 	end
 
-	if (strTraitText == Locale.ConvertTextKey("TXT_KEY_CITY_STATE_CULTURED_ADJECTIVE")) then
+	if (strTraitText == L("TXT_KEY_CITY_STATE_CULTURED_ADJECTIVE")) then
 		strTraitText = "[ICON_CULTURE] [COLOR_MAGENTA]".. strTraitText .."[ENDCOLOR]"
-	elseif (strTraitText == Locale.ConvertTextKey("TXT_KEY_CITY_STATE_MILITARISTIC_ADJECTIVE")) then
+	elseif (strTraitText == L("TXT_KEY_CITY_STATE_MILITARISTIC_ADJECTIVE")) then
 		strTraitText = "[ICON_WAR] [COLOR_RED]".. strTraitText .."[ENDCOLOR]"
-	elseif (strTraitText == Locale.ConvertTextKey("TXT_KEY_CITY_STATE_MARITIME_ADJECTIVE")) then
+	elseif (strTraitText == L("TXT_KEY_CITY_STATE_MARITIME_ADJECTIVE")) then
 		strTraitText = "[ICON_FOOD] [COLOR_CYAN]".. strTraitText .."[ENDCOLOR]"
-	elseif (strTraitText == Locale.ConvertTextKey("TXT_KEY_CITY_STATE_MERCANTILE_ADJECTIVE")) then
+	elseif (strTraitText == L("TXT_KEY_CITY_STATE_MERCANTILE_ADJECTIVE")) then
 		strTraitText = "[ICON_GOLD] [COLOR_YELLOW]".. strTraitText .."[ENDCOLOR]"
-	elseif (strTraitText == Locale.ConvertTextKey("TXT_KEY_CITY_STATE_RELIGIOUS_ADJECTIVE")) then
+	elseif (strTraitText == L("TXT_KEY_CITY_STATE_RELIGIOUS_ADJECTIVE")) then
 		strTraitText = "[ICON_PEACE] [COLOR_WHITE]".. strTraitText .."[ENDCOLOR]"
 	end
 	
@@ -270,17 +273,17 @@ function OnDisplay()
 	local iPersonality = minorPlayer:GetPersonality()
 	
 	if (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_FRIENDLY) then
-		strPersonalityText = "[ICON_FLOWER] [COLOR_POSITIVE_TEXT]".. Locale.ConvertTextKey("TXT_KEY_CITY_STATE_PERSONALITY_FRIENDLY") .."[ENDCOLOR]"
-		strPersonalityTT = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_PERSONALITY_FRIENDLY_TT")
+		strPersonalityText = "[ICON_FLOWER] [COLOR_POSITIVE_TEXT]".. L("TXT_KEY_CITY_STATE_PERSONALITY_FRIENDLY") .."[ENDCOLOR]"
+		strPersonalityTT = L("TXT_KEY_CITY_STATE_PERSONALITY_FRIENDLY_TT")
 	elseif (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_NEUTRAL) then
-		strPersonalityText = "[ICON_TEAM_1] [COLOR_FADING_POSITIVE_TEXT]".. Locale.ConvertTextKey("TXT_KEY_CITY_STATE_PERSONALITY_NEUTRAL") .."[ENDCOLOR]"
-		strPersonalityTT = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_PERSONALITY_NEUTRAL_TT")
+		strPersonalityText = "[ICON_TEAM_1] [COLOR_FADING_POSITIVE_TEXT]".. L("TXT_KEY_CITY_STATE_PERSONALITY_NEUTRAL") .."[ENDCOLOR]"
+		strPersonalityTT = L("TXT_KEY_CITY_STATE_PERSONALITY_NEUTRAL_TT")
 	elseif (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_HOSTILE) then
-		strPersonalityText = "[ICON_RAZING] [COLOR_NEGATIVE_TEXT]".. Locale.ConvertTextKey("TXT_KEY_CITY_STATE_PERSONALITY_HOSTILE") .."[ENDCOLOR]"
-		strPersonalityTT = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_PERSONALITY_HOSTILE_TT")
+		strPersonalityText = "[ICON_RAZING] [COLOR_NEGATIVE_TEXT]".. L("TXT_KEY_CITY_STATE_PERSONALITY_HOSTILE") .."[ENDCOLOR]"
+		strPersonalityTT = L("TXT_KEY_CITY_STATE_PERSONALITY_HOSTILE_TT")
 	elseif (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_IRRATIONAL) then
-		strPersonalityText = "[ICON_HAPPINESS_4] [COLOR_FADING_NEGATIVE_TEXT]".. Locale.ConvertTextKey("TXT_KEY_CITY_STATE_PERSONALITY_IRRATIONAL") .."[ENDCOLOR]"
-		strPersonalityTT = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_PERSONALITY_IRRATIONAL_TT")
+		strPersonalityText = "[ICON_HAPPINESS_4] [COLOR_FADING_NEGATIVE_TEXT]".. L("TXT_KEY_CITY_STATE_PERSONALITY_IRRATIONAL") .."[ENDCOLOR]"
+		strPersonalityTT = L("TXT_KEY_CITY_STATE_PERSONALITY_IRRATIONAL_TT")
 	end
 	
 	Controls.PersonalityInfo:SetText(strPersonalityText)
@@ -301,26 +304,26 @@ function OnDisplay()
 		if (iAlly ~= activePlayerID) then
 			if (Teams[Players[iAlly]:GetTeam()]:IsHasMet(Game.GetActiveTeam())) then
 				local iInfUntilAllied = iAllyInf - iActivePlayerInf + 1 -- needs to pass up the current ally, not just match
-				strAllyTT = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_ALLY_TT", Players[iAlly]:GetCivilizationShortDescriptionKey(), iInfUntilAllied)
+				strAllyTT = L("TXT_KEY_CITY_STATE_ALLY_TT", Players[iAlly]:GetCivilizationShortDescriptionKey(), iInfUntilAllied)
 				bHideIcon = false
 				CivIconHookup(iAlly, 32, Controls.AllyIcon, Controls.AllyIconBG, Controls.AllyIconShadow, false, true)
 			else
 				local iInfUntilAllied = iAllyInf - iActivePlayerInf + 1 -- needs to pass up the current ally, not just match
-				strAllyTT = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_ALLY_UNKNOWN_TT", iInfUntilAllied)
+				strAllyTT = L("TXT_KEY_CITY_STATE_ALLY_UNKNOWN_TT", iInfUntilAllied)
 				bHideIcon = false
 				CivIconHookup(-1, 32, Controls.AllyIcon, Controls.AllyIconBG, Controls.AllyIconShadow, false, true)
 			end
 		else
-			strAllyTT = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_ALLY_ACTIVE_PLAYER_TT")
+			strAllyTT = L("TXT_KEY_CITY_STATE_ALLY_ACTIVE_PLAYER_TT")
 			bHideText = false
-			strAlly = "[COLOR_POSITIVE_TEXT]" .. Locale.ConvertTextKey("TXT_KEY_YOU") .. "[ENDCOLOR]"
+			strAlly = "[COLOR_POSITIVE_TEXT]" .. L("TXT_KEY_YOU") .. "[ENDCOLOR]"
 		end
 	else
 		local iActivePlayerInf = minorPlayer:GetMinorCivFriendshipWithMajor(activePlayerID)
 		local iInfUntilAllied = GameDefines["FRIENDSHIP_THRESHOLD_ALLIES"] - iActivePlayerInf
-		strAllyTT = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_ALLY_NOBODY_TT", iInfUntilAllied)
+		strAllyTT = L("TXT_KEY_CITY_STATE_ALLY_NOBODY_TT", iInfUntilAllied)
 		bHideText = false
-		strAlly = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_NOBODY")
+		strAlly = L("TXT_KEY_CITY_STATE_NOBODY")
 	end
 	
 	--strAlly = GetAllyText(activePlayerID, minorPlayerID)
@@ -350,11 +353,11 @@ function OnDisplay()
 	if (sProtectingPlayers ~= "") then
 		Controls.ProtectInfo:SetText("[COLOR_POSITIVE_TEXT]" .. sProtectingPlayers .. "[ENDCOLOR]")
 	else
-		Controls.ProtectInfo:SetText(Locale.ConvertTextKey("TXT_KEY_CITY_STATE_NOBODY"))
+		Controls.ProtectInfo:SetText(L("TXT_KEY_CITY_STATE_NOBODY"))
 	end
 
-	Controls.ProtectInfo:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_POP_CSTATE_PROTECTED_BY_TT"))
-	Controls.ProtectLabel:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_POP_CSTATE_PROTECTED_BY_TT"))
+	Controls.ProtectInfo:SetToolTipString(L("TXT_KEY_POP_CSTATE_PROTECTED_BY_TT"))
+	Controls.ProtectLabel:SetToolTipString(L("TXT_KEY_POP_CSTATE_PROTECTED_BY_TT"))
 	
 	-- Nearby Resources
 	local pCapital = minorPlayer:GetCapitalCity()
@@ -409,9 +412,9 @@ function OnDisplay()
 			local pResource = GameInfo.Resources[iResourceType]
 			
 			if pResource.ResourceClassType == "RESOURCECLASS_LUXURY" then	
-				strResourceText = strResourceText .. pResource.IconString .. " [COLOR_PLAYER_LIGHT_YELLOW_TEXT]" .. Locale.ConvertTextKey(pResource.Description) .. " (" .. iAmount .. ") [ENDCOLOR]"
+				strResourceText = strResourceText .. pResource.IconString .. " [COLOR_PLAYER_LIGHT_YELLOW_TEXT]" .. L(pResource.Description) .. " (" .. iAmount .. ") [ENDCOLOR]"
 			else
-				strResourceText = strResourceText .. pResource.IconString .. " [COLOR_YIELD_FOOD]" .. Locale.ConvertTextKey(pResource.Description) .. " (" .. iAmount .. ") [ENDCOLOR]"
+				strResourceText = strResourceText .. pResource.IconString .. " [COLOR_YIELD_FOOD]" .. L(pResource.Description) .. " (" .. iAmount .. ") [ENDCOLOR]"
 			end
 			
 			iNumResourcesFound = iNumResourcesFound + 1
@@ -422,7 +425,7 @@ function OnDisplay()
 		Controls.ResourcesLabel:SetHide(false)
 		Controls.ResourcesInfo:SetHide(false)
 
-		local strResourceTextTT = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_RESOURCES_TT")
+		local strResourceTextTT = L("TXT_KEY_CITY_STATE_RESOURCES_TT")
 		
 		Controls.ResourcesInfo:SetToolTipString(strResourceTextTT)
 		Controls.ResourcesLabel:SetToolTipString(strResourceTextTT)
@@ -442,6 +445,58 @@ function OnDisplay()
 	Controls.QuestInfo:SetText(sIconText)
 	Controls.QuestInfo:SetToolTipString(sToolTipText)
 	Controls.QuestLabel:SetToolTipString(sToolTipText)
+
+	-- UCS Info Tab
+	local sUCSInfoHide = true
+	local tUCSBonuses = {}
+	
+	for option in GameInfo.Community{Type="CSL-UCS"} do
+		if option.Value == 1 then
+			sUCSInfoHide = false
+			break
+		end
+	end
+
+	local sUCSInfoTitle = L("TXT_KEY_POP_CSTATE_UCS_MAIN_TEXT")
+	local sUCSInfoTT = L("TXT_KEY_POP_CSTATE_UCS_TOOLTIP_TITLE")
+	local sNoUCSBonusesFound = L("TXT_KEY_POP_CSTATE_UCS_NO_BONUS_FOUND")
+	local sTextEnableUCS = L("TXT_KEY_POP_CSTATE_UCS_NO_UCS_FOUND")
+	local bBonusFound = false
+	
+	table_insert(tUCSBonuses, sUCSInfoTT)
+	
+	local pUCSActivePlayer = Players[Game.GetActivePlayer()]
+	
+	for eUCSPlayer, pUCSPlayer in ipairs(Players) do
+		if pUCSPlayer and pUCSPlayer:IsAlive() then
+			if pUCSPlayer:IsMinorCiv() then
+				local sMinorType = GameInfo.MinorCivilizations[pUCSPlayer:GetMinorCivType()].Type
+				
+				if pUCSActivePlayer:GetEventChoiceCooldown(GameInfoTypes["PLAYER_EVENT_CHOICE_" .. GameInfo.MinorCivilizations[pUCSPlayer:GetMinorCivType()].Type]) ~= 0 then
+					table_insert(tUCSBonuses, "[ICON_BULLET][COLOR_CYAN]" .. pUCSPlayer:GetName() .. ":[ENDCOLOR] " .. L("TXT_KEY_CSTRAIT_" .. sMinorType))
+					bBonusFound = true
+				end
+			end
+		end
+	end
+
+	if not bBonusFound then
+		table_insert(tUCSBonuses, sNoUCSBonusesFound)
+	end
+	
+	Controls.UCSInfo:SetHide(false)
+	
+	if sUCSInfoHide == false then
+		Controls.UCSInfo:SetText("")
+		Controls.UCSLabel:SetText(sUCSInfoTitle)
+		Controls.UCSInfo:SetToolTipString(table_concat(tUCSBonuses, ""))
+		Controls.UCSLabel:SetToolTipString(table_concat(tUCSBonuses, ""))
+	else
+		Controls.UCSInfo:SetText("")
+		Controls.UCSLabel:SetText(sUCSInfoTitle)
+		Controls.UCSInfo:SetToolTipString(sTextEnableUCS)
+		Controls.UCSLabel:SetToolTipString(sTextEnableUCS)
+	end
 
 	-- Peace
 	if (not isAtWar) then
@@ -466,38 +521,38 @@ function OnDisplay()
 
 			if m_PopupInfo.Text == "GOLD" then
 				sRandTrait1 = string.format("TXT_KEY_CITY_STATE_GREETING_MERCANTILE_%s", iRandomTraitText)
-				sRandTrait2 = sRandPersonality2 .. " " .. Locale.ConvertTextKey(sRandTrait1)
+				sRandTrait2 = sRandPersonality2 .. " " .. L(sRandTrait1)
 			elseif m_PopupInfo.Text == "FAITH" then
 				sRandTrait1 = string.format("TXT_KEY_CITY_STATE_GREETING_RELIGIOUS_%s", iRandomTraitText)
-				sRandTrait2 = sRandPersonality2 .. " " .. Locale.ConvertTextKey(sRandTrait1)
+				sRandTrait2 = sRandPersonality2 .. " " .. L(sRandTrait1)
 			elseif m_PopupInfo.Text == "CULTURE" then
 				sRandTrait1 = string.format("TXT_KEY_CITY_STATE_GREETING_CULTURED_%s", iRandomTraitText)
-				sRandTrait2 = sRandPersonality2 .. " " .. Locale.ConvertTextKey(sRandTrait1)
+				sRandTrait2 = sRandPersonality2 .. " " .. L(sRandTrait1)
 			elseif m_PopupInfo.Text == "FOOD" then
 				sRandTrait1 = string.format("TXT_KEY_CITY_STATE_GREETING_MARITIME_%s", iRandomTraitText)
-				sRandTrait2 = sRandPersonality2 .. " " .. Locale.ConvertTextKey(sRandTrait1)
+				sRandTrait2 = sRandPersonality2 .. " " .. L(sRandTrait1)
 			else
 				sRandTrait1 = string.format("TXT_KEY_CITY_STATE_GREETING_MILITARISTIC_%s", iRandomTraitText)
-				sRandTrait2 = sRandPersonality2 .. " " .. Locale.ConvertTextKey(sRandTrait1)
+				sRandTrait2 = sRandPersonality2 .. " " .. L(sRandTrait1)
 			end
 			
 			local sRandBonus1 = string.format("TXT_KEY_MINOR_CIV_%sCONTACT_BONUS_%s_%s", (bFirstMajorCiv and "FIRST_" or ""), m_PopupInfo.Text, iRandomBonusText)
 
 			if (m_PopupInfo.Data3 == 0) then
-				strGiftString = Locale.ConvertTextKey("TXT_KEY_MINOR_CIV_CONTACT_BONUS_NOTHING_1")
+				strGiftString = L("TXT_KEY_MINOR_CIV_CONTACT_BONUS_NOTHING_1")
 			else
 				if bFirstMajorCiv then
 					if (m_PopupInfo.Text == "UNIT") then
 						if m_PopupInfo.Data2 ~= 0 then
-							strGiftString = sRandTrait2 .. " " .. Locale.ConvertTextKey(sRandBonus1, GameInfo.Units[m_PopupInfo.Data2].Description)
+							strGiftString = sRandTrait2 .. " " .. L(sRandBonus1, GameInfo.Units[m_PopupInfo.Data2].Description)
 						else
-							strGiftString = Locale.Lookup(sRandFriendship, leaderPlace) .. " " .. Locale.ConvertTextKey(sRandTrait1)
+							strGiftString = Locale.Lookup(sRandFriendship, leaderPlace) .. " " .. L(sRandTrait1)
 						end
 					else
-						strGiftString = sRandTrait2 .. " " .. Locale.ConvertTextKey(sRandBonus1, m_PopupInfo.Data2)
+						strGiftString = sRandTrait2 .. " " .. L(sRandBonus1, m_PopupInfo.Data2)
 					end
 				else
-					strGiftString = Locale.Lookup(sRandFriendship, leaderPlace) .. " " .. Locale.ConvertTextKey(sRandTrait1)
+					strGiftString = Locale.Lookup(sRandFriendship, leaderPlace) .. " " .. L(sRandTrait1)
 				end
 			end
 			
@@ -505,44 +560,44 @@ function OnDisplay()
 		
 		-- Were we sent here because we clicked a notification for a new quest?
 		elseif (m_lastAction == kiNoAction and m_isNewQuestAvailable) then
-			strText = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_DIPLO_HELLO_QUEST_MESSAGE")
+			strText = L("TXT_KEY_CITY_STATE_DIPLO_HELLO_QUEST_MESSAGE")
 
 		-- Did we just make peace?
 		elseif (m_lastAction == kiMadePeace) then
-			strText = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_DIPLO_PEACE_JUST_MADE")
+			strText = L("TXT_KEY_CITY_STATE_DIPLO_PEACE_JUST_MADE")
 
 		-- Did we just bully gold?
 		elseif (m_lastAction == kiBulliedGold) then
-			strText = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_DIPLO_JUST_BULLIED")
+			strText = L("TXT_KEY_CITY_STATE_DIPLO_JUST_BULLIED")
 
 		-- Did we just bully a worker?
 		elseif (m_lastAction == kiBulliedUnit) then
-			strText = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_DIPLO_JUST_BULLIED_WORKER")
+			strText = L("TXT_KEY_CITY_STATE_DIPLO_JUST_BULLIED_WORKER")
 
 		-- Did we just give gold?
 		elseif (m_lastAction == kiGiftedGold) then
-			strText = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_DIPLO_JUST_SUPPORTED")
+			strText = L("TXT_KEY_CITY_STATE_DIPLO_JUST_SUPPORTED")
 
 		-- Did we just PtP?
 		elseif (m_lastAction == kiPledgedToProtect) then
-			strText = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_PLEDGE_RESPONSE")
+			strText = L("TXT_KEY_CITY_STATE_PLEDGE_RESPONSE")
 
 		-- Did we just revoke a PtP?
 		elseif (m_lastAction == kiRevokedProtection) then
-			strText = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_DIPLO_JUST_REVOKED_PROTECTION")
+			strText = L("TXT_KEY_CITY_STATE_DIPLO_JUST_REVOKED_PROTECTION")
 
 		-- Normal peaceful hello, with info about active quests
 		else
 			local iPersonality = minorPlayer:GetPersonality()
 			
 			if minorPlayer:IsProtectedByMajor(activePlayerID) then
-				strText = Locale.ConvertTextKey(string.format("TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_PROTECTED_%s", iRandomVisitText))
+				strText = L(string.format("TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_PROTECTED_%s", iRandomVisitText))
 			elseif (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_FRIENDLY) then
-				strText = Locale.ConvertTextKey(string.format("TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_FRIENDLY_%s", iRandomVisitText))
+				strText = L(string.format("TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_FRIENDLY_%s", iRandomVisitText))
 			elseif (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_NEUTRAL) then
-				strText = Locale.ConvertTextKey(string.format("TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_NEUTRAL_%s", iRandomVisitText))
+				strText = L(string.format("TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_NEUTRAL_%s", iRandomVisitText))
 			elseif (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_HOSTILE) then
-				strText = Locale.ConvertTextKey(string.format("TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_HOSTILE_%s", iRandomVisitText))
+				strText = L(string.format("TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_HOSTILE_%s", iRandomVisitText))
 			end
 
 			local strQuestString = ""
@@ -563,7 +618,7 @@ function OnDisplay()
 								if (iNumPlayersAtWar ~= 0) then
 									strWarString = strWarString .. ", "
 								end
-								strWarString = strWarString .. Locale.ConvertTextKey(pOtherPlayer:GetNameKey())
+								strWarString = strWarString .. L(pOtherPlayer:GetNameKey())
 
 								iNumPlayersAtWar = iNumPlayersAtWar + 1
 							end
@@ -580,9 +635,9 @@ function OnDisplay()
 			-- Player has said to turn it off
 			local strSpawnText
 			if (minorPlayer:IsMinorCivUnitSpawningDisabled(activePlayerID)) then
-				strSpawnText = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_TURN_SPAWNING_ON")
+				strSpawnText = L("TXT_KEY_CITY_STATE_TURN_SPAWNING_ON")
 			else
-				strSpawnText = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_TURN_SPAWNING_OFF")
+				strSpawnText = L("TXT_KEY_CITY_STATE_TURN_SPAWNING_OFF")
 			end
 			Controls.NoUnitSpawningLabel:SetText(strSpawnText)
 		else
@@ -598,11 +653,11 @@ function OnDisplay()
 	else
 		-- Warmongering player
 		if (minorPlayer:IsPeaceBlocked(activeTeamID)) then
-			strText = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_DIPLO_HELLO_WARMONGER")
+			strText = L("TXT_KEY_CITY_STATE_DIPLO_HELLO_WARMONGER")
 			Controls.PeaceButton:SetHide(true)
 		-- Normal War
 		else
-			strText = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_DIPLO_HELLO_WAR")
+			strText = L("TXT_KEY_CITY_STATE_DIPLO_HELLO_WAR")
 			Controls.PeaceButton:SetHide(false)
 		end
 
@@ -689,8 +744,8 @@ function OnDisplay()
 
 	if(not minorPlayer:IsMarried(activePlayerID)) then
 		local iBuyoutCost = minorPlayer:GetMarriageCost(activePlayerID)
-		local strButtonLabel = Locale.ConvertTextKey( "TXT_KEY_POP_CSTATE_BUYOUT")
-		local strToolTip = Locale.ConvertTextKey( "TXT_KEY_POP_CSTATE_MARRIAGE_TT", iBuyoutCost )
+		local strButtonLabel = L( "TXT_KEY_POP_CSTATE_BUYOUT")
+		local strToolTip = L( "TXT_KEY_POP_CSTATE_MARRIAGE_TT", iBuyoutCost )
 		if minorPlayer:CanMajorMarry(activePlayerID) and not isAtWar then	
 			Controls.MarriageButton:SetHide(false)
 			Controls.MarriageAnim:SetHide(false)
@@ -698,10 +753,10 @@ function OnDisplay()
 			if (minorPlayer:GetAlly() == activePlayerID) then
 				local iAllianceTurns = minorPlayer:GetAlliedTurns()
 				strButtonLabel = "[COLOR_WARNING_TEXT]" .. strButtonLabel .. "[ENDCOLOR]"
-				strToolTip = Locale.ConvertTextKey("TXT_KEY_POP_CSTATE_MARRIAGE_DISABLED_ALLY_TT", GameDefines.MINOR_CIV_BUYOUT_TURNS, iAllianceTurns, iBuyoutCost)
+				strToolTip = L("TXT_KEY_POP_CSTATE_MARRIAGE_DISABLED_ALLY_TT", GameDefines.MINOR_CIV_BUYOUT_TURNS, iAllianceTurns, iBuyoutCost)
 			else
 				strButtonLabel = "[COLOR_WARNING_TEXT]" .. strButtonLabel .. "[ENDCOLOR]"
-				strToolTip = Locale.ConvertTextKey("TXT_KEY_POP_CSTATE_MARRIAGE_DISABLED_TT", GameDefines.MINOR_CIV_BUYOUT_TURNS, iBuyoutCost)
+				strToolTip = L("TXT_KEY_POP_CSTATE_MARRIAGE_DISABLED_TT", GameDefines.MINOR_CIV_BUYOUT_TURNS, iBuyoutCost)
 			end
 			
 			Controls.MarriageButton:SetHide(false)
@@ -789,15 +844,15 @@ function getProtectingPlayers(iMinorCivID)
 					local iApproach = pActivePlayer:GetApproachTowardsUsGuess(iPlayerLoop)
 						
 					if iApproach == -1 or iApproach == 6 then 
-						sProtecting = sProtecting .. "[COLOR_FADING_POSITIVE_TEXT]" .. Locale.ConvertTextKey(Players[iPlayerLoop]:GetCivilizationShortDescriptionKey()) .. "[ENDCOLOR]"
+						sProtecting = sProtecting .. "[COLOR_FADING_POSITIVE_TEXT]" .. L(Players[iPlayerLoop]:GetCivilizationShortDescriptionKey()) .. "[ENDCOLOR]"
 					elseif iApproach <= 2 then
-						sProtecting = sProtecting .. "[COLOR_NEGATIVE_TEXT]" .. Locale.ConvertTextKey(Players[iPlayerLoop]:GetCivilizationShortDescriptionKey()) .. "[ENDCOLOR]"
+						sProtecting = sProtecting .. "[COLOR_NEGATIVE_TEXT]" .. L(Players[iPlayerLoop]:GetCivilizationShortDescriptionKey()) .. "[ENDCOLOR]"
 					elseif iApproach == 3 then
-						sProtecting = sProtecting .. "[COLOR_PLAYER_LIGHT_ORANGE_TEXT]" .. Locale.ConvertTextKey(Players[iPlayerLoop]:GetCivilizationShortDescriptionKey()) .. "[ENDCOLOR]"
+						sProtecting = sProtecting .. "[COLOR_PLAYER_LIGHT_ORANGE_TEXT]" .. L(Players[iPlayerLoop]:GetCivilizationShortDescriptionKey()) .. "[ENDCOLOR]"
 					elseif iApproach == 4 then
-						sProtecting = sProtecting .. "[COLOR_MAGENTA]" .. Locale.ConvertTextKey(Players[iPlayerLoop]:GetCivilizationShortDescriptionKey()) .. "[ENDCOLOR]"
+						sProtecting = sProtecting .. "[COLOR_MAGENTA]" .. L(Players[iPlayerLoop]:GetCivilizationShortDescriptionKey()) .. "[ENDCOLOR]"
 					elseif iApproach == 5 then
-						sProtecting = sProtecting .. "[COLOR_POSITIVE_TEXT]" .. Locale.ConvertTextKey(Players[iPlayerLoop]:GetCivilizationShortDescriptionKey()) .. "[ENDCOLOR]"
+						sProtecting = sProtecting .. "[COLOR_POSITIVE_TEXT]" .. L(Players[iPlayerLoop]:GetCivilizationShortDescriptionKey()) .. "[ENDCOLOR]"
 					end
 				end
 			end
@@ -832,36 +887,36 @@ function GetCityStateStatusText( majorPlayerID, minorPlayerID )
 		-- Status:
 		-- Allies
 		if minorPlayer:IsAllies(majorPlayerID) then
-			strStatusText = "[COLOR_CYAN]" .. Locale.ConvertTextKey("TXT_KEY_ALLIES")
+			strStatusText = "[COLOR_CYAN]" .. L("TXT_KEY_ALLIES")
 		
 		-- Friends
 		elseif minorPlayer:IsFriends(majorPlayerID) then
-			strStatusText = "[COLOR_POSITIVE_TEXT]" .. Locale.ConvertTextKey("TXT_KEY_FRIENDS")
+			strStatusText = "[COLOR_POSITIVE_TEXT]" .. L("TXT_KEY_FRIENDS")
 		
 		-- Permanent War
 		elseif minorPlayer:IsMinorPermanentWar(majorTeamID) then
-			strStatusText = "[COLOR_NEGATIVE_TEXT]" .. Locale.ConvertTextKey("TXT_KEY_PERMANENT_WAR")
+			strStatusText = "[COLOR_NEGATIVE_TEXT]" .. L("TXT_KEY_PERMANENT_WAR")
 		
 		-- Peace blocked by being at war with ally
 		elseif minorPlayer:IsPeaceBlocked(majorTeamID) then
-			strStatusText = "[COLOR_FADING_NEGATIVE_TEXT]" .. Locale.ConvertTextKey("TXT_KEY_PEACE_BLOCKED")
+			strStatusText = "[COLOR_FADING_NEGATIVE_TEXT]" .. L("TXT_KEY_PEACE_BLOCKED")
 		
 		-- War
 		elseif isAtWar then
-			strStatusText = "[COLOR_NEGATIVE_TEXT]" .. Locale.ConvertTextKey("TXT_KEY_WAR")
+			strStatusText = "[COLOR_NEGATIVE_TEXT]" .. L("TXT_KEY_WAR")
 
 		elseif majorInfluenceWithMinor < GameDefines.FRIENDSHIP_THRESHOLD_NEUTRAL then
 			-- Afraid
 			if minorPlayer:CanMajorBullyGold(majorPlayerID) then
-				strStatusText = "[COLOR_PLAYER_LIGHT_ORANGE_TEXT]"..Locale.ConvertTextKey("TXT_KEY_AFRAID").."[ENDCOLOR]"
+				strStatusText = "[COLOR_PLAYER_LIGHT_ORANGE_TEXT]"..L("TXT_KEY_AFRAID").."[ENDCOLOR]"
 			-- Angry
 			else
-				strStatusText = "[COLOR_MAGENTA]"..Locale.ConvertTextKey("TXT_KEY_ANGRY")
+				strStatusText = "[COLOR_MAGENTA]"..L("TXT_KEY_ANGRY")
 			end
 		
 		-- Neutral
 		else
-			strStatusText = "[COLOR_WHITE]" .. Locale.ConvertTextKey("TXT_KEY_CITY_STATE_PERSONALITY_NEUTRAL")
+			strStatusText = "[COLOR_WHITE]" .. L("TXT_KEY_CITY_STATE_PERSONALITY_NEUTRAL")
 		end
 		
 		strStatusText = strStatusText .. "[ENDCOLOR]"
@@ -870,7 +925,7 @@ function GetCityStateStatusText( majorPlayerID, minorPlayerID )
 			strStatusText = strStatusText .. " " .. majorInfluenceWithMinor .. " [ICON_INFLUENCE]"
 			
 			if majorInfluenceWithMinor ~= 0 then
-				strStatusText = strStatusText .. (" (%+2.2g [ICON_INFLUENCE] / "):format(minorPlayer:GetFriendshipChangePerTurnTimes100(majorPlayerID) / 100) .. Locale.ConvertTextKey("TXT_KEY_DO_TURN") .. ")" --"TXT_KEY_CITY_STATE_TITLE_TOOL_TIP_CURRENT"
+				strStatusText = strStatusText .. (" (%+2.2g [ICON_INFLUENCE] / "):format(minorPlayer:GetFriendshipChangePerTurnTimes100(majorPlayerID) / 100) .. L("TXT_KEY_DO_TURN") .. ")" --"TXT_KEY_CITY_STATE_TITLE_TOOL_TIP_CURRENT"
 			end
 		end
 	else
@@ -1010,9 +1065,9 @@ function OnStopStartSpawning()
 	-- Update the text based on what state we're changing to
 	local strSpawnText
 	if (bSpawningDisabled) then
-		strSpawnText = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_TURN_SPAWNING_OFF")
+		strSpawnText = L("TXT_KEY_CITY_STATE_TURN_SPAWNING_OFF")
 	else
-		strSpawnText = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_TURN_SPAWNING_ON")
+		strSpawnText = L("TXT_KEY_CITY_STATE_TURN_SPAWNING_ON")
 	end
 
 	Controls.NoUnitSpawningLabel:SetText(strSpawnText)
@@ -1084,8 +1139,8 @@ function PopulateGiftChoices()
 	-- Unit
 	local iInfluence = minorPlayer:GetFriendshipFromUnitGift(activePlayerID, false, true)
 	local iTravelTurns = GameDefines.MINOR_UNIT_GIFT_TRAVEL_TURNS
-	local buttonText = Locale.ConvertTextKey("TXT_KEY_POP_CSTATE_GIFT_UNIT", iInfluence)
-	local tooltipText = Locale.ConvertTextKey("TXT_KEY_POP_CSTATE_GIFT_UNIT_TT", iTravelTurns, iInfluence)
+	local buttonText = L("TXT_KEY_POP_CSTATE_GIFT_UNIT", iInfluence)
+	local tooltipText = L("TXT_KEY_POP_CSTATE_GIFT_UNIT_TT", iTravelTurns, iInfluence)
 	
 	if minorPlayer:GetIncomingUnitCountdown(activePlayerID) >= 0 then
 		buttonText = "[COLOR_WARNING_TEXT]" .. buttonText .. "[ENDCOLOR]"
@@ -1104,7 +1159,7 @@ function PopulateGiftChoices()
 	-- Tile Improvement
 	-- Only allowed for allies
 	iGold = minorPlayer:GetGiftTileImprovementCost(activePlayerID)
-	local buttonText = Locale.ConvertTextKey("TXT_KEY_POPUP_MINOR_GIFT_TILE_IMPROVEMENT", iGold)
+	local buttonText = L("TXT_KEY_POPUP_MINOR_GIFT_TILE_IMPROVEMENT", iGold)
 	
 	if not minorPlayer:CanMajorGiftTileImprovement(activePlayerID) then
 		buttonText = "[COLOR_WARNING_TEXT]" .. buttonText .. "[ENDCOLOR]"
@@ -1263,17 +1318,17 @@ function BullyAction(action)
 	
 	if action == kiDeclaredWar then
 		if #listofProtectingCivs >= 1 then
-			bullyConfirmString = Locale.ConvertTextKey("TXT_KEY_CONFIRM_WAR_PROTECTED_CITY_STATE", cityStateName ) .. " " .. table.concat(listofProtectingCivs, ", ")
+			bullyConfirmString = L("TXT_KEY_CONFIRM_WAR_PROTECTED_CITY_STATE", cityStateName ) .. " " .. table.concat(listofProtectingCivs, ", ")
 		else
-			bullyConfirmString = cityStateName .. ": " .. Locale.ConvertTextKey("TXT_KEY_CONFIRM_WAR")
+			bullyConfirmString = cityStateName .. ": " .. L("TXT_KEY_CONFIRM_WAR")
 		end
 	else
 		if #listofProtectingCivs == 1 then
-			bullyConfirmString = Locale.ConvertTextKey("TXT_KEY_CONFIRM_BULLY_PROTECTED_CITY_STATE", cityStateName, listofProtectingCivs[1])
+			bullyConfirmString = L("TXT_KEY_CONFIRM_BULLY_PROTECTED_CITY_STATE", cityStateName, listofProtectingCivs[1])
 		elseif #listofProtectingCivs > 1 then
-			bullyConfirmString = Locale.ConvertTextKey("TXT_KEY_CONFIRM_BULLY_PROTECTED_CITY_STATE_MULTIPLE", cityStateName, table.concat(listofProtectingCivs, ", "))
+			bullyConfirmString = L("TXT_KEY_CONFIRM_BULLY_PROTECTED_CITY_STATE_MULTIPLE", cityStateName, table.concat(listofProtectingCivs, ", "))
 		else
-			bullyConfirmString = Locale.ConvertTextKey("TXT_KEY_CONFIRM_BULLY", cityStateName)
+			bullyConfirmString = L("TXT_KEY_CONFIRM_BULLY", cityStateName)
 		end
 	end
 

@@ -3,7 +3,7 @@
 <!-- modified and expanded by adan_eslavo -->
 <Context Font="TwCenMT20" ColorSet="Beige_Black_Alpha" FontStyle="Shadow">
 	<Box Style="BGBlock_ClearTopBar" ID="BGBlock"/>
-	
+
 	<Grid Size="560,605" Anchor="C,C" Offset="0,100" Padding="0,0" Style="Grid9DetailFive140" ConsumeMouse="1">
 		<!-- Leader picture -->
 		<Label ID="LeaderLabel" Anchor="C,T" Offset="0,20" Font="TwCenMT20" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" String="TXT_KEY_CITY_STATE_NOBODY"/>
@@ -24,7 +24,7 @@
 
 			<!-- Body Text -->
 			<Label Anchor="C,T" Offset="-2,0" WrapWidth="514" LeadingOffset="-4" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" ID="DescriptionLabel" String="A city-state is an independent country whose territory consists of a city which is not administered as part of another local government."/>
-			
+
 			<!-- Background image -->
 			<Image Anchor="C,B" Texture="blank_texture.dds" Size="1.1">
 				<Image ID="BackgroundImage" Anchor="C,T" Offset="3,-5" Texture="blank_texture.dds" Size="527.261"/>
@@ -41,65 +41,70 @@
 					<Image Anchor="C,C" Offset="1,0" Texture="CityStateMeterBase.dds" Size="161,7" Hidden="0" Color="White.160"/>
 					<TextureBar ID="NegativeStatusMeter" Anchor="L,C" Size="81.7" Direction="Left" Texture="Assets/UI/Art/Notification/CityStateMeterBaseRed.dds" Hidden="0"/>
 					<TextureBar ID="PositiveStatusMeter" Anchor="R,C" Size="81.7" Direction="Right" Texture="Assets/UI/Art/Notification/CityStateMeterBaseBlue.dds" Hidden="0"/>
-					
+
 					<Image Anchor="C,C" Offset="0,0" Texture="Assets/UI/Art/Notification/CityStateMeterFrameQuartered.dds" Size="161.11" Hidden="0">
 						<!-- Austrian Married Button -->
 						<Label ID="MarriedButton" Anchor="C,C" Offset="150,-2" Size="60.15" Hidden="0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" />
-					
+
 						<Label ID="StatusLabel" AnchorSide="I.O" Anchor="L,T" Offset="22,9" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" String="TXT_KEY_POP_CSTATE_STATUS">
 							<Label ID="StatusInfo" Anchor="R,T" AnchorSide="O.I" Offset="12,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha"/>
 						</Label>
 					</Image>
-					
+
 					<Image ID="StatusMeterMarker" Anchor="C,C" Offset="0,1" Texture="Assets/UI/Art/Notification/CityStateMeterFrameIcon32.dds" Size="32.32" Hidden="0"/>
 				</Container>
 			</Box>
 
-			<Stack Anchor="C,T" Offset="-73,-10" Padding="12" StackGrowth="Bottom">
+			<Stack Anchor="C,T" Offset="-168,-55" Padding="12" StackGrowth="Bottom">
+				<!-- CS Bonuses Info Tab -->
+				<Label ID="UCSLabel" Anchor="R,T" Offset="20,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" String="TXT_KEY_POP_CSTATE_UCS_INFO_TAB">
+					<Label ID="UCSInfo" String="Information" Anchor="R,T" AnchorSide="O.I" Offset="0,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha"/>
+				</Label>
+
 				<!-- Active Quests-->
-				<Label ID="QuestLabel" Anchor="R,T" Offset="0,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" String="TXT_KEY_POP_CSTATE_QUESTS">
+				<Label ID="QuestLabel" Anchor="R,T" Offset="-20,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" String="TXT_KEY_POP_CSTATE_QUESTS">
 					<TextButton ID="QuestInfo" String="Information" Anchor="R,T" AnchorSide="O.I" Offset="10,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha"/>
 				</Label>
-				
+
 				<!-- Ally -->
-				<Label ID="AllyLabel" Anchor="R,T" Offset="0,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" String="TXT_KEY_POP_CSTATE_ALLIED_WITH">
+				<Label ID="AllyLabel" Anchor="R,T" Offset="-20,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" String="TXT_KEY_POP_CSTATE_ALLIED_WITH">
 					<Container ID="AllyIconContainer" Size="32,32" Anchor="R,T" Offset="0,-10" AnchorSide="O.I">
 						<Image ID="AllyIconBG" Size="32,32" Anchor="C,C" Offset="4,0" TextureOffset="32,0" Texture="CivIconBGSizes.dds"/>
 						<Image ID="AllyIconShadow" Size="24,24" Anchor="C,C" Offset="4,1" Texture="CivSymbolAtlas32.dds" Color="Black.128"/>
 						<Image ID="AllyIcon" Size="24,24" Offset="3,0" Anchor="C,C" Texture="CivSymbolsColor256.dds"/>
 					</Container>
-			
+
 					<Label ID="AllyText" String="Information" Anchor="R,T" AnchorSide="O.I" Offset="12,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha"/>
 				</Label>
 
 				<!-- Protection -->
-				<Label ID="ProtectLabel" Anchor="R,T" Offset="0,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" String="TXT_KEY_POP_CSTATE_PROTECTED_BY">
+				<Label ID="ProtectLabel" Anchor="R,T" Offset="-20,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" String="TXT_KEY_POP_CSTATE_PROTECTED_BY">
 					<Label ID="ProtectInfo"  String="Information" WrapWidth="300" Anchor="R,T" AnchorSide="O.I" Offset="13,0"  Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" />
 				</Label>
 
 				<!-- Contender -->
-				<Label ID="ContenderLabel" Anchor="R,T" Offset="0,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" String="TXT_KEY_POP_CSTATE_LABEL_CONTENDER">
+				<Label ID="ContenderLabel" Anchor="R,T" Offset="-20,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" String="TXT_KEY_POP_CSTATE_LABEL_CONTENDER">
 					<Container ID="ContenderIconContainer" Size="32,32" Anchor="R,T" Offset="0,-10" AnchorSide="O.I">
 						<Image ID="ContenderIconBG" Size="32,32" Anchor="C,C" Offset="4,0" TextureOffset="32,0" Texture="CivIconBGSizes.dds"/>
 						<Image ID="ContenderIconShadow" Size="24,24" Anchor="C,C" Offset="4,1" Texture="CivSymbolAtlas32.dds" Color="Black.128"/>
 						<Image ID="ContenderIcon" Size="24,24" Offset="3,0" Anchor="C,C" Texture="CivSymbolsColor256.dds"/>
 					</Container>
-					
+
 					<Label ID="ContenderInfo"  String="Information" WrapWidth="300" Anchor="R,T" AnchorSide="O.I" Offset="36,0"  Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" />
 				</Label>
-			
+
 				<!-- Trait -->
-				<Label ID="TraitLabel" Anchor="R,T" Offset="0,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" String="TXT_KEY_POP_CSTATE_TRAIT">
+				<Label ID="TraitLabel" Anchor="R,T" Offset="-20,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" String="TXT_KEY_POP_CSTATE_TRAIT">
 					<Label ID="TraitInfo" String="Information" Anchor="R,T" AnchorSide="O.I" Offset="12,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha"/>
 				</Label>
 
 				<!-- Personality  -->
-				<Label ID="PersonalityLabel" Anchor="R,T" Offset="0,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" String="TXT_KEY_POP_CSTATE_PERSONALITY">
+				<Label ID="PersonalityLabel" Anchor="R,T" Offset="-20,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" String="TXT_KEY_POP_CSTATE_PERSONALITY">
 					<Label ID="PersonalityInfo" String="Information" Anchor="R,T" AnchorSide="O.I" Offset="12,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha"/>
 				</Label>
 
 				<!-- Resources -->
-				<Label ID="ResourcesLabel" Anchor="R,T" Offset="-48,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" String="TXT_KEY_POP_CSTATE_RESOURCES_CSL">
+				<Label ID="ResourcesLabel" Anchor="R,T" Offset="-68,0" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha" String="TXT_KEY_POP_CSTATE_RESOURCES_CSL">
 					<Label ID="ResourcesInfo" String="Information" WrapWidth="460" Anchor="R,T" AnchorSide="O.I" Offset="-265,21" Font="TwCenMT16" FontStyle="Shadow" ColorSet="Beige_Black_Alpha"/>
 				</Label>
 			</Stack>
@@ -109,7 +114,7 @@
 				<ScrollBar Anchor="R,T" Offset="0.18" AnchorSide="O,I" Length="189" Style="VertSlider"/>
 				<UpButton Anchor="R,T" AnchorSide="O,I" Style="ScrollBarUp"/>
 				<DownButton Anchor="R,T" Offset="0.207" AnchorSide="O,I" Style="ScrollBarDown"/>
-				
+
 				<!--=======================================================================================================================-->
 				<!--Basic Buttons Stack-->
 				<!--=======================================================================================================================-->
@@ -121,7 +126,7 @@
 					<Button Size="500,28" Hidden="1" Anchor="C,C" Offset="0,0" ID="PeaceButton">
 						<Label ID="PeaceLabel" Anchor="C,C" Offset="0,-2" Font="TwCenMT18" String="TXT_KEY_POP_CSTATE_MAKE_PEACE"/>
 						<Image Anchor="C,B" Offset="-5,2" Texture="bar500x2.dds" Size="500,1"/>
-					
+
 						<ShowOnMouseOver>
 							<AlphaAnim ID="PeaceAnim" Anchor="C,C" Offset="-5,0" Size="500,30" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1">
 								<Grid ID="PeaceButtonHL" Size="500,30" Offset="0,0" Padding="0,0" Style="Grid9FrameTurnsHL"/>
@@ -133,7 +138,7 @@
 					<Button Size="500,28" Anchor="C,C" Offset="0,0" ID="GiveButton" ToolTip="TXT_KEY_POP_CSTATE_GIFT_GOLD_TT">
 						<Label ID="GiveLabel" Anchor="C,C" Offset="0,-2" Font="TwCenMT18" String="TXT_KEY_POP_CSTATE_GIFT_GOLD"/>
 						<Image Anchor="C,B" Offset="-5,2" Texture="bar500x2.dds" Size="500,1"/>
-		
+
 						<ShowOnMouseOver>
 							<AlphaAnim ID="GiveAnim" Anchor="C,C" Offset="-5,-1" Size="500,30" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1">
 								<Grid ID="GiveButtonHL" Size="500,30" Offset="0,0" Padding="0,0" Style="Grid9FrameTurnsHL"/>
@@ -157,7 +162,7 @@
 					<Button Size="500,28" Anchor="C,C" Offset="0,-2" ID="RevokePledgeButton" ToolTip="TXT_KEY_POP_CSTATE_REVOKE_PROTECTION_TT">
 						<Label ID="RevokePledgeLabel" Anchor="C,C" Offset="0,-2" Font="TwCenMT18" String="TXT_KEY_POP_CSTATE_REVOKE_PROTECTION"/>
 						<Image Anchor="C,B" Offset="-5,2" Texture="bar500x2.dds" Size="500,1"/>
-					
+
 						<ShowOnMouseOver>
 							<AlphaAnim ID="RevokePledgeAnim" Anchor="C,C" Offset="-5,0" Size="500,30" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1">
 								<Grid ID="RevokePledgeButtonHL" Size="500,30" Offset="0,0" Padding="0,0" Style="Grid9FrameTurnsHL"/>
@@ -169,7 +174,7 @@
 					<Button Size="500,28" Anchor="C,C" Offset="0,-2" ID="TakeButton" ToolTip="TXT_KEY_POP_CSTATE_BULLY_TT">
 						<Label ID="TakeLabel" Anchor="C,C" Offset="0,-2" Font="TwCenMT18" String="TXT_KEY_POP_CSTATE_BULLY"/>
 						<Image Anchor="C,B" Offset="-5,2" Texture="bar500x2.dds" Size="500,1"/>
-	
+
 						<ShowOnMouseOver>
 							<AlphaAnim ID="TakeAnim" Anchor="C,C" Offset="-5,-1" Size="500,30" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1">
 								<Grid ID="TakeButtonHL" Size="500,30" Offset="0,0" Padding="0,0" Style="Grid9FrameTurnsHL"/>
@@ -181,7 +186,7 @@
 					<Button Size="500,28" Anchor="C,C" Offset="0,-2" ID="WarButton">
 						<Label ID="WarLabel" Anchor="C,C" Offset="0,-2" Font="TwCenMT18" String="TXT_KEY_POP_CSTATE_DECLARE_WAR"/>
 						<Image Anchor="C,B" Offset="-5,2" Texture="bar500x2.dds" Size="500,1"/>
-						
+
 						<ShowOnMouseOver>
 							<AlphaAnim ID="WarAnim" Anchor="C,C" Offset="-5,-1" Size="500,30" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1">
 								<Grid ID="WarButtonHL" Size="500,30" Offset="0,0" Padding="0,0" Style="Grid9FrameTurnsHL"/>
@@ -193,7 +198,7 @@
 					<Button Hidden="0" Size="500,28" Anchor="C,C" Offset="0,-2" ID="NoUnitSpawningButton" ToolTip="TXT_KEY_POP_CSTATE_STOP_UNITS_TT">
 						<Label Anchor="C,C" Offset="0,-2" ID="NoUnitSpawningLabel" Font="TwCenMT18" String="TXT_KEY_POP_CSTATE_STOP_UNIT_SPAWNING"/>
 						<Image Anchor="C,B" Offset="-5,2" Texture="bar500x2.dds" Size="500,1"/>
-						
+
 						<ShowOnMouseOver>
 							<AlphaAnim ID="NoUnitSpawningAnim" Anchor="C,C" Offset="-5,-1" Size="500,30" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1">
 								<Grid ID="NoUnitSpawningButtonHL" Size="500,30" Offset="0,0" Padding="0,0" Style="Grid9FrameTurnsHL"/>
@@ -205,7 +210,7 @@
 					<Button Hidden="0" Size="500,28" Anchor="C,C" Offset="0,-2" ID="MarriageButton" ToolTip="">
 						<Label Anchor="C,C" Offset="0,-2" ID="MarriageLabel" Font="TwCenMT18" String="TXT_KEY_POP_CSTATE_BUYOUT"/>
 						<Image Anchor="C,B" Offset="-5,2" Texture="bar500x2.dds" Size="500,1"/>
-				
+
 						<ShowOnMouseOver>
 							<AlphaAnim ID="MarriageAnim" Anchor="C,C" Offset="-5,-1" Size="500,30" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1">
 								<Grid ID="MarriageButtonHL" Size="500,30" Offset="0,0" Padding="0,0" Style="Grid9FrameTurnsHL"/>
@@ -249,7 +254,7 @@
 					<Button Size="500,28" Hidden="0" Anchor="C,C" Offset="0,-1" ID="ExitGiveButton">
 						<Label Anchor="C,C" Offset="0,-1" Font="TwCenMT18" String="TXT_KEY_BACK_BUTTON"/>
 						<Image Anchor="C,B" Offset="0,1" Texture="bar500x2.dds" Size="500.1"/>
-						
+
 						<ShowOnMouseOver>
 							<AlphaAnim Anchor="C,C" Offset="-5,-1" Size="500,33" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1">
 								<Grid Size="500,33" Offset="0,0" Padding="0,0" Style="Grid9FrameTurnsHL"/>
@@ -281,7 +286,7 @@
 					<Button Size="500,28" Anchor="C,C" Offset="0,-2" ID="UnitTributeButton" ToolTip="">
 						<Label Anchor="C,C" Offset="0,-2" Font="TwCenMT18" ID="UnitTributeLabel" />
 						<Image Anchor="C,B" Offset="-5,2" Texture="bar500x2.dds" Size="500,1"/>
-						
+
 						<ShowOnMouseOver>
 							<AlphaAnim ID="UnitTributeAnim" Anchor="C,C" Offset="-5,-1" Size="500,30" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1">
 								<Grid ID="UnitTributeButtonHL" Size="500,30" Offset="0,0" Padding="0,0" Style="Grid9FrameTurnsHL"/>
@@ -293,7 +298,7 @@
 					<Button Size="500,28" Hidden="0" Anchor="C,C" Offset="0,-1" ID="ExitTakeButton">
 						<Label Anchor="C,C" Offset="0,-1" Font="TwCenMT18" String="TXT_KEY_BACK_BUTTON"/>
 						<Image Anchor="C,B" Offset="0,1" Texture="bar500x2.dds" Size="500.1"/>
-						
+
 						<ShowOnMouseOver>
 							<AlphaAnim Anchor="C,C" Offset="-5,-1" Size="500,33" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1">
 								<Grid Size="500,33" Offset="0,0" Padding="0,0" Style="Grid9FrameTurnsHL"/>
@@ -305,12 +310,12 @@
 		</Stack>
 
 		<Box Anchor="C,B" AnchorSide="I.I" Offset="0,54" Size="520,56" Color="255,255,255,0">
-			<!-- CLOSE BUTTON  -->
+			<!-- CLOSE BUTTON -->
 			<GridButton Anchor="L,B" Style="SmallButton" Size="65,30" Offset="2,-10" StateOffsetIncrement="0,0" ID="CloseButton">
 				<Label Anchor="C,C" Offset="0,0" String="TXT_KEY_CLOSE" Font="TwCenMT18" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"/>
 			</GridButton>
 
-			<!-- FIND ON MAP BUTTON  -->
+			<!-- FIND ON MAP BUTTON -->
 			<GridButton Anchor="R,B" Style="SmallButton" Size="95,24" Offset="0,480" StateOffsetIncrement="0,0" ID="FindOnMapButton">
 				<Label Anchor="C,C" Offset="0,0" String="TXT_KEY_POP_CSTATE_FIND_ON_MAP" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"/>
 			</GridButton>
@@ -323,7 +328,7 @@
 			<!-- Side treatments -->
 			<Box Style="MenuLeftSideTreatment"/>
 			<Box Style="MenuRightSideTreatment"/>
-			
+
 			<Image Anchor="C,T" AnchorSide="I.O" Offset="0,-14" Size="256,64" Texture="Top512IconTrim.dds">
 				<Image Anchor="C,C" Offset="0,-6" Size="80,80" Texture="NotificationFrameBase.dds">
 					<AlphaAnim Anchor="C,C" Offset="0,0" Size="80.80" Texture="assets\UI\Art\Notification\NotificationGenericGlow.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd=".5"/>
@@ -331,13 +336,13 @@
 			</Image>
 
 			<Label Anchor="C,T" Offset="0,74" WrapWidth="440" String="" ID="BullyConfirmLabel" Font="TwCenMT22" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"/>
-			
+
 			<Stack Anchor="C,B" Offset="0,80" Padding="24" StackGrowth="Bottom">
 				<!-- Yes Button  -->
 				<GridButton Style="BaseButton" ID="YesBully" Size="400,42" Anchor="C,T" Offset="0,0" Hidden="0">
 					<Label Anchor="C,C" Offset="0,0" String="TXT_KEY_YES_BUTTON" ColorSet="Beige_Black" Font="TwCenMT24" FontStyle="Shadow"/>
 				</GridButton>
-				
+
 				<!-- No Button  -->
 				<GridButton Style="BaseButton" ID="NoBully" Size="400,42" Anchor="C,T" Offset="0,0" Hidden="0">
 					<Label Anchor="C,C" Offset="0,0" String="TXT_KEY_NO_BUTTON" ColorSet="Beige_Black" Font="TwCenMT24" FontStyle="Shadow"/>
