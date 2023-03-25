@@ -1,4 +1,10 @@
 Changelog:
+v16:
+- fixed Heavy Tribute;
+- cleaned up the files;
+- fixed Managua leader name;
+- few historical accuracy tweaks;
+
 v15:
 - added compatibility for new UCS City-States (Andorra, Canossa, Thimphu, Tintagel, Levuka);
 - adjusted numerous old leader icons to better fit the frame;

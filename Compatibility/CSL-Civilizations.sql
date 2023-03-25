@@ -11,7 +11,6 @@ VALUES	('CSL-CIV-CAN', 	2),
 		('CSL-CIV-ISR', 	2),
 		('CSL-CIV-SUM', 	2),
 		('CSL-CIV-TIM', 	2),
-		('CSL-CIV-PHI', 	2),
 		('CSL-CIV-PAP', 	2),
 		('CSL-CIV-TIB', 	2),
 		('CSL-CIV-FLA', 	2);
