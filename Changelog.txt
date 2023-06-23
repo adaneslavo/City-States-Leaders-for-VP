@@ -1,4 +1,7 @@
 Changelog:
+v17:
+- added modified stuff from VP to UI window;
+
 v16:
 - fixed Heavy Tribute;
 - cleaned up the files;
