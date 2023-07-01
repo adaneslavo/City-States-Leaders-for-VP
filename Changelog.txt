@@ -1,4 +1,29 @@
 Changelog:
+v18:
+- deleted CSL-Civilization.sql file; now custom civilizations are on their own; too much work with keeping each civ up to date;
+- added new art:
+	- new main icons for base CS (previous main icons still available as alternative):
+		- Brussels (Janboruta), leader change: Leopold II -> Albert I;
+		- Kathmandu (DarthKyofu);
+		- Malacca (DarthKyofu);
+		- Panama (DuskJockey and DarthKyofu), leader change: Victoriano Lorenzo -> Manuel Amador;
+		- Ragusa (DMS), leader change: Auguste de Marmont -> Nicolò Vito di Gozze;
+		- Vilnius (Janboruta);
+		- Yerevan (DarthKyofu).
+	- new alternative icons for:
+		- Almaty (DuskJockey), leader change: Janybek Khan -> Ablai Khan;
+		- Antananarivo (DMS);
+		- Belgrade (Janboruta), leader change: Karadorde Petrovic -> Peter I;
+		- Hanoi (LastSword);
+		- Kabul (Janboruta);
+		- La Venta (Janboruta);
+		- Melbourne (DarthKyofu), leader change: John Batman -> Billy Hughes,  the Colony of New South Wales -> the Commonwealth of Australia;
+		- Mombasa (DMS);
+		- Mogadishu (TopHatPaladin), leader change: Aden Adde -> Siad Barre.
+		- Vancouver (TPangolin);
+		- Wellington (Janboruta).
+	- updated Leluh leader icon (TopHatPaladin);
+
 v17:
 - added modified stuff from VP to UI window;
 
