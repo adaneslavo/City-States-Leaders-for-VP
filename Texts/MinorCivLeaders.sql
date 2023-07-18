@@ -40,7 +40,7 @@ INSERT INTO MinorCivLeaders(
 		SELECT	'MINOR_CIV_LHASA',			'lhasa_leadericon.dds',			'Tibet',						'Thubten Gyatso',				'13th Dalai Lama',	'sukritact'					UNION ALL
 		SELECT	'MINOR_CIV_MALACCA',		'malacca_leadericon.dds',		'the Malacca Sultanate',		'Parameswara',					'Sultan',			'DarthKyofu'				UNION ALL
 		SELECT	'MINOR_CIV_MANILA',			'manila_leadericon.dds',		'the Philippines Republic',		'Jose Rizal',					'',					'knightmare13'				UNION ALL
-		SELECT	'MINOR_CIV_MBANZA_KONGO',	'mbanza_kongo_leadericon.dds',	'the Ambundu Kingdoms',			'Nzingha Mbande',				'Queen',			'Leugi'						UNION ALL
+		SELECT	'MINOR_CIV_MBANZA_KONGO',	'mbanza_kongo_leadericon.dds',	'the Ambundu Kingdoms',			'Ana Nzingha Mbande',			'Ngola',			'Leugi'						UNION ALL
 		SELECT	'MINOR_CIV_MELBOURNE',		'melbourne_leadericon.dds',		'the Colony of New South Wales','John Batman',					'',					'TPangolin'					UNION ALL
 		SELECT	'MINOR_CIV_MILAN',			'milan_leadericon.dds',			'the Duchy of Milan',			'Gian Galeazzo Visconti', 		'Duke',				'Janboruta'					UNION ALL
 		SELECT	'MINOR_CIV_MOGADISHU',		'mogadishu_leadericon.dds',		'the Fed. Rep. of Somalia',		'Aden Adde',					'President',		'TPangolin'					UNION ALL
