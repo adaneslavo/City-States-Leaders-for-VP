@@ -24,7 +24,9 @@ v18:
 		- Vancouver (TPangolin);
 		- Wellington (Janboruta).
 	- updated Leluh leader icon (TopHatPaladin);
+- revamped art folders;
 - fixed broken button animation;
+- slightly tweaked Mbanza Kongo leader;
 - corrected few art alignment;
 
 v17:
