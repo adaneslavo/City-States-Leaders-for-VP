@@ -29,7 +29,7 @@ INSERT INTO MinorCivLeaders(
 		SELECT	'MINOR_CIV_GENOA',			'genoa_leadericon.dds',			'the Republic of Genoa',		'Andrea Doria',					'Condottiero',		'Janboruta'					UNION ALL
 		SELECT	'MINOR_CIV_HANOI',			'hanoi_leadericon.dds',			'Dai Viet',						'Ly Thai To',					'Emperor',			'davey_henninger'			UNION ALL
 		SELECT	'MINOR_CIV_HONG_KONG',		'hong_kong_leadericon.dds',		'the British Hong Kong',		'Kai Ho',						'Sir',				'TPangolin'					UNION ALL
-		SELECT	'MINOR_CIV_IFE',			'ife_leadericon.dds',			'Ife-Ife',						'Akinmoyero',					'Ooni',				'Janboruta'					UNION ALL
+		SELECT	'MINOR_CIV_IFE',			'ife_leadericon.dds',			'Ife-Ife',						'Odudwa',						'Ooni',				'Janboruta'					UNION ALL
 		SELECT	'MINOR_CIV_JERUSALEM',		'jerusalem_leadericon.dds',		'the Kingdom of Israel',		'Solomon',						'King',				'Leugi'						UNION ALL
 		SELECT	'MINOR_CIV_KABUL',			'kabul_leadericon.dds',			'the Durrani Empire',			'Ahmad Shah Durrani',			'Emir',				'LastSword'					UNION ALL
 		SELECT	'MINOR_CIV_KATHMANDU',		'kathmandu_leadericon.dds',		'the Kingdom of Nepal',			'Tribhuvan',					'King',				'DarthKyofu'				UNION ALL
@@ -60,7 +60,7 @@ INSERT INTO MinorCivLeaders(
 		SELECT	'MINOR_CIV_TYRE',			'tyre_leadericon.dds',			'the Kingdom of Tyre',			'Hiram I',						'King',				'LastSword'					UNION ALL
 		SELECT	'MINOR_CIV_UR',				'ur_leadericon.dds',			'Sumer',						'Eannatum',						'King',				'Janboruta'					UNION ALL
 		SELECT	'MINOR_CIV_VALLETTA',		'valletta_leadericon.dds',		'the Knights of Malta',			'Giovanni Paolo Lascaris', 		'Grand Master',		'TPangolin'					UNION ALL
-		SELECT	'MINOR_CIV_VANCOUVER',		'vancouver_leadericon.dds',		'Canada',						'William Lyon Mackenzie King',	'Prime Minister',	'TPangolin'				UNION ALL
+		SELECT	'MINOR_CIV_VANCOUVER',		'vancouver_leadericon.dds',		'Canada',						'William Lyon Mackenzie King',	'Prime Minister',	'TPangolin'					UNION ALL
 		SELECT	'MINOR_CIV_VATICAN_CITY',	'vatican_city_leadericon.dds',	'Vatican',						'Pius IX',						'Pope',				'Janboruta'					UNION ALL
 		SELECT	'MINOR_CIV_VILNIUS',		'vilnius_leadericon.dds',		'the Grand Duchy of Lithuania',	'Gediminas',					'Grand Duke',		'Janboruta'					UNION ALL
 		SELECT	'MINOR_CIV_WELLINGTON',		'wellington_leadericon.dds',	'New Zealand',					'Richard Seddon',				'Prime Minister',	'TPangolin'					UNION ALL
@@ -79,6 +79,7 @@ INSERT INTO MinorCivLeaders(
 --[ALT]	SELECT	'MINOR_CIV_CAHOKIA',		'cahokia_leadericon2.dds',		'the Mississippians',			'Birdman',						'King',				'H. Roe/TPangolin'			UNION ALL
 --[ALT]	SELECT	'MINOR_CIV_HANOI',			'hanoi_leadericon2.dds',		'Dai Viet',						'Le Loi',						'Emperor',			'LastSword'					UNION ALL
 --[ALT]	SELECT	'MINOR_CIV_HANOI',			'hanoi_leadericon3.dds',		'Vietnam',						'Ho Chi Minh',					'President',		'knightmare13'				UNION ALL
+--[ALT]	SELECT	'MINOR_CIV_IFE',			'ife_leadericon.dds',			'Ife-Ife',						'Akinmoyero',					'Ooni',				'Janboruta'					UNION ALL
 --[ALT]	SELECT	'MINOR_CIV_KABUL',			'kabul_leadericon2.dds',		'the Durrani Empire',			'Ahmad Shah Durrani',			'Emir',				'Janboruta'					UNION ALL
 --[ALT]	SELECT	'MINOR_CIV_KABUL',			'kabul_leadericon3.dds',		'the Durrani Empire',			'Ahmad Shah Durrani',			'Emir',				'TPangolin'					UNION ALL
 --[ALT] SELECT	'MINOR_CIV_KATHMANDU',		'kathmandu_leadericon2.dds',	'the Kingdom of Nepal',			'Tribhuvan',					'King',				'Leugi'						UNION ALL

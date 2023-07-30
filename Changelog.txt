@@ -9,6 +9,7 @@ v18:
 		- Malacca (DarthKyofu);
 		- Panama (DuskJockey and DarthKyofu), leader change: Victoriano Lorenzo -> Manuel Amador;
 		- Ragusa (DMS), leader change: Auguste de Marmont -> Nicolo Vito di Gozze;
+		- Surrey (now Brooklands) (Janboruta), leader change: Aethelwulf -> King George V;
 		- Vilnius (Janboruta);
 		- Yerevan (DarthKyofu).
 	- new alternative icons for:
