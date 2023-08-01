@@ -1,7 +1,11 @@
 Changelog:
+v19:
+- added code for few new leaders from UCS v14;
+- contenders are now hidden in the CS window, if player has not met them before (thanks @Chinag);
+
 v18:
 - deleted CSL-Civilization.sql file; now custom civilizations are on their own; too much work with keeping each civ up to date;
-- added code for 8 new Religious CSs from UCS and set art for them;
+- added code for 9 new Religious CSs from UCS v13 and set art for them;
 - added new art:
 	- new main icons for base CS (previous main icons still available as alternative):
 		- Brussels (Janboruta), leader change: Leopold II -> Albert I;

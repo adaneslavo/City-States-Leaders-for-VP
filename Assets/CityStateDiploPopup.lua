@@ -822,7 +822,24 @@ function GetContenderInfo(majorPlayerID, minorPlayerID)
 
 	local iMissingInfluenceForContender = iAllyInfluence - iContInfluence
 
+	local bPlayerMet = false
+	local pContenderTeam = nil
+	local bMetContender = true
+	
+	if eContender ~= -1 then
+		pContenderTeam = Teams[Players[eContender]:GetTeam()]
+		bMetContender = pContenderTeam:IsHasMet(Game.GetActiveTeam())
+	end
+			
+	if eContender == Game.GetActivePlayer() then
+		bPlayerMet = true	-- active player
+	else
+		bPlayerMet = bMetContender	-- met players
+	end 
+
 	if eContender == -1 then
+		CivIconHookup(-1, 32, Controls.ContenderIcon, Controls.ContenderIconBG, Controls.ContenderIconShadow, false, true)
+	elseif eContender ~= -1 and not bPlayerMet then
 		CivIconHookup(-1, 32, Controls.ContenderIcon, Controls.ContenderIconBG, Controls.ContenderIconShadow, false, true)
 	else
 		CivIconHookup(eContender, 32, Controls.ContenderIcon, Controls.ContenderIconBG, Controls.ContenderIconShadow, false, true)

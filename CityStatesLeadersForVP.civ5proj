@@ -5,7 +5,7 @@
     <ProjectGuid>{426fb8f7-3ce1-488c-ac01-2afa6c26603b}</ProjectGuid>
     <Name>(ui) City-States Leaders for VP</Name>
     <Guid>5594cb50-a30e-4abf-a249-69704fc95da9</Guid>
-    <ModVersion>18</ModVersion>
+    <ModVersion>19</ModVersion>
     <Stability>Stable</Stability>
     <Teaser>Adds leader icons to city state screens, making it easier to remember who is who</Teaser>
     <Description>Adds leader icons to city state screens, making it easier to remember who is who. This is an modification to "City-States Leaders" by mihaifx and "City-State Leaders II" by Nutty.</Description>
@@ -633,10 +633,6 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\adeje_leadericon.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
     <Content Include="Art\!Unfinished\al_tarabin_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
@@ -737,10 +733,6 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\karyes_leadericon.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
     <Content Include="Art\!Unfinished\katende_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
@@ -782,10 +774,6 @@
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="Art\!Unfinished\ngazargamu_leadericon.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="Art\!Unfinished\nyaryanamarq_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -861,10 +849,6 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\sgang_gwaay_leadericon.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
     <Content Include="Art\!Unfinished\shahrazur_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
@@ -925,10 +909,6 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\wootei_niicie_leadericon.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
     <Content Include="Art\!Unfinished\yaiuwa_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
@@ -940,6 +920,10 @@
     <Content Include="Art\!Unfinished\shamaki_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Art\UCS\adeje_leadericon.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Art\UCS\ambracia_leadericon.dds">
       <SubType>Lua</SubType>
@@ -966,6 +950,22 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Art\UCS\dano_leadericon.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Art\UCS\karyes_leadericon.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Art\UCS\nyaryana_marq_leadericon.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Art\UCS\sgang_leadericon.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Art\UCS\sgang_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -1126,6 +1126,10 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Art\UCS\tiwanaku_leadericon.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Art\UCS\wootei_niicie_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
