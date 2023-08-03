@@ -75,13 +75,26 @@ WHERE Type = 'CSL-UCS' AND EXISTS (SELECT * FROM MinorCivilizations WHERE Type='
 		SELECT	'MINOR_CIV_WOOTEI_NIICIE',	'wootei_niicie_leadericon.dds',	'the Arapaho',						'Pretty Nose',					'War Chief',			'Arilasqueto'						WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
 		SELECT	'MINOR_CIV_YANGCHENG',		'yangcheng_leadericon.dds',		'the Xia Dynasty',					'Yu',							'Emperor',				'janboruta'							WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1);
 		
-	/*
+		/*
+		SELECT	'MINOR_CIV_KARASJOHKA',		'karasjohka_leadericon.dds',	'the Sami',							'Eadni'							'Mother',				'Sukritact'							WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
+		SELECT	'MINOR_CIV_KATENDE',		'katende_leadericon.dds',		'the Kingdom of Luba',				'Ilunga Sungu'					'King',					'TopHatPaladin'						WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
+		SELECT	'MINOR_CIV_LAHORE',			'lahore_leadericon.dds',		'the Sikh Empire',					'Ranjit Singh'					'Great Maharaja',		'RawSasquatch'						WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
+		SELECT	'MINOR_CIV_OUIDAH',			'ouidah_leadericon.dds',		'the Kingdom of Whydah',			'Haffon'						'King',					'Hoop Thrower'						WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
+		SELECT	'MINOR_CIV_PELYM',			'pelym_leadericon.dds',			'the Permians',						'Azykay'						'Grand Duke',			'Grant'								WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
+		SELECT	'MINOR_CIV_POKROVKA',		'pokrovka_leadericon.dds',		'the Massagetae Confederation',		'Tomyris'						'Queen',				'TarcisioCM'						WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
+		SELECT	'MINOR_CIV_SARNATH',		'sarnath_leadericon.dds',		'the Maurya Empire',				'Ashoka',						'Emperor',				'LastSword'							WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL
+--[ALT]	SELECT	'MINOR_CIV_SARNATH',		'sarnath_leadericon2.dds',		'the Maurya Empire',				'Ashoka',						'Emperor',				'janboruta'							WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL
+		SELECT	'MINOR_CIV_SUCEAVA',		'suceava_leadericon.dds',		'the Moldavian Empire',				'Stephen III'					'King',					'DJSHenninger'						WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
+		SELECT	'MINOR_CIV_TBILISI',		'tbilisi_leadericon.dds',		'the Kingdom of Georgia',			'Tamar'							'Queen',				'Urdnot'							WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL
+--[ALT]	SELECT	'MINOR_CIV_TBILISI',		'tbilisi_leadericon2.dds',		'the Kingdom of Georgia',			'Tamar'							'Queen',				'Urdnot'							WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL
+		SELECT	'MINOR_CIV_YAIUWA',			'yaiuwa_leadericon.dds',		'the Haush',						'Tenenisk'						'Shaman',				'Grant'								WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
+		*/
+		
+		/*
 		SELECT	'MINOR_CIV_HONIARA',		'honiara_leadericon.dds',		'Solomon Islands',					'Peter Kenilorea',				'Prime Minister sir',	'adan_eslavo'						WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
 		SELECT	'MINOR_CIV_BALKH',			'balkh_leadericon.dds',			'the Bactria',						'Demetrius I',					'King',					'tarcisiocm'						WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
 		SELECT	'MINOR_CIV_SKARA_BRAE',		'skara_brae_leadericon.dds',	'the Pictish Confederation',		'Oengus mac Fergusa',			'King',					'Firebug'							WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
 --[ALT]	SELECT	'MINOR_CIV_SANAA',			'sanaa_leadericon.dds',			'Sheba',							'Yahya',						'Imam',					'adan_eslavo'						WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
 		SELECT	'MINOR_CIV_SANAA',			'sanaa_leadericon2.dds',		'the Sultanate of Yemen',			'Arwa Al Sulayhi',				'Queen',				'Urdnot '							WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
-		SELECT	'MINOR_CIV_SARNATH',		'sarnath_leadericon.dds',		'the Maurya Empire',				'Ashoka',						'Emperor',				'LastSword'							WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
---[ALT]	SELECT	'MINOR_CIV_SARNATH',		'sarnath_leadericon2.dds',		'the Maurya Empire',				'Ashoka',						'Emperor',				'janboruta'							WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
 		SELECT	'MINOR_CIV_LUXEMBOURG',		'luxembourg_leadericon.dds',	'the Grand Duchy of Luxembourg',	'Ermesinde II',					'Countess',				'DJSHenninger'						WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
-	*/
+		*/
