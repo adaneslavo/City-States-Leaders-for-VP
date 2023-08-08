@@ -1,6 +1,7 @@
 Changelog:
 v19:
 - added code for few new leaders from UCS v14;
+- prepared stuff for UCS v15;
 - contenders are now hidden in the CS window, if player has not met them before (thanks @Chinag);
 
 v18:
