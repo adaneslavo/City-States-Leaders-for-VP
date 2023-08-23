@@ -1,4 +1,7 @@
 Changelog:
+v20:
+- added code for few new leaders from UCS v15;
+
 v19:
 - added code for few new leaders from UCS v14;
 - prepared stuff for UCS v15;

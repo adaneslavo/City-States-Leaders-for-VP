@@ -27,48 +27,6 @@
         <MinVersion>0</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
-      <Association>
-        <Type>Mod</Type>
-        <Name>Sumer</Name>
-        <Id>7dbedfbe-cce4-49cd-a2bc-3507e38f4bd4</Id>
-        <MinVersion>0</MinVersion>
-        <MaxVersion>999</MaxVersion>
-      </Association>
-      <Association>
-        <Type>Mod</Type>
-        <Name>The Timurids</Name>
-        <Id>cc3e1671-2832-40dc-9bfd-8e053d3b76b2</Id>
-        <MinVersion>0</MinVersion>
-        <MaxVersion>999</MaxVersion>
-      </Association>
-      <Association>
-        <Type>Mod</Type>
-        <Name>The Papal States</Name>
-        <Id>42c4728e-4544-4520-8488-4bb430e27e34</Id>
-        <MinVersion>0</MinVersion>
-        <MaxVersion>999</MaxVersion>
-      </Association>
-      <Association>
-        <Type>Mod</Type>
-        <Name>Canada</Name>
-        <Id>8562c016-f5bb-40f1-b37e-d3b40d3fg13e</Id>
-        <MinVersion>0</MinVersion>
-        <MaxVersion>999</MaxVersion>
-      </Association>
-      <Association>
-        <Type>Mod</Type>
-        <Name>Tibet</Name>
-        <Id>0474fd37-a41e-43b9-88be-81da4b112d52</Id>
-        <MinVersion>0</MinVersion>
-        <MaxVersion>999</MaxVersion>
-      </Association>
-      <Association>
-        <Type>Mod</Type>
-        <Name>Israel</Name>
-        <Id>35e27828-cf22-4aec-b087-08169fa4e430</Id>
-        <MinVersion>0</MinVersion>
-        <MaxVersion>999</MaxVersion>
-      </Association>
     </ModReferences>
     <Homepage>http://https://forums.civfanatics.com/threads/city-states-leaders-for-vp.636763/</Homepage>
     <ModDependencies>
