@@ -1379,39 +1379,42 @@ end
 -- Take Gold
 ----------------------------------------------------------------
 function OnGoldTributeButtonClicked()
-	local minorPlayer = Players[g_minorCivID]
-	local activePlayerID = Game.GetActivePlayer()
-
-	if minorPlayer:CanMajorBullyGold(activePlayerID) then
-		BullyAction( kiBulliedGold )
-		OnCloseTake()
+	local pPlayer = Players[g_iMinorCivID];
+	local iActivePlayer = Game.GetActivePlayer();
+	
+	if (pPlayer:CanMajorBullyGold(iActivePlayer)) then
+		m_iPendingAction = kiBulliedGold;
+		OnBullyButtonClicked();
+		OnCloseTake();
 	end
 end
-Controls.GoldTributeButton:RegisterCallback( Mouse.eLClick, OnGoldTributeButtonClicked )
+Controls.GoldTributeButton:RegisterCallback( Mouse.eLClick, OnGoldTributeButtonClicked );
 
 ----------------------------------------------------------------
 -- Take Unit
 ----------------------------------------------------------------
 function OnUnitTributeButtonClicked()
-	local minorPlayer = Players[g_minorCivID]
-	local activePlayerID = Game.GetActivePlayer()
-
-	if minorPlayer:CanMajorBullyUnit(activePlayerID) then
-		BullyAction( kiBulliedUnit )
-		OnCloseTake()
+	local pPlayer = Players[g_iMinorCivID];
+	local iActivePlayer = Game.GetActivePlayer();
+	
+	if (pPlayer:CanMajorBullyUnit(iActivePlayer)) then
+		m_iPendingAction = kiBulliedUnit;
+		OnBullyButtonClicked();
+		OnCloseTake();
 	end
 end
-Controls.UnitTributeButton:RegisterCallback( Mouse.eLClick, OnUnitTributeButtonClicked )
+Controls.UnitTributeButton:RegisterCallback( Mouse.eLClick, OnUnitTributeButtonClicked );
 
 ----------------------------------------------------------------
 -- CBP: Forced Annex (Rome UA)
 ----------------------------------------------------------------
 function OnBullyAnnexButtonClicked()
-	local minorPlayer = Players[g_minorCivID]
-	local activePlayerID = Game.GetActivePlayer()
+	local pPlayer = Players[g_iMinorCivID];
+	local iActivePlayer = Game.GetActivePlayer();
 	
-	if (minorPlayer:CanMajorBullyUnit(activePlayerID)) then
-		BullyAction( kiBullyAnnexed );
+	if (pPlayer:CanMajorBullyUnit(iActivePlayer)) then
+		m_iPendingAction = kiBullyAnnexed;
+		OnForcedAnnexButtonClicked();
 		OnCloseTake();
 	end
 end
@@ -1421,18 +1424,18 @@ Controls.BullyAnnexButton:RegisterCallback( Mouse.eLClick, OnBullyAnnexButtonCli
 -- CBP: Deny Quest Influence
 ----------------------------------------------------------------
 function OnNoQuestInfluenceButtonClicked()
-	local minorPlayer = Players[g_minorCivID]
-	local activePlayerID = Game.GetActivePlayer()
+	local pPlayer = Players[g_iMinorCivID];
+	local iActivePlayer = Game.GetActivePlayer();
 	
-	if (minorPlayer:IsQuestInfluenceDisabled(activePlayerID)) then
-		minorPlayer:SetQuestInfluenceDisabled(activePlayerID, false);
+	if (pPlayer:IsQuestInfluenceDisabled(iActivePlayer)) then
+		pPlayer:SetQuestInfluenceDisabled(iActivePlayer, false);
 		OnCloseTake();
 	else
-		minorPlayer:SetQuestInfluenceDisabled(activePlayerID, true);
+		pPlayer:SetQuestInfluenceDisabled(iActivePlayer, true);
 		OnCloseTake();
 	end
 end
-Controls.DenyInfluenceButton:RegisterCallback(Mouse.eLClick, OnNoQuestInfluenceButtonClicked);
+Controls.DenyInfluenceButton:RegisterCallback( Mouse.eLClick, OnNoQuestInfluenceButtonClicked );
 
 ----------------------------------------------------------------
 -- Close Take Submenu
