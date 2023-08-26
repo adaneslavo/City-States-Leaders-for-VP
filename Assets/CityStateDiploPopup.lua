@@ -1452,41 +1452,42 @@ Controls.ExitTakeButton:RegisterCallback( Mouse.eLClick, OnCloseTake )
 -- Bully Action Confirmation
 -------------------------------------------------------------------------------
 function OnYesBully( )
-	local activePlayerID = Game.GetActivePlayer()
-	
-	if m_pendingAction == kiBulliedGold then
-		Game.DoMinorBullyGold(activePlayerID, g_minorCivID)
-
-	elseif m_pendingAction == kiBulliedUnit then
-		--[VP]
-		OnCloseButtonClicked()
-		--[END]
-		
-		Game.DoMinorBullyUnit(activePlayerID, g_minorCivID)
-
-	elseif m_pendingAction == kiDeclaredWar then
-		Network.SendChangeWar(g_minorCivTeamID, true)
+	local iActivePlayer = Game.GetActivePlayer();
+	if (m_iPendingAction == kiBulliedGold) then
+		Game.DoMinorBullyGold(iActivePlayer, g_iMinorCivID);
+		m_iPendingAction = kiNoAction;
+		m_iLastAction = kiBulliedGold;
+	elseif (m_iPendingAction == kiBulliedUnit) then
 -- CBP
-	elseif m_pendingAction == kiBullyAnnexed then
 		OnCloseButtonClicked();
-		Game.DoMinorBullyAnnex(activePlayerID, g_minorCivID);
+		m_iPendingAction = kiNoAction;
+		m_iLastAction = kiBulliedUnit;
+-- END
+		Game.DoMinorBullyUnit(iActivePlayer, g_iMinorCivID);
+-- CBP
+	elseif (m_iPendingAction == kiBullyAnnexed) then
+		OnCloseButtonClicked();
+		m_iPendingAction = kiNoAction;
+		m_iLastAction = kiBullyAnnexed;
+		Game.DoMinorBullyAnnex(iActivePlayer, g_iMinorCivID);
 -- END
 	else
-		print("Scripting error - Selected Yes for bully confrirmation dialog, but invalid PendingAction type")
+		print("Scripting error - Selected Yes for bully confirmation dialog, but invalid PendingAction type");
 	end
-	
-	m_lastAction = m_pendingAction
-	m_pendingAction = kiNoAction
 
-	Controls.BullyConfirm:SetHide(true)
-	Controls.BGBlock:SetHide(false)
+	Controls.BullyConfirm:SetHide(true);
+	Controls.BGBlock:SetHide(false);
+    UIManager:DequeuePopup( ContextPtr );
 end
-Controls.YesBully:RegisterCallback( Mouse.eLClick, OnYesBully )
+Controls.YesBully:RegisterCallback( Mouse.eLClick, OnYesBully );
 
 function OnNoBully( )
-	m_lastAction = kiNoAction
-	m_pendingAction = kiNoAction
-	Controls.BullyConfirm:SetHide(true)
-	Controls.BGBlock:SetHide(false)
+	Controls.BullyConfirm:SetHide(true);
+	Controls.BGBlock:SetHide(false);
 end
-Controls.NoBully:RegisterCallback( Mouse.eLClick, OnNoBully )
+Controls.NoBully:RegisterCallback( Mouse.eLClick, OnNoBully );
+
+-------------------------------------------------
+-- 'Active' (local human) player has changed
+-------------------------------------------------
+Events.GameplaySetActivePlayer.Add(OnCloseButtonClicked);
