@@ -1247,77 +1247,62 @@ Controls.ExitGiveButton:RegisterCallback( Mouse.eLClick, OnCloseGive )
 -- TAKE MENU
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
-function PopulateTakeChoices()
-	local minorPlayer = Players[g_minorCivID]
-	local activePlayerID = Game.GetActivePlayer()
-	local buttonText = ""
-	local ttText = ""
+local iBullyGoldInfluenceLost = (GameDefines["MINOR_FRIENDSHIP_DROP_BULLY_GOLD_SUCCESS"] / 100) * -1; -- Since XML value is times 100 for fidelity, and negative
+local iBullyUnitInfluenceLost = (GameDefines["MINOR_FRIENDSHIP_DROP_BULLY_WORKER_SUCCESS"] / 100) * -1; -- Since XML value is times 100 for fidelity, and negative
+local iBullyUnitMinimumPop = 4; --antonjs: todo: XML
 
-	buttonText = Locale.Lookup("TXT_KEY_POPUP_MINOR_BULLY_GOLD_AMOUNT",
-			minorPlayer:GetMinorCivBullyGoldAmount(activePlayerID),
-			(-GameDefines.MINOR_FRIENDSHIP_DROP_BULLY_GOLD_SUCCESS / 100) or 0 )
+function PopulateTakeChoices()	
+	local pPlayer = Players[g_iMinorCivID];
+	local iActivePlayer = Game.GetActivePlayer();
+	local buttonText = "";
+	local ttText = "";
 	
-	if minorPlayer.GetMajorBullyGoldDetails then
-		ttText = minorPlayer:GetMajorBullyGoldDetails(activePlayerID)
+	local iBullyGold = pPlayer:GetMinorCivBullyGoldAmount(iActivePlayer);
+	buttonText = Locale.Lookup("TXT_KEY_POPUP_MINOR_BULLY_GOLD_AMOUNT", iBullyGold, iBullyGoldInfluenceLost);
+	ttText = pPlayer:GetMajorBullyGoldDetails(iActivePlayer);
+	if (not pPlayer:CanMajorBullyGold(iActivePlayer)) then
+		buttonText = "[COLOR_WARNING_TEXT]" .. buttonText .. "[ENDCOLOR]";
+		Controls.GoldTributeAnim:SetHide(true);
 	else
-		ttText = Locale.Lookup("TXT_KEY_POP_CSTATE_BULLY_GOLD_TT")
+		Controls.GoldTributeAnim:SetHide(false);
 	end
+	Controls.GoldTributeLabel:SetText(buttonText);
+	Controls.GoldTributeButton:SetToolTipString(ttText);
+	SetButtonSize(Controls.GoldTributeLabel, Controls.GoldTributeButton, Controls.GoldTributeAnim, Controls.GoldTributeButtonHL);
 	
-	if (not minorPlayer:CanMajorBullyGold(activePlayerID)) then
-		buttonText = "[COLOR_WARNING_TEXT]" .. buttonText .. "[ENDCOLOR]"
-		Controls.GoldTributeAnim:SetHide(true)
-	else
-		Controls.GoldTributeAnim:SetHide(false)
-	end
-	
-	Controls.GoldTributeLabel:SetText(buttonText)
-	Controls.GoldTributeButton:SetToolTipString(ttText)
-	SetButtonSize(Controls.GoldTributeLabel, Controls.GoldTributeButton, Controls.GoldTributeAnim, Controls.GoldTributeButtonHL)
-
 -- CBP
-	local iGoldTribute = minorPlayer:GetMinorCivBullyGoldAmount(activePlayerID, true);
-	local iTheftValue = minorPlayer:GetYieldTheftAmount(activePlayerID);
-	local iBullyUnitInfluenceLost = (-GameDefines.MINOR_FRIENDSHIP_DROP_BULLY_WORKER_SUCCESS / 100);
-	local pMajor = Players[activePlayerID];
-	local sBullyUnit = GameInfo.Units[minorPlayer:GetBullyUnit()].Description; --antonjs: todo: XML or fn
-	if(minorPlayer:GetMinorCivTrait() == MinorCivTraitTypes.MINOR_CIV_TRAIT_MARITIME) then
-		buttonText = Locale.Lookup("TXT_KEY_POPUP_MINOR_BULLY_FOOD_AMOUNT", iGoldTribute, iTheftValue, iBullyUnitInfluenceLost);
-	elseif(minorPlayer:GetMinorCivTrait() == MinorCivTraitTypes.MINOR_CIV_TRAIT_CULTURED) then
-		buttonText = Locale.Lookup("TXT_KEY_POPUP_MINOR_BULLY_CULTURE_AMOUNT", iGoldTribute, iTheftValue, iBullyUnitInfluenceLost);
-	elseif(minorPlayer:GetMinorCivTrait() == MinorCivTraitTypes.MINOR_CIV_TRAIT_MILITARISTIC) then
-		buttonText = Locale.Lookup("TXT_KEY_POPUP_MINOR_BULLY_SCIENCE_AMOUNT", iGoldTribute, iTheftValue, iBullyUnitInfluenceLost);
-	elseif(minorPlayer:GetMinorCivTrait() == MinorCivTraitTypes.MINOR_CIV_TRAIT_MERCANTILE) then
-		buttonText = Locale.Lookup("TXT_KEY_POPUP_MINOR_BULLY_PRODUCTION_AMOUNT", iGoldTribute, iTheftValue, iBullyUnitInfluenceLost);
-	elseif(minorPlayer:GetMinorCivTrait() == MinorCivTraitTypes.MINOR_CIV_TRAIT_RELIGIOUS) then
-		buttonText = Locale.Lookup("TXT_KEY_POPUP_MINOR_BULLY_FAITH_AMOUNT", iGoldTribute, iTheftValue, iBullyUnitInfluenceLost);
+	local iGoldTribute = pPlayer:GetMinorCivBullyGoldAmount(iActivePlayer, true);
+	local pMajor = Players[iActivePlayer];
+	buttonText = Locale.Lookup("TXT_KEY_POPUP_MINOR_BULLY_UNIT_AMOUNT", iGoldTribute, iBullyUnitInfluenceLost);
+-- END
+	ttText = pPlayer:GetMajorBullyUnitDetails(iActivePlayer);
+	if (not pPlayer:CanMajorBullyUnit(iActivePlayer)) then
+		buttonText = "[COLOR_WARNING_TEXT]" .. buttonText .. "[ENDCOLOR]";
+		Controls.UnitTributeAnim:SetHide(true);
 	else
-		buttonText = Locale.Lookup("TXT_KEY_POPUP_MINOR_BULLY_UNIT_AMOUNT", sBullyUnit, iBullyUnitInfluenceLost);
-	end	
+		Controls.UnitTributeAnim:SetHide(false);
+	end
+	Controls.UnitTributeLabel:SetText(buttonText);
+	Controls.UnitTributeButton:SetToolTipString(ttText);
+	SetButtonSize(Controls.UnitTributeLabel, Controls.UnitTributeButton, Controls.UnitTributeAnim, Controls.UnitTributeButtonHL);
+
+-- CBP: Deny Quest Influence Award
+	if (pPlayer:IsQuestInfluenceDisabled(iActivePlayer)) then
+			Controls.DenyInfluenceLabel:SetText(Locale.Lookup("TXT_KEY_CITY_STATE_DISABLED_QUEST_INFLUENCE_YES"))
+			Controls.DenyInfluenceButton:SetToolTipString(Locale.Lookup("TXT_KEY_CITY_STATE_DISABLED_QUEST_INFLUENCE_YES_TT", pPlayer:GetName()))
+		else
+			Controls.DenyInfluenceLabel:SetText(Locale.Lookup("TXT_KEY_CITY_STATE_DISABLED_QUEST_INFLUENCE_NO"))
+			Controls.DenyInfluenceButton:SetToolTipString(Locale.Lookup("TXT_KEY_CITY_STATE_DISABLED_QUEST_INFLUENCE_NO_TT", pPlayer:GetName()))
+		end
+	SetButtonSize(Controls.DenyInfluenceLabel, Controls.DenyInfluenceButton, Controls.DenyInfluenceAnim, Controls.DenyInfluenceButtonHL)
 -- END
 	
-	if minorPlayer.GetMajorBullyUnitDetails then
-		ttText = minorPlayer:GetMajorBullyUnitDetails(activePlayerID)
-	else
-		ttText = Locale.Lookup("TXT_KEY_POP_CSTATE_BULLY_UNIT_TT", sBullyUnit, 4 ) --antonjs: todo: BullyUnitMinimumPop XML
-	end
-	
-	if (not minorPlayer:CanMajorBullyUnit(activePlayerID)) then
-		buttonText = "[COLOR_WARNING_TEXT]" .. buttonText .. "[ENDCOLOR]"
-		Controls.UnitTributeAnim:SetHide(true)
-	else
-		Controls.UnitTributeAnim:SetHide(false)
-	end
-	
-	Controls.UnitTributeLabel:SetText(buttonText)
-	Controls.UnitTributeButton:SetToolTipString(ttText)
-	SetButtonSize(Controls.UnitTributeLabel, Controls.UnitTributeButton, Controls.UnitTributeAnim, Controls.UnitTributeButtonHL)
-
-	-- CBP: Forced Annex
+-- CBP: Forced Annex
 	if(pMajor:IsBullyAnnex()) then
-		ttText = minorPlayer:GetMajorBullyAnnexDetails(activePlayerID)
+		ttText = pPlayer:GetMajorBullyAnnexDetails(iActivePlayer);
 		buttonText = Locale.Lookup("TXT_KEY_POPUP_MINOR_BULLY_UNIT_AMOUNT_ANNEX");
 		Controls.BullyAnnexButton:SetHide(false);
-		if not minorPlayer:CanMajorBullyUnit(activePlayerID) then
+		if not pPlayer:CanMajorBullyUnit(activePlayerID) then
 			buttonText = "[COLOR_WARNING_TEXT]" .. buttonText .. "[ENDCOLOR]"
 			Controls.BullyAnnexAnim:SetHide(true)
 		else
@@ -1329,58 +1314,65 @@ function PopulateTakeChoices()
 	else
 		Controls.BullyAnnexButton:SetHide(true);
 	end
- 	-- END
-
-	UpdateButtonStack()
+-- END
+	UpdateButtonStack();
 end
 
 ----------------------------------------------------------------
--- Bully Action
+-- Bully confirmation
 ----------------------------------------------------------------
-function BullyAction(action)
-	local minorPlayer = Players[g_minorCivID]
-	
-	if not minorPlayer then
-		return
-	end
-	
-	m_pendingAction = action
-	local listofProtectingCivs = {}
-	
+function OnBullyButtonClicked ()
+
+	local listofProtectingCivs = {};
 	for iPlayerLoop = 0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
-		pOtherPlayer = Players[iPlayerLoop]
-
+			
+		pOtherPlayer = Players[iPlayerLoop];
+			
 		-- Don't test protection status with active player!
-		if iPlayerLoop ~= Game.GetActivePlayer() and pOtherPlayer:IsAlive() and pOtherPlayer:IsProtectingMinor(g_minorCivID) then
-			table.insert(listofProtectingCivs, Locale.Lookup(Players[iPlayerLoop]:GetCivilizationShortDescriptionKey()))
+		if (iPlayerLoop ~= Game.GetActivePlayer()) then
+			if (pOtherPlayer:IsAlive()) then
+				if(Teams[Game.GetActiveTeam()]:IsHasMet(pOtherPlayer:GetTeam())) then
+					if (pOtherPlayer:IsProtectingMinor(g_iMinorCivID)) then
+						table.insert(listofProtectingCivs, Players[iPlayerLoop]:GetCivilizationShortDescriptionKey()); 
+					end
+				end
+			end
 		end
 	end
-
-	local cityStateName = Locale.Lookup(minorPlayer:GetCivilizationShortDescriptionKey())
-
-	local bullyConfirmString
 	
-	if action == kiDeclaredWar then
-		if #listofProtectingCivs >= 1 then
-			bullyConfirmString = L("TXT_KEY_CONFIRM_WAR_PROTECTED_CITY_STATE", cityStateName ) .. " " .. table.concat(listofProtectingCivs, ", ")
+	local pMinor = Players[g_iMinorCivID];
+	local cityStateName = Locale.Lookup(pMinor:GetCivilizationShortDescriptionKey());
+	
+	local bullyConfirmString = Locale.ConvertTextKey("TXT_KEY_CONFIRM_BULLY", cityStateName);
+	local numProtectingCivs = #listofProtectingCivs;
+	if(numProtectingCivs > 0) then
+		if(numProtectingCivs == 1) then
+			bullyConfirmString = Locale.ConvertTextKey("TXT_KEY_CONFIRM_BULLY_PROTECTED_CITY_STATE", cityStateName, listofProtectingCivs[1]);
 		else
-			bullyConfirmString = cityStateName .. ": " .. L("TXT_KEY_CONFIRM_WAR")
-		end
-	elseif action == kiBullyAnnexed then
-		bullyConfirmString = L("TXT_KEY_CONFIRM_BULLYANNEX", cityStateName) 
-	else
-		if #listofProtectingCivs == 1 then
-			bullyConfirmString = L("TXT_KEY_CONFIRM_BULLY_PROTECTED_CITY_STATE", cityStateName, listofProtectingCivs[1])
-		elseif #listofProtectingCivs > 1 then
-			bullyConfirmString = L("TXT_KEY_CONFIRM_BULLY_PROTECTED_CITY_STATE_MULTIPLE", cityStateName, table.concat(listofProtectingCivs, ", "))
-		else
-			bullyConfirmString = L("TXT_KEY_CONFIRM_BULLY", cityStateName)
+			local translatedCivs = {};
+			for i,v in ipairs(listofProtectingCivs) do
+				translatedCivs[i] = Locale.Lookup(v);
+			end
+		
+			bullyConfirmString = Locale.ConvertTextKey("TXT_KEY_CONFIRM_BULLY_PROTECTED_CITY_STATE_MULTIPLE", cityStateName, table.concat(translatedCivs, ", "));
 		end
 	end
+	
+	Controls.BullyConfirmLabel:SetText( bullyConfirmString );
+	Controls.BullyConfirm:SetHide(false);
+	Controls.BGBlock:SetHide(true);
+end
 
-	Controls.BullyConfirmLabel:SetText( bullyConfirmString )
-	Controls.BullyConfirm:SetHide(false)
-	Controls.BGBlock:SetHide(true)
+----------------------------------------------------------------
+-- CBP: Forced Annex confirmation
+----------------------------------------------------------------
+function OnForcedAnnexButtonClicked ()
+    local pMinor = Players[g_iMinorCivID];
+	local cityStateName = Locale.Lookup(pMinor:GetCivilizationShortDescriptionKey());
+	local bullyConfirmString = Locale.ConvertTextKey("TXT_KEY_CONFIRM_BULLYANNEX", cityStateName);
+	Controls.BullyConfirmLabel:SetText( bullyConfirmString );
+	Controls.BullyConfirm:SetHide(false);
+	Controls.BGBlock:SetHide(true);
 end
 
 ----------------------------------------------------------------
