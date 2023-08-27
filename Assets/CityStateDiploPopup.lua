@@ -984,17 +984,18 @@ function GetProtectingPlayers(iMinorCivID)
 					end
 					
 					local iApproach = pActivePlayer:GetApproachTowardsUsGuess(iPlayerLoop)
+					local sCivShortDescription = L(Players[iPlayerLoop]:GetCivilizationShortDescriptionKey())	
 						
 					if iApproach == -1 or iApproach == 6 then 
-						sProtecting = sProtecting .. "[COLOR_FADING_POSITIVE_TEXT]" .. L(Players[iPlayerLoop]:GetCivilizationShortDescriptionKey()) .. "[ENDCOLOR]"
+						sProtecting = sProtecting .. "[COLOR_FADING_POSITIVE_TEXT]" .. sCivShortDescription .. "[ENDCOLOR]"
 					elseif iApproach <= 2 then
-						sProtecting = sProtecting .. "[COLOR_NEGATIVE_TEXT]" .. L(Players[iPlayerLoop]:GetCivilizationShortDescriptionKey()) .. "[ENDCOLOR]"
+						sProtecting = sProtecting .. "[COLOR_NEGATIVE_TEXT]" .. sCivShortDescription .. "[ENDCOLOR]"
 					elseif iApproach == 3 then
-						sProtecting = sProtecting .. "[COLOR_PLAYER_LIGHT_ORANGE_TEXT]" .. L(Players[iPlayerLoop]:GetCivilizationShortDescriptionKey()) .. "[ENDCOLOR]"
+						sProtecting = sProtecting .. "[COLOR_PLAYER_LIGHT_ORANGE_TEXT]" .. sCivShortDescription .. "[ENDCOLOR]"
 					elseif iApproach == 4 then
-						sProtecting = sProtecting .. "[COLOR_MAGENTA]" .. L(Players[iPlayerLoop]:GetCivilizationShortDescriptionKey()) .. "[ENDCOLOR]"
+						sProtecting = sProtecting .. "[COLOR_MAGENTA]" .. sCivShortDescription .. "[ENDCOLOR]"
 					elseif iApproach == 5 then
-						sProtecting = sProtecting .. "[COLOR_POSITIVE_TEXT]" .. L(Players[iPlayerLoop]:GetCivilizationShortDescriptionKey()) .. "[ENDCOLOR]"
+						sProtecting = sProtecting .. "[COLOR_POSITIVE_TEXT]" .. sCivShortDescription .. "[ENDCOLOR]"
 					end
 				end
 			end
@@ -1004,7 +1005,7 @@ function GetProtectingPlayers(iMinorCivID)
 					sProtecting = sProtecting .. ", "
 				end
 
-				sProtecting = sProtecting .. "[COLOR_POSITIVE_TEXT]You[ENDCOLOR]"
+				sProtecting = sProtecting .. "[COLOR_POSITIVE_TEXT]" .. L("TXT_KEY_YOU") .. "[ENDCOLOR]"
 			end
 		end
 	end
@@ -1043,7 +1044,8 @@ function OnQuestInfoClicked()
 				
 				Events.GameplayFX(hex.x, hex.y, -1)
 			end
-		end
+	    end
+	
 		if pMinor:IsMinorCivDisplayedQuestForPlayer(iActivePlayer, MinorCivQuestTypes.MINOR_CIV_QUEST_ARCHAEOLOGY) then
 			local iQuestData1 = pMinor:GetQuestData1(iActivePlayer, MinorCivQuestTypes.MINOR_CIV_QUEST_ARCHAEOLOGY)
 			local iQuestData2 = pMinor:GetQuestData2(iActivePlayer, MinorCivQuestTypes.MINOR_CIV_QUEST_ARCHAEOLOGY)
@@ -1056,7 +1058,8 @@ function OnQuestInfoClicked()
 				
 				Events.GameplayFX(hex.x, hex.y, -1)
 			end
-		end
+	    end
+	
 		if pMinor:IsMinorCivDisplayedQuestForPlayer(activePlayerID, MinorCivQuestTypes.MINOR_CIV_QUEST_DISCOVER_AREA) then
 			local iQuestData1 = pMinor:GetQuestData1(iActivePlayer, MinorCivQuestTypes.MINOR_CIV_QUEST_DISCOVER_AREA)
 			local iQuestData2 = pMinor:GetQuestData2(iActivePlayer, MinorCivQuestTypes.MINOR_CIV_QUEST_DISCOVER_AREA)
@@ -1068,7 +1071,8 @@ function OnQuestInfoClicked()
 				
 				Events.GameplayFX(hex.x, hex.y, -1)
 			end
-		end
+	    end
+	
 		if pMinor:IsMinorCivDisplayedQuestForPlayer(activePlayerID, MinorCivQuestTypes.MINOR_CIV_QUEST_ACQUIRE_CITY) then
 			local iQuestData1 = pMinor:GetQuestData1(iActivePlayer, MinorCivQuestTypes.MINOR_CIV_QUEST_ACQUIRE_CITY)
 			local iQuestData2 = pMinor:GetQuestData2(iActivePlayer, MinorCivQuestTypes.MINOR_CIV_QUEST_ACQUIRE_CITY)
