@@ -1,6 +1,10 @@
 Changelog:
 v20:
 - added code for few new leaders from UCS v15;
+- City-State screen:	
+	- "refreshed" CityStateDiploPopup.lua file (read "made all changes from scratch on fresh file");
+	- added couple of text tags for localizations;
+	- fixed alignment of some icons and texts;
 
 v19:
 - added code for few new leaders from UCS v14;

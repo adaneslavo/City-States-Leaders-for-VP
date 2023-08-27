@@ -99,9 +99,7 @@ function ShowHideHandler(bIsHide, bInitState)
  	   Controls.BackgroundImage:UnloadTexture()
        
        if not bIsHide then
-			--Controls.BackgroundImage:SetTexture(lastBackgroundImage)
-        	
-        	-- adan_eslavo -->
+			-- adan_eslavo -->
         	Events.SerialEventGameDataDirty.Add(OnDisplay)
 			Events.WarStateChanged.Add(OnDisplay)			-- bc1 hack to force refresh in vanilla when selecting peace / war
 			
@@ -142,7 +140,7 @@ function OnEventReceived(popupInfo)
 	
 	-- adan_eslavo -->
 	if bMessage or bDiplo then
-		-- nothing
+		m_iLastAction = kiNoAction
 	elseif bGreeting then
 		m_iLastAction = kiGreet
 	else
@@ -162,12 +160,9 @@ function OnEventReceived(popupInfo)
     g_iMinorCivID = iPlayer
     g_iMinorCivTeamID = iTeam
 	
-	--m_iLastAction = kiNoAction
 	m_iPendingAction = kiNoAction
 	
 	m_bNewQuestAvailable = iQuestFlags == 1
-	
-	--OnDisplay() -- ???
 	
 	UIManager:QueuePopup(ContextPtr, PopupPriority.CityStateDiplo)
 end
@@ -195,9 +190,9 @@ function OnDisplay()
 	local activeTeamID = Game.GetActiveTeam()
 	local activeTeam = Teams[activeTeamID]
 
-	local minorPlayerID = g_minorCivID
+	local minorPlayerID = g_iMinorCivID
 	local minorPlayer = Players[minorPlayerID]
-	local minorTeamID = g_minorCivTeamID
+	local minorTeamID = g_iMinorCivTeamID
 	local minorTeam = Teams[minorTeamID]
 	local minorCivType = minorPlayer:GetMinorCivType()
 
@@ -380,9 +375,6 @@ function OnDisplay()
 		strAlly = L("TXT_KEY_CITY_STATE_NOBODY")
 	end
 	
-	--strAlly = GetAllyText(activePlayerID, minorPlayerID)
-	--strAllyTT = GetAllyToolTip(activePlayerID, minorPlayerID)
-
 	if Game.IsResolutionPassed(GameInfoTypes.RESOLUTION_SPHERE_OF_INFLUENCE, minorPlayerID) then
 		strAlly = strAlly .. " [ICON_LOCKED]"
 		strAllyTT = strAllyTT .. "[NEWLINE][NEWLINE]" .. L("TXT_KEY_POP_CSTATE_UCS_UNDER_SOI")
@@ -609,7 +601,7 @@ function OnDisplay()
 			strText = strGiftString
 		
 		-- Were we sent here because we clicked a notification for a new quest?
-		elseif m_iLastAction == kiNoAction and m_isNewQuestAvailable then
+		elseif m_iLastAction == kiNoAction and m_bNewQuestAvailable then
 			strText = L("TXT_KEY_CITY_STATE_DIPLO_HELLO_QUEST_MESSAGE")
 
 		-- Did we just make peace?
@@ -1125,21 +1117,6 @@ function OnRevokePledgeButtonClicked()
 end
 Controls.RevokePledgeButton:RegisterCallback(Mouse.eLClick, OnRevokePledgeButtonClicked)
 
-----------------------------------------------------------------
--- Buyout
-----------------------------------------------------------------
-function OnBuyoutButtonClicked()
-	local iActivePlayer = Game.GetActivePlayer()
-	local pMinor = Players[g_iMinorCivID]
-	
-	if pMinor:CanMajorBuyout(iActivePlayer) then
-		UIManager:DequeuePopup(ContextPtr)
-		
-		Game.DoMinorBuyout(iActivePlayer, pMinor:GetID())
-	end
-end
-Controls.BuyoutButton:RegisterCallback(Mouse.eLClick, OnBuyoutButtonClicked)
-
 --CBP
 ----------------------------------------------------------------
 -- Marriage
@@ -1201,24 +1178,11 @@ Controls.NoUnitSpawningButton:RegisterCallback(Mouse.eLClick, OnStopStartSpawnin
 -- Open Give Submenu
 ----------------------------------------------------------------
 function OnGiveButtonClicked()
---CSD LUA CHANGE FOR GIFTS
-	local iGoldGiftLarge = GameDefines["MINOR_GOLD_GIFT_LARGE"]
+	Controls.GiveStack:SetHide(false)
+	Controls.TakeStack:SetHide(true)
+	Controls.ButtonStack:SetHide(true)
 	
-	if (iGoldGiftLarge == 0) then
-		Controls.GiveStackCSD:SetHide(false)
-		Controls.GiveStack:SetHide(true)
-		Controls.TakeStack:SetHide(true)
-		Controls.ButtonStack:SetHide(true)
-		
-		PopulateGiftChoices()
-	else
-		Controls.GiveStackCSD:SetHide(true)
-		Controls.GiveStack:SetHide(false)
-		Controls.TakeStack:SetHide(true)
-		Controls.ButtonStack:SetHide(true)
-		
-		PopulateGiftChoices()
-	end
+	PopulateGiftChoices()
 end
 Controls.GiveButton:RegisterCallback(Mouse.eLClick, OnGiveButtonClicked)
 
@@ -1226,8 +1190,6 @@ Controls.GiveButton:RegisterCallback(Mouse.eLClick, OnGiveButtonClicked)
 -- Open Take Submenu
 ----------------------------------------------------------------
 function OnTakeButtonClicked()
--- CSD
-	Controls.GiveStackCSD:SetHide(true)
 	Controls.GiveStack:SetHide(true)
 	Controls.TakeStack:SetHide(false)
 	Controls.ButtonStack:SetHide(true)
@@ -1279,60 +1241,6 @@ function PopulateGiftChoices()
 	local iActivePlayer = Game.GetActivePlayer()
 	local pActivePlayer = Players[iActivePlayer]
 	
-	-- Small Gold
-	local iNumGoldPlayerHas = pActivePlayer:GetGold()
-	
-	iGold = iGoldGiftSmall
-	iLowestGold = iGold
-	iFriendshipAmount = pPlayer:GetFriendshipFromGoldGift(iActivePlayer, iGold)
-
-	local buttonText = L("TXT_KEY_POPUP_MINOR_GOLD_GIFT_AMOUNT", iGold, iFriendshipAmount)
-	
-	if iNumGoldPlayerHas < iGold then
-		buttonText = "[COLOR_WARNING_TEXT]" .. buttonText .. "[ENDCOLOR]"
-		Controls.SmallGiftAnim:SetHide(true)
-	else
-		Controls.SmallGiftAnim:SetHide(false)
-	end
-	
-	Controls.SmallGift:SetText(buttonText)
-	
-	SetButtonSize(Controls.SmallGift, Controls.SmallGiftButton, Controls.SmallGiftAnim, Controls.SmallGiftButtonHL)
-	
-	-- Medium Gold
-	iGold = iGoldGiftMedium
-	iFriendshipAmount = pPlayer:GetFriendshipFromGoldGift(iActivePlayer, iGold)
-	
-	local buttonText = L("TXT_KEY_POPUP_MINOR_GOLD_GIFT_AMOUNT", iGold, iFriendshipAmount)
-	
-	if iNumGoldPlayerHas < iGold then
-		buttonText = "[COLOR_WARNING_TEXT]" .. buttonText .. "[ENDCOLOR]"
-		Controls.MediumGiftAnim:SetHide(true)
-	else
-		Controls.MediumGiftAnim:SetHide(false)
-	end
-
-	Controls.MediumGift:SetText(buttonText)
-	
-	SetButtonSize(Controls.MediumGift, Controls.MediumGiftButton, Controls.MediumGiftAnim, Controls.MediumGiftButtonHL)
-	
-	-- Large Gold
-	iGold = iGoldGiftLarge
-	iFriendshipAmount = pPlayer:GetFriendshipFromGoldGift(iActivePlayer, iGold)
-	
-	local buttonText = L("TXT_KEY_POPUP_MINOR_GOLD_GIFT_AMOUNT", iGold, iFriendshipAmount)
-	
-	if (iNumGoldPlayerHas < iGold) then
-		buttonText = "[COLOR_WARNING_TEXT]" .. buttonText .. "[ENDCOLOR]"
-		Controls.LargeGiftAnim:SetHide(true)
-	else
-		Controls.LargeGiftAnim:SetHide(false)
-	end
-
-	Controls.LargeGift:SetText(buttonText)
-	
-	SetButtonSize(Controls.LargeGift, Controls.LargeGiftButton, Controls.LargeGiftAnim, Controls.LargeGiftButtonHL)
-	
 	-- Unit
 	local iInfluence = pPlayer:GetFriendshipFromUnitGift(iActivePlayer, false, true)
 	local iTravelTurns = GameDefines.MINOR_UNIT_GIFT_TRAVEL_TURNS
@@ -1369,70 +1277,21 @@ function PopulateGiftChoices()
 	Controls.TileImprovementGift:SetText(buttonText)
 	
 	SetButtonSize(Controls.TileImprovementGift, Controls.TileImprovementGiftButton, Controls.TileImprovementGiftAnim, Controls.TileImprovementGiftButtonHL)
+
+-- CBP: Deny Quest Influence Award
+	if pPlayer:IsQuestInfluenceDisabled(iActivePlayer) then
+		Controls.DenyInfluenceLabel:SetText(Locale.Lookup("TXT_KEY_CITY_STATE_DISABLED_QUEST_INFLUENCE_YES"))
+		Controls.DenyInfluenceButton:SetToolTipString(Locale.Lookup("TXT_KEY_CITY_STATE_DISABLED_QUEST_INFLUENCE_YES_TT", pPlayer:GetName()))
+	else
+		Controls.DenyInfluenceLabel:SetText(Locale.Lookup("TXT_KEY_CITY_STATE_DISABLED_QUEST_INFLUENCE_NO"))
+		Controls.DenyInfluenceButton:SetToolTipString(Locale.Lookup("TXT_KEY_CITY_STATE_DISABLED_QUEST_INFLUENCE_NO_TT", pPlayer:GetName()))
+	end
 	
-	-- Tooltip info
-	local iFriendsAmount = GameDefines["FRIENDSHIP_THRESHOLD_FRIENDS"]
-	local iAlliesAmount = GameDefines["FRIENDSHIP_THRESHOLD_ALLIES"]
-    local iFriendship = pPlayer:GetMinorCivFriendshipWithMajor(iActivePlayer)
-	local strInfoTT = L("TXT_KEY_POP_CSTATE_GOLD_STATUS_TT", iFriendsAmount, iAlliesAmount, iFriendship)
-	
-	strInfoTT = strInfoTT .. "[NEWLINE][NEWLINE]"
-	strInfoTT = strInfoTT .. L("TXT_KEY_POP_CSTATE_GOLD_TT")
-	
-	Controls.SmallGiftButton:SetToolTipString(strInfoTT)
-	Controls.MediumGiftButton:SetToolTipString(strInfoTT)
-	Controls.LargeGiftButton:SetToolTipString(strInfoTT)
+	SetButtonSize(Controls.DenyInfluenceLabel, Controls.DenyInfluenceButton, Controls.DenyInfluenceAnim, Controls.DenyInfluenceButtonHL)
+-- END
 	
 	UpdateButtonStack()
 end
-
-----------------------------------------------------------------
--- Gold Gifts
-----------------------------------------------------------------
-function OnSmallGold ()
-	local iActivePlayer = Game.GetActivePlayer()
-	local pActivePlayer = Players[iActivePlayer]
-	local iNumGoldPlayerHas = pActivePlayer:GetGold()
-	
-	if iNumGoldPlayerHas >= iGoldGiftSmall then
-		Game.DoMinorGoldGift(g_iMinorCivID, iGoldGiftSmall)
-		
-		m_iLastAction = kiGiftedGold
-		
-		OnCloseGive()
-	end
-end
-Controls.SmallGiftButton:RegisterCallback(Mouse.eLClick, OnSmallGold)
-
-function OnMediumGold ()
-	local iActivePlayer = Game.GetActivePlayer()
-	local pActivePlayer = Players[iActivePlayer]
-	local iNumGoldPlayerHas = pActivePlayer:GetGold()
-	
-	if iNumGoldPlayerHas >= iGoldGiftMedium then
-		Game.DoMinorGoldGift(g_iMinorCivID, iGoldGiftMedium)
-		
-		m_iLastAction = kiGiftedGold
-		
-		OnCloseGive()
-	end
-end
-Controls.MediumGiftButton:RegisterCallback(Mouse.eLClick, OnMediumGold)
-
-function OnBigGold ()
-	local iActivePlayer = Game.GetActivePlayer()
-	local pActivePlayer = Players[iActivePlayer]
-	local iNumGoldPlayerHas = pActivePlayer:GetGold()
-	
-	if iNumGoldPlayerHas >= iGoldGiftLarge then
-		Game.DoMinorGoldGift(g_iMinorCivID, iGoldGiftLarge)
-		
-		m_iLastAction = kiGiftedGold
-	
-		OnCloseGive()
-	end
-end
-Controls.LargeGiftButton:RegisterCallback(Mouse.eLClick, OnBigGold)
 
 ----------------------------------------------------------------
 -- Gift Unit
@@ -1470,7 +1329,7 @@ Controls.TileImprovementGiftButton:RegisterCallback(Mouse.eLClick, OnGiftTileImp
 ----------------------------------------------------------------
 function OnCloseGive()
 --CSD
-	Controls.GiveStackCSD:SetHide(true)
+	--Controls.GiveStackCSD:SetHide(true)
 	Controls.GiveStack:SetHide(true)
 	Controls.TakeStack:SetHide(true)
 	Controls.ButtonStack:SetHide(false)
@@ -1488,7 +1347,7 @@ local iBullyGoldInfluenceLost = (GameDefines["MINOR_FRIENDSHIP_DROP_BULLY_GOLD_S
 local iBullyUnitInfluenceLost = (GameDefines["MINOR_FRIENDSHIP_DROP_BULLY_WORKER_SUCCESS"] / 100) * -1 -- Since XML value is times 100 for fidelity, and negative
 local iBullyUnitMinimumPop = 4 --antonjs: todo: XML
 
-function PopulateTakeChoices()	
+function PopulateTakeChoices()
 	local pPlayer = Players[g_iMinorCivID]
 	local iActivePlayer = Game.GetActivePlayer()
 	local buttonText = ""
@@ -1531,18 +1390,6 @@ function PopulateTakeChoices()
 	Controls.UnitTributeButton:SetToolTipString(ttText)
 
 	SetButtonSize(Controls.UnitTributeLabel, Controls.UnitTributeButton, Controls.UnitTributeAnim, Controls.UnitTributeButtonHL)
-
--- CBP: Deny Quest Influence Award
-	if pPlayer:IsQuestInfluenceDisabled(iActivePlayer) then
-		Controls.DenyInfluenceLabel:SetText(Locale.Lookup("TXT_KEY_CITY_STATE_DISABLED_QUEST_INFLUENCE_YES"))
-		Controls.DenyInfluenceButton:SetToolTipString(Locale.Lookup("TXT_KEY_CITY_STATE_DISABLED_QUEST_INFLUENCE_YES_TT", pPlayer:GetName()))
-	else
-		Controls.DenyInfluenceLabel:SetText(Locale.Lookup("TXT_KEY_CITY_STATE_DISABLED_QUEST_INFLUENCE_NO"))
-		Controls.DenyInfluenceButton:SetToolTipString(Locale.Lookup("TXT_KEY_CITY_STATE_DISABLED_QUEST_INFLUENCE_NO_TT", pPlayer:GetName()))
-	end
-	
-	SetButtonSize(Controls.DenyInfluenceLabel, Controls.DenyInfluenceButton, Controls.DenyInfluenceAnim, Controls.DenyInfluenceButtonHL)
--- END
 	
 -- CBP: Forced Annex
 	if pMajor:IsBullyAnnex() then
@@ -1686,11 +1533,11 @@ function OnNoQuestInfluenceButtonClicked()
 	
 	if pPlayer:IsQuestInfluenceDisabled(iActivePlayer) then
 		pPlayer:SetQuestInfluenceDisabled(iActivePlayer, false)
-		
+		print("ENABLE")
 		OnCloseTake()
 	else
 		pPlayer:SetQuestInfluenceDisabled(iActivePlayer, true)
-		
+		print("DISABLE")
 		OnCloseTake()
 	end
 end
@@ -1701,7 +1548,7 @@ Controls.DenyInfluenceButton:RegisterCallback(Mouse.eLClick, OnNoQuestInfluenceB
 ----------------------------------------------------------------
 function OnCloseTake()
 --CSD
-	Controls.GiveStackCSD:SetHide(true)
+	--Controls.GiveStackCSD:SetHide(true)
 	Controls.GiveStack:SetHide(true)
 	Controls.TakeStack:SetHide(true)
 	Controls.ButtonStack:SetHide(false)
