@@ -25,6 +25,9 @@
 		<Row Tag="TXT_KEY_POP_CSTATE_UCS_NO_UCS_FOUND">
 			<Text>You must enable [COLOR_YELLOW]Unique City-States[ENDCOLOR] mod to gain bonuses from [ICON_CITY_STATE] City-States.</Text>
 		</Row>
+		<Row Tag="TXT_KEY_POP_CSTATE_UCS_LEADER">
+			<Text>{1_LeaderName} from {2_LeaderPlace}</Text>
+		</Row>
 		
 		<!-- Personality texts -->
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_FRIENDLY_1">
