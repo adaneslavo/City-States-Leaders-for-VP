@@ -1172,9 +1172,9 @@ function OnStopStartSpawning()
 	local strSpawnText
 	
 	if bSpawningDisabled then
-		strSpawnText = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_TURN_SPAWNING_OFF")
+		strSpawnText = L("TXT_KEY_CITY_STATE_TURN_SPAWNING_OFF")
 	else
-		strSpawnText = Locale.ConvertTextKey("TXT_KEY_CITY_STATE_TURN_SPAWNING_ON")
+		strSpawnText = L("TXT_KEY_CITY_STATE_TURN_SPAWNING_ON")
 	end
 	
 	Controls.NoUnitSpawningLabel:SetText(strSpawnText)
@@ -1272,7 +1272,7 @@ function PopulateGiftChoices()
 	iLowestGold = iGold
 	iFriendshipAmount = pPlayer:GetFriendshipFromGoldGift(iActivePlayer, iGold)
 
-	local buttonText = Locale.ConvertTextKey("TXT_KEY_POPUP_MINOR_GOLD_GIFT_AMOUNT", iGold, iFriendshipAmount)
+	local buttonText = L("TXT_KEY_POPUP_MINOR_GOLD_GIFT_AMOUNT", iGold, iFriendshipAmount)
 	
 	if iNumGoldPlayerHas < iGold then
 		buttonText = "[COLOR_WARNING_TEXT]" .. buttonText .. "[ENDCOLOR]"
@@ -1289,7 +1289,7 @@ function PopulateGiftChoices()
 	iGold = iGoldGiftMedium
 	iFriendshipAmount = pPlayer:GetFriendshipFromGoldGift(iActivePlayer, iGold)
 	
-	local buttonText = Locale.ConvertTextKey("TXT_KEY_POPUP_MINOR_GOLD_GIFT_AMOUNT", iGold, iFriendshipAmount)
+	local buttonText = L("TXT_KEY_POPUP_MINOR_GOLD_GIFT_AMOUNT", iGold, iFriendshipAmount)
 	
 	if iNumGoldPlayerHas < iGold then
 		buttonText = "[COLOR_WARNING_TEXT]" .. buttonText .. "[ENDCOLOR]"
@@ -1306,7 +1306,7 @@ function PopulateGiftChoices()
 	iGold = iGoldGiftLarge
 	iFriendshipAmount = pPlayer:GetFriendshipFromGoldGift(iActivePlayer, iGold)
 	
-	local buttonText = Locale.ConvertTextKey("TXT_KEY_POPUP_MINOR_GOLD_GIFT_AMOUNT", iGold, iFriendshipAmount)
+	local buttonText = L("TXT_KEY_POPUP_MINOR_GOLD_GIFT_AMOUNT", iGold, iFriendshipAmount)
 	
 	if (iNumGoldPlayerHas < iGold) then
 		buttonText = "[COLOR_WARNING_TEXT]" .. buttonText .. "[ENDCOLOR]"
@@ -1322,8 +1322,8 @@ function PopulateGiftChoices()
 	-- Unit
 	local iInfluence = pPlayer:GetFriendshipFromUnitGift(iActivePlayer, false, true)
 	local iTravelTurns = GameDefines.MINOR_UNIT_GIFT_TRAVEL_TURNS
-	local buttonText = Locale.ConvertTextKey("TXT_KEY_POP_CSTATE_GIFT_UNIT", iInfluence)
-	local tooltipText = Locale.ConvertTextKey("TXT_KEY_POP_CSTATE_GIFT_UNIT_TT", iTravelTurns, iInfluence)
+	local buttonText = L("TXT_KEY_POP_CSTATE_GIFT_UNIT", iInfluence)
+	local tooltipText = L("TXT_KEY_POP_CSTATE_GIFT_UNIT_TT", iTravelTurns, iInfluence)
 
 	if (pPlayer:GetIncomingUnitCountdown(iActivePlayer) >= 0) then
 		buttonText = "[COLOR_WARNING_TEXT]" .. buttonText .. "[ENDCOLOR]"
@@ -1343,7 +1343,7 @@ function PopulateGiftChoices()
 	-- Only allowed for allies
 	iGold = pPlayer:GetGiftTileImprovementCost(iActivePlayer)
 
-	local buttonText = Locale.ConvertTextKey("TXT_KEY_POPUP_MINOR_GIFT_TILE_IMPROVEMENT", iGold)
+	local buttonText = L("TXT_KEY_POPUP_MINOR_GIFT_TILE_IMPROVEMENT", iGold)
 	
 	if not pPlayer:CanMajorGiftTileImprovement(iActivePlayer) then
 		buttonText = "[COLOR_WARNING_TEXT]" .. buttonText .. "[ENDCOLOR]"
@@ -1360,10 +1360,10 @@ function PopulateGiftChoices()
 	local iFriendsAmount = GameDefines["FRIENDSHIP_THRESHOLD_FRIENDS"]
 	local iAlliesAmount = GameDefines["FRIENDSHIP_THRESHOLD_ALLIES"]
     local iFriendship = pPlayer:GetMinorCivFriendshipWithMajor(iActivePlayer)
-	local strInfoTT = Locale.ConvertTextKey("TXT_KEY_POP_CSTATE_GOLD_STATUS_TT", iFriendsAmount, iAlliesAmount, iFriendship)
+	local strInfoTT = L("TXT_KEY_POP_CSTATE_GOLD_STATUS_TT", iFriendsAmount, iAlliesAmount, iFriendship)
 	
 	strInfoTT = strInfoTT .. "[NEWLINE][NEWLINE]"
-	strInfoTT = strInfoTT .. Locale.ConvertTextKey("TXT_KEY_POP_CSTATE_GOLD_TT")
+	strInfoTT = strInfoTT .. L("TXT_KEY_POP_CSTATE_GOLD_TT")
 	
 	Controls.SmallGiftButton:SetToolTipString(strInfoTT)
 	Controls.MediumGiftButton:SetToolTipString(strInfoTT)
@@ -1570,7 +1570,7 @@ function OnBullyButtonClicked ()
 			if pOtherPlayer:IsAlive() then
 				if Teams[Game.GetActiveTeam()]:IsHasMet(pOtherPlayer:GetTeam()) then
 					if  pOtherPlayer:IsProtectingMinor(g_iMinorCivID)  then
-						table.insert(listofProtectingCivs, Players[iPlayerLoop]:GetCivilizationShortDescriptionKey()) 
+						table_insert(listofProtectingCivs, Players[iPlayerLoop]:GetCivilizationShortDescriptionKey()) 
 					end
 				end
 			end
@@ -1580,12 +1580,12 @@ function OnBullyButtonClicked ()
 	local pMinor = Players[g_iMinorCivID]
 	local cityStateName = Locale.Lookup(pMinor:GetCivilizationShortDescriptionKey())
 	
-	local bullyConfirmString = Locale.ConvertTextKey("TXT_KEY_CONFIRM_BULLY", cityStateName)
+	local bullyConfirmString = L("TXT_KEY_CONFIRM_BULLY", cityStateName)
 	local numProtectingCivs = #listofProtectingCivs
 	
 	if numProtectingCivs > 0 then
 		if numProtectingCivs == 1 then
-			bullyConfirmString = Locale.ConvertTextKey("TXT_KEY_CONFIRM_BULLY_PROTECTED_CITY_STATE", cityStateName, listofProtectingCivs[1])
+			bullyConfirmString = L("TXT_KEY_CONFIRM_BULLY_PROTECTED_CITY_STATE", cityStateName, listofProtectingCivs[1])
 		else
 			local translatedCivs = {}
 			
@@ -1593,7 +1593,7 @@ function OnBullyButtonClicked ()
 				translatedCivs[i] = Locale.Lookup(v)
 			end
 		
-			bullyConfirmString = Locale.ConvertTextKey("TXT_KEY_CONFIRM_BULLY_PROTECTED_CITY_STATE_MULTIPLE", cityStateName, table.concat(translatedCivs, ", "))
+			bullyConfirmString = L("TXT_KEY_CONFIRM_BULLY_PROTECTED_CITY_STATE_MULTIPLE", cityStateName, table_concat(translatedCivs, ", "))
 		end
 	end
 	
@@ -1608,7 +1608,7 @@ end
 function OnForcedAnnexButtonClicked()
     local pMinor = Players[g_iMinorCivID]
 	local cityStateName = Locale.Lookup(pMinor:GetCivilizationShortDescriptionKey())
-	local bullyConfirmString = Locale.ConvertTextKey("TXT_KEY_CONFIRM_BULLYANNEX", cityStateName)
+	local bullyConfirmString = L("TXT_KEY_CONFIRM_BULLYANNEX", cityStateName)
 
 	Controls.BullyConfirmLabel:SetText(bullyConfirmString)
 	Controls.BullyConfirm:SetHide(false)
