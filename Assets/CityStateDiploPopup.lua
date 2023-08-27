@@ -235,7 +235,7 @@ function OnDisplay()
 	local leaderTitle = nil
 	local artistName = nil
 
-	if (minorCivType ~= nil) then
+	if minorCivType ~= nil then
 		local realMinorCivType = GameInfo.MinorCivilizations[minorCivType].Type
 		
 		if realMinorCivType ~= nil then
@@ -250,16 +250,16 @@ function OnDisplay()
 			end
 		end
 
-		if (leaderIcon ~= nil and leaderName ~= nil) then
+		if leaderIcon ~= nil and leaderName ~= nil then
 			if leaderPlace == nil then
 				leaderPlace = L(strShortDescKey)
 			end
 			
-			if (leaderTitle ~= nil) then
-				leaderName = leaderTitle.." "..leaderName
+			if leaderTitle ~= nil then
+				leaderName = leaderTitle .. " " .. leaderName
 			end
 			
-			leaderName = leaderName.." from "..leaderPlace
+			leaderName = L("TXT_KEY_POP_CSTATE_UCS_LEADER", leaderName, leaderPlace)
 			
 			Controls.TitleIconCSLTrait:SetHide(false)
 			Controls.TitleIconCSLTrait:SetTexture(traitIcon)
@@ -288,6 +288,7 @@ function OnDisplay()
 	local strStatusTT = GetCityStateStatusToolTip(activePlayerID, minorPlayerID, true)
 	
 	UpdateCityStateStatusUI(activePlayerID, minorPlayerID, Controls.PositiveStatusMeter, Controls.NegativeStatusMeter, Controls.StatusMeterMarker, Controls.StatusIconBG)
+	
 	Controls.StatusInfo:SetText(strStatusText)
 	Controls.StatusInfo:SetToolTipString(strStatusTT)
 	Controls.StatusLabel:SetToolTipString(strStatusTT)
@@ -296,21 +297,21 @@ function OnDisplay()
 	Controls.NegativeStatusMeter:SetToolTipString(strStatusTT)
 	Controls.MarriedButton:SetHide(true)
 	
-	if(minorPlayer:IsMarried(activePlayerID))then
+	if minorPlayer:IsMarried(activePlayerID) then
 		Controls.MarriedButton:SetHide(false)
 		Controls.MarriedButton:SetText(L("TXT_KEY_DIPLO_MAJOR_CIV_DIPLO_STATE_MARRIED_SMALL"))
 		Controls.MarriedButton:SetToolTipString(L("TXT_KEY_DIPLO_MAJOR_CIV_DIPLO_STATE_MARRIED_TT"))
 	end
 
-	if (strTraitText == L("TXT_KEY_CITY_STATE_CULTURED_ADJECTIVE")) then
+	if strTraitText == L("TXT_KEY_CITY_STATE_CULTURED_ADJECTIVE") then
 		strTraitText = "[ICON_CULTURE] [COLOR_MAGENTA]".. strTraitText .."[ENDCOLOR]"
-	elseif (strTraitText == L("TXT_KEY_CITY_STATE_MILITARISTIC_ADJECTIVE")) then
+	elseif strTraitText == L("TXT_KEY_CITY_STATE_MILITARISTIC_ADJECTIVE") then
 		strTraitText = "[ICON_WAR] [COLOR_RED]".. strTraitText .."[ENDCOLOR]"
-	elseif (strTraitText == L("TXT_KEY_CITY_STATE_MARITIME_ADJECTIVE")) then
+	elseif strTraitText == L("TXT_KEY_CITY_STATE_MARITIME_ADJECTIVE") then
 		strTraitText = "[ICON_FOOD] [COLOR_CYAN]".. strTraitText .."[ENDCOLOR]"
-	elseif (strTraitText == L("TXT_KEY_CITY_STATE_MERCANTILE_ADJECTIVE")) then
+	elseif strTraitText == L("TXT_KEY_CITY_STATE_MERCANTILE_ADJECTIVE") then
 		strTraitText = "[ICON_GOLD] [COLOR_YELLOW]".. strTraitText .."[ENDCOLOR]"
-	elseif (strTraitText == L("TXT_KEY_CITY_STATE_RELIGIOUS_ADJECTIVE")) then
+	elseif strTraitText == L("TXT_KEY_CITY_STATE_RELIGIOUS_ADJECTIVE") then
 		strTraitText = "[ICON_PEACE] [COLOR_WHITE]".. strTraitText .."[ENDCOLOR]"
 	end
 	
@@ -323,18 +324,15 @@ function OnDisplay()
 	local strPersonalityTT = ""
 	local iPersonality = minorPlayer:GetPersonality()
 	
-	if (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_FRIENDLY) then
+	if iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_FRIENDLY then
 		strPersonalityText = "[ICON_FLOWER] [COLOR_POSITIVE_TEXT]".. L("TXT_KEY_CITY_STATE_PERSONALITY_FRIENDLY") .."[ENDCOLOR]"
 		strPersonalityTT = L("TXT_KEY_CITY_STATE_PERSONALITY_FRIENDLY_TT")
-	elseif (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_NEUTRAL) then
+	elseif iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_NEUTRAL then
 		strPersonalityText = "[ICON_TEAM_1] [COLOR_FADING_POSITIVE_TEXT]".. L("TXT_KEY_CITY_STATE_PERSONALITY_NEUTRAL") .."[ENDCOLOR]"
 		strPersonalityTT = L("TXT_KEY_CITY_STATE_PERSONALITY_NEUTRAL_TT")
-	elseif (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_HOSTILE) then
+	elseif iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_HOSTILE then
 		strPersonalityText = "[ICON_RAZING] [COLOR_NEGATIVE_TEXT]".. L("TXT_KEY_CITY_STATE_PERSONALITY_HOSTILE") .."[ENDCOLOR]"
 		strPersonalityTT = L("TXT_KEY_CITY_STATE_PERSONALITY_HOSTILE_TT")
-	elseif (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_IRRATIONAL) then
-		strPersonalityText = "[ICON_HAPPINESS_4] [COLOR_FADING_NEGATIVE_TEXT]".. L("TXT_KEY_CITY_STATE_PERSONALITY_IRRATIONAL") .."[ENDCOLOR]"
-		strPersonalityTT = L("TXT_KEY_CITY_STATE_PERSONALITY_IRRATIONAL_TT")
 	end
 	
 	Controls.PersonalityInfo:SetText(strPersonalityText)
@@ -348,20 +346,24 @@ function OnDisplay()
 	local bHideIcon = true
 	local bHideText = true
 	
-	if (iAlly ~= nil and iAlly ~= -1) then
+	if iAlly ~= nil and iAlly ~= -1 then
 		local iAllyInf = minorPlayer:GetMinorCivFriendshipWithMajor(iAlly)
 		local iActivePlayerInf = minorPlayer:GetMinorCivFriendshipWithMajor(activePlayerID)
 
-		if (iAlly ~= activePlayerID) then
-			if (Teams[Players[iAlly]:GetTeam()]:IsHasMet(Game.GetActiveTeam())) then
+		if iAlly ~= activePlayerID then
+			if Teams[Players[iAlly]:GetTeam()]:IsHasMet(Game.GetActiveTeam()) then
 				local iInfUntilAllied = iAllyInf - iActivePlayerInf + 1 -- needs to pass up the current ally, not just match
+				
 				strAllyTT = L("TXT_KEY_CITY_STATE_ALLY_TT", Players[iAlly]:GetCivilizationShortDescriptionKey(), iInfUntilAllied)
 				bHideIcon = false
+				
 				CivIconHookup(iAlly, 32, Controls.AllyIcon, Controls.AllyIconBG, Controls.AllyIconShadow, false, true)
 			else
 				local iInfUntilAllied = iAllyInf - iActivePlayerInf + 1 -- needs to pass up the current ally, not just match
+				
 				strAllyTT = L("TXT_KEY_CITY_STATE_ALLY_UNKNOWN_TT", iInfUntilAllied)
 				bHideIcon = false
+				
 				CivIconHookup(-1, 32, Controls.AllyIcon, Controls.AllyIconBG, Controls.AllyIconShadow, false, true)
 			end
 		else
@@ -372,6 +374,7 @@ function OnDisplay()
 	else
 		local iActivePlayerInf = minorPlayer:GetMinorCivFriendshipWithMajor(activePlayerID)
 		local iInfUntilAllied = GameDefines["FRIENDSHIP_THRESHOLD_ALLIES"] - iActivePlayerInf
+		
 		strAllyTT = L("TXT_KEY_CITY_STATE_ALLY_NOBODY_TT", iInfUntilAllied)
 		bHideText = false
 		strAlly = L("TXT_KEY_CITY_STATE_NOBODY")
@@ -382,7 +385,7 @@ function OnDisplay()
 
 	if Game.IsResolutionPassed(GameInfoTypes.RESOLUTION_SPHERE_OF_INFLUENCE, minorPlayerID) then
 		strAlly = strAlly .. " [ICON_LOCKED]"
-		strAllyTT = strAllyTT .. "[NEWLINE][NEWLINE]This City-State is under the [COLOR_CYAN]Sphere of Influence[ENDCOLOR]."
+		strAllyTT = strAllyTT .. "[NEWLINE][NEWLINE]" .. L("TXT_KEY_POP_CSTATE_UCS_UNDER_SOI")
 	end
 
 	Controls.AllyText:SetText(strAlly)
@@ -401,7 +404,7 @@ function OnDisplay()
 	-- Protector
 	local sProtectingPlayers = GetProtectingPlayers(minorPlayerID)
 
-	if (sProtectingPlayers ~= "") then
+	if sProtectingPlayers ~= "" then
 		Controls.ProtectInfo:SetText("[COLOR_POSITIVE_TEXT]" .. sProtectingPlayers .. "[ENDCOLOR]")
 	else
 		Controls.ProtectInfo:SetText(L("TXT_KEY_CITY_STATE_NOBODY"))
@@ -412,6 +415,7 @@ function OnDisplay()
 	
 	-- Nearby Resources
 	local pCapital = minorPlayer:GetCapitalCity()
+	
 	if pCapital then
 
 		local strResourceText = ""
@@ -421,7 +425,7 @@ function OnDisplay()
 		local thisX = pCapital:GetX()
 		local thisY = pCapital:GetY()
 
-		local iRange = GameDefines.MINOR_CIV_RESOURCE_SEARCH_RADIUS or 5 --5
+		local iRange = GameDefines.MINOR_CIV_RESOURCE_SEARCH_RADIUS or 5
 		local iCloseRange = math.floor(iRange/2) --2
 		local tResourceList = {}
 
@@ -456,7 +460,7 @@ function OnDisplay()
 		end
 
 		for iResourceType, iAmount in pairs(tResourceList) do
-			if (iNumResourcesFound > 0) then
+			if iNumResourcesFound > 0 then
 				strResourceText = strResourceText .. ", "
 			end
 			
@@ -545,21 +549,21 @@ function OnDisplay()
 	end
 
 	-- Peace
-	if (not isAtWar) then
+	if not isAtWar then
 		-- Gifts
 		if m_lastAction == kiGreet then
 			local bFirstMajorCiv = m_PopupInfo.Option1
 			local sRandPersonality1, sRandPersonality2, sRandTrait1, sRandTrait2, sRandBonus1, sRandBonus2, sRandFriendship, strGiftString = "", "", "", "", "", "", "", ""
 
-			if (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_FRIENDLY) then
+			if iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_FRIENDLY then
 				sRandFriendship = string.format("TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_FRIENDLY_%s", iRandomFrienshipText)
 				sRandPersonality1 = string.format("TXT_KEY_CITY_STATE_GREETING_FRIENDLY_%s", iRandomPersonalityText)
 				sRandPersonality2 = Locale.Lookup(sRandPersonality1, leaderPlace)
-			elseif (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_NEUTRAL) then
+			elseif iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_NEUTRAL then
 				sRandFriendship = string.format("TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_NEUTRAL_%s", iRandomFrienshipText)
 				sRandPersonality1 = string.format("TXT_KEY_CITY_STATE_GREETING_NEUTRAL_%s", iRandomPersonalityText)
 				sRandPersonality2 = Locale.Lookup(sRandPersonality1, leaderPlace)
-			elseif (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_HOSTILE) then
+			elseif iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_HOSTILE then
 				sRandFriendship = string.format("TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_HOSTILE_%s", iRandomFrienshipText)
 				sRandPersonality1 = string.format("TXT_KEY_CITY_STATE_GREETING_HOSTILE_%s", iRandomPersonalityText)
 				sRandPersonality2 = Locale.Lookup(sRandPersonality1, leaderPlace)
@@ -584,11 +588,11 @@ function OnDisplay()
 			
 			local sRandBonus1 = string.format("TXT_KEY_MINOR_CIV_%sCONTACT_BONUS_%s_%s", (bFirstMajorCiv and "FIRST_" or ""), m_PopupInfo.Text, iRandomBonusText)
 
-			if (m_PopupInfo.Data3 == 0) then
+			if m_PopupInfo.Data3 == 0 then
 				strGiftString = L("TXT_KEY_MINOR_CIV_CONTACT_BONUS_NOTHING_1")
 			else
 				if bFirstMajorCiv then
-					if (m_PopupInfo.Text == "UNIT") then
+					if m_PopupInfo.Text == "UNIT" then
 						if m_PopupInfo.Data2 ~= 0 then
 							strGiftString = sRandTrait2 .. " " .. L(sRandBonus1, GameInfo.Units[m_PopupInfo.Data2].Description)
 						else
@@ -605,31 +609,31 @@ function OnDisplay()
 			strText = strGiftString
 		
 		-- Were we sent here because we clicked a notification for a new quest?
-		elseif (m_lastAction == kiNoAction and m_isNewQuestAvailable) then
+		elseif m_lastAction == kiNoAction and m_isNewQuestAvailable then
 			strText = L("TXT_KEY_CITY_STATE_DIPLO_HELLO_QUEST_MESSAGE")
 
 		-- Did we just make peace?
-		elseif (m_lastAction == kiMadePeace) then
+		elseif m_lastAction == kiMadePeace then
 			strText = L("TXT_KEY_CITY_STATE_DIPLO_PEACE_JUST_MADE")
 
 		-- Did we just bully gold?
-		elseif (m_lastAction == kiBulliedGold) then
+		elseif m_lastAction == kiBulliedGold then
 			strText = L("TXT_KEY_CITY_STATE_DIPLO_JUST_BULLIED")
 
 		-- Did we just bully a worker?
-		elseif (m_lastAction == kiBulliedUnit) then
+		elseif m_lastAction == kiBulliedUnit then
 			strText = L("TXT_KEY_CITY_STATE_DIPLO_JUST_BULLIED_WORKER")
 
 		-- Did we just give gold?
-		elseif (m_lastAction == kiGiftedGold) then
+		elseif m_lastAction == kiGiftedGold then
 			strText = L("TXT_KEY_CITY_STATE_DIPLO_JUST_SUPPORTED")
 
 		-- Did we just PtP?
-		elseif (m_lastAction == kiPledgedToProtect) then
+		elseif m_lastAction == kiPledgedToProtect then
 			strText = L("TXT_KEY_CITY_STATE_PLEDGE_RESPONSE")
 
 		-- Did we just revoke a PtP?
-		elseif (m_lastAction == kiRevokedProtection) then
+		elseif m_lastAction == kiRevokedProtection then
 			strText = L("TXT_KEY_CITY_STATE_DIPLO_JUST_REVOKED_PROTECTION")
 
 		-- Normal peaceful hello, with info about active quests
@@ -657,13 +661,14 @@ function OnDisplay()
 				iOtherTeam = pOtherPlayer:GetTeam()
 
 				-- Don't test war with active player!
-				if (iPlayerLoop ~= activePlayerID) then
-					if (pOtherPlayer:IsAlive()) then
-						if (minorTeam:IsAtWar(iOtherTeam)) then
+				if iPlayerLoop ~= activePlayerID then
+					if pOtherPlayer:IsAlive() then
+						if minorTeam:IsAtWar(iOtherTeam) then
 							if minorPlayer:IsMinorWarQuestWithMajorActive(iPlayerLoop) then
-								if (iNumPlayersAtWar ~= 0) then
+								if iNumPlayersAtWar ~= 0 then
 									strWarString = strWarString .. ", "
 								end
+								
 								strWarString = strWarString .. L(pOtherPlayer:GetNameKey())
 
 								iNumPlayersAtWar = iNumPlayersAtWar + 1
@@ -680,11 +685,12 @@ function OnDisplay()
 
 			-- Player has said to turn it off
 			local strSpawnText
-			if (minorPlayer:IsMinorCivUnitSpawningDisabled(activePlayerID)) then
+			if minorPlayer:IsMinorCivUnitSpawningDisabled(activePlayerID) then
 				strSpawnText = L("TXT_KEY_CITY_STATE_TURN_SPAWNING_ON")
 			else
 				strSpawnText = L("TXT_KEY_CITY_STATE_TURN_SPAWNING_OFF")
 			end
+			
 			Controls.NoUnitSpawningLabel:SetText(strSpawnText)
 		else
 			Controls.NoUnitSpawningButton:SetHide(true)
@@ -698,12 +704,14 @@ function OnDisplay()
 	-- War
 	else
 		-- Warmongering player
-		if (minorPlayer:IsPeaceBlocked(activeTeamID)) then
+		if minorPlayer:IsPeaceBlocked(activeTeamID) then
 			strText = L("TXT_KEY_CITY_STATE_DIPLO_HELLO_WARMONGER")
+			
 			Controls.PeaceButton:SetHide(true)
 		-- Normal War
 		else
 			strText = L("TXT_KEY_CITY_STATE_DIPLO_HELLO_WAR")
+			
 			Controls.PeaceButton:SetHide(false)
 		end
 
@@ -762,7 +770,7 @@ function OnDisplay()
 	Controls.PledgeAnim:SetHide(not isEnablePledgeButton)
 	Controls.PledgeButton:SetHide(not isShowPledgeButton)
 	
-	if (isShowPledgeButton) then
+	if isShowPledgeButton then
 		Controls.PledgeLabel:SetText(strProtectButton)
 		Controls.PledgeButton:SetToolTipString(strProtectTT)
 	end
@@ -770,34 +778,36 @@ function OnDisplay()
 	Controls.RevokePledgeAnim:SetHide(not isEnableRevokeButton)
 	Controls.RevokePledgeButton:SetHide(not isShowRevokeButton)
 	
-	if (isShowRevokeButton) then
+	if isShowRevokeButton then
 		Controls.RevokePledgeLabel:SetText(strRevokeProtectButton)
 		Controls.RevokePledgeButton:SetToolTipString(strRevokeProtectTT)
 	end
 
-	if (Game.IsOption(GameOptionTypes.GAMEOPTION_ALWAYS_WAR)) then
+	if Game.IsOption(GameOptionTypes.GAMEOPTION_ALWAYS_WAR) then
 		Controls.PeaceButton:SetHide(true)
 	end
 	
-	if (Game.IsOption(GameOptionTypes.GAMEOPTION_ALWAYS_PEACE)) then
+	if Game.IsOption(GameOptionTypes.GAMEOPTION_ALWAYS_PEACE) then
 		Controls.WarButton:SetHide(true)
 	end
 	
-	if (Game.IsOption(GameOptionTypes.GAMEOPTION_NO_CHANGING_WAR_PEACE)) then
+	if Game.IsOption(GameOptionTypes.GAMEOPTION_NO_CHANGING_WAR_PEACE) then
 		Controls.PeaceButton:SetHide(true)
 		Controls.WarButton:SetHide(true)
 	end
 
-	if(not minorPlayer:IsMarried(activePlayerID)) then
+	if not minorPlayer:IsMarried(activePlayerID)  then
 		local iBuyoutCost = minorPlayer:GetMarriageCost(activePlayerID)
 		local strButtonLabel = L( "TXT_KEY_POP_CSTATE_BUYOUT")
-		local strToolTip = L( "TXT_KEY_POP_CSTATE_MARRIAGE_TT", iBuyoutCost )
+		local strToolTip = L("TXT_KEY_POP_CSTATE_MARRIAGE_TT", iBuyoutCost)
+		
 		if minorPlayer:CanMajorMarry(activePlayerID) and not isAtWar then	
 			Controls.MarriageButton:SetHide(false)
 			Controls.MarriageAnim:SetHide(false)
-		elseif (activePlayer:IsDiplomaticMarriage() and not isAtWar) then
-			if (minorPlayer:GetAlly() == activePlayerID) then
+		elseif activePlayer:IsDiplomaticMarriage() and not isAtWar then
+			if minorPlayer:GetAlly() == activePlayerID then
 				local iAllianceTurns = minorPlayer:GetAlliedTurns()
+				
 				strButtonLabel = "[COLOR_WARNING_TEXT]" .. strButtonLabel .. "[ENDCOLOR]"
 				strToolTip = L("TXT_KEY_POP_CSTATE_MARRIAGE_DISABLED_ALLY_TT", GameDefines.MINOR_CIV_BUYOUT_TURNS, iAllianceTurns, iBuyoutCost)
 			else
@@ -810,8 +820,8 @@ function OnDisplay()
 		else
 			Controls.MarriageButton:SetHide(true)
 		end
-		Controls.MarriageLabel:SetText( strButtonLabel )
-		Controls.MarriageButton:SetToolTipString( strToolTip )
+		Controls.MarriageLabel:SetText(strButtonLabel)
+		Controls.MarriageButton:SetToolTipString(strToolTip)
 	else
 		Controls.MarriageButton:SetHide(true)
 	end
@@ -888,7 +898,7 @@ function GetContenderInfo(majorPlayerID, minorPlayerID)
 		CivIconHookup(eContender, 32, Controls.ContenderIcon, Controls.ContenderIconBG, Controls.ContenderIconShadow, false, true)
 	end
 
-	return tostring(iContInfluence) .. " [ICON_INFLUENCE] (" .. iMissingInfluenceForContender .. " [ICON_INFLUENCE] to become an Ally)"
+	return L("TXT_KEY_POP_CSTATE_UCS_CONTENDER_INFLUENCE", tostring(iContInfluence), iMissingInfluenceForContender)
 end
 
 function GetCityStateStatusText(majorPlayerID, minorPlayerID)
