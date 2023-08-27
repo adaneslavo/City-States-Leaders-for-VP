@@ -144,7 +144,7 @@ function OnEventReceived(popupInfo)
 	if bMessage or bDiplo then
 		-- nothing
 	elseif bGreeting then
-		m_lastAction = kiGreet
+		m_iLastAction = kiGreet
 	else
 		return
 	end
@@ -162,12 +162,12 @@ function OnEventReceived(popupInfo)
     g_iMinorCivID = iPlayer
     g_iMinorCivTeamID = iTeam
 	
-	m_iLastAction = kiNoAction
+	--m_iLastAction = kiNoAction
 	m_iPendingAction = kiNoAction
 	
 	m_bNewQuestAvailable = iQuestFlags == 1
 	
-	OnDisplay() -- ???
+	--OnDisplay() -- ???
 	
 	UIManager:QueuePopup(ContextPtr, PopupPriority.CityStateDiplo)
 end
@@ -551,7 +551,7 @@ function OnDisplay()
 	-- Peace
 	if not isAtWar then
 		-- Gifts
-		if m_lastAction == kiGreet then
+		if m_iLastAction == kiGreet then
 			local bFirstMajorCiv = m_PopupInfo.Option1
 			local sRandPersonality1, sRandPersonality2, sRandTrait1, sRandTrait2, sRandBonus1, sRandBonus2, sRandFriendship, strGiftString = "", "", "", "", "", "", "", ""
 
@@ -609,31 +609,31 @@ function OnDisplay()
 			strText = strGiftString
 		
 		-- Were we sent here because we clicked a notification for a new quest?
-		elseif m_lastAction == kiNoAction and m_isNewQuestAvailable then
+		elseif m_iLastAction == kiNoAction and m_isNewQuestAvailable then
 			strText = L("TXT_KEY_CITY_STATE_DIPLO_HELLO_QUEST_MESSAGE")
 
 		-- Did we just make peace?
-		elseif m_lastAction == kiMadePeace then
+		elseif m_iLastAction == kiMadePeace then
 			strText = L("TXT_KEY_CITY_STATE_DIPLO_PEACE_JUST_MADE")
 
 		-- Did we just bully gold?
-		elseif m_lastAction == kiBulliedGold then
+		elseif m_iLastAction == kiBulliedGold then
 			strText = L("TXT_KEY_CITY_STATE_DIPLO_JUST_BULLIED")
 
 		-- Did we just bully a worker?
-		elseif m_lastAction == kiBulliedUnit then
+		elseif m_iLastAction == kiBulliedUnit then
 			strText = L("TXT_KEY_CITY_STATE_DIPLO_JUST_BULLIED_WORKER")
 
 		-- Did we just give gold?
-		elseif m_lastAction == kiGiftedGold then
+		elseif m_iLastAction == kiGiftedGold then
 			strText = L("TXT_KEY_CITY_STATE_DIPLO_JUST_SUPPORTED")
 
 		-- Did we just PtP?
-		elseif m_lastAction == kiPledgedToProtect then
+		elseif m_iLastAction == kiPledgedToProtect then
 			strText = L("TXT_KEY_CITY_STATE_PLEDGE_RESPONSE")
 
 		-- Did we just revoke a PtP?
-		elseif m_lastAction == kiRevokedProtection then
+		elseif m_iLastAction == kiRevokedProtection then
 			strText = L("TXT_KEY_CITY_STATE_DIPLO_JUST_REVOKED_PROTECTION")
 
 		-- Normal peaceful hello, with info about active quests
