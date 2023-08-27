@@ -28,6 +28,12 @@
 		<Row Tag="TXT_KEY_POP_CSTATE_UCS_LEADER">
 			<Text>{1_LeaderName} from {2_LeaderPlace}</Text>
 		</Row>
+		<Row Tag="TXT_KEY_POP_CSTATE_UCS_UNDER_SOI">
+			<Text>This City-State is under the [COLOR_CYAN]Sphere of Influence[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POP_CSTATE_UCS_CONTENDER_INFLUENCE">
+			<Text>{1_ContenderInf} [ICON_INFLUENCE] ({2_MissingInf} [ICON_INFLUENCE] to become an Ally)</Text>
+		</Row>
 		
 		<!-- Personality texts -->
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_FRIENDLY_1">
