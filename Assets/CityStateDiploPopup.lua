@@ -436,17 +436,17 @@ function OnDisplay()
 				if pTargetPlot ~= nil then
 					local iOwner = pTargetPlot:GetOwner()
 
-					if (iOwner == minorPlayerID or iOwner == -1) then
+					if iOwner == minorPlayerID or iOwner == -1 then
 						local plotX = pTargetPlot:GetX()
 						local plotY = pTargetPlot:GetY()
 						local plotDistance = Map.PlotDistance(thisX, thisY, plotX, plotY)
 
-						if (plotDistance <= iRange and (plotDistance <= iCloseRange or iOwner == minorPlayerID)) then
+						if plotDistance <= iRange and (plotDistance <= iCloseRange or iOwner == minorPlayerID) then
 							local iResourceType = pTargetPlot:GetResourceType(Game.GetActiveTeam())
 
-							if (iResourceType ~= -1) then
-								if (Game.GetResourceUsageType(iResourceType) ~= ResourceUsageTypes.RESOURCEUSAGE_BONUS) then
-									if (tResourceList[iResourceType] == nil) then
+							if iResourceType ~= -1 then
+								if Game.GetResourceUsageType(iResourceType) ~= ResourceUsageTypes.RESOURCEUSAGE_BONUS then
+									if tResourceList[iResourceType] == nil then
 										tResourceList[iResourceType] = 0
 									end
 
