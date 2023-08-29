@@ -43,7 +43,7 @@ INSERT INTO MinorCivLeaders(
 		SELECT	'MINOR_CIV_MBANZA_KONGO',	'mbanza_kongo_leadericon.dds',	'the Ambundu Kingdoms',			'Ana Nzingha Mbande',			'Ngola',			'Leugi'						UNION ALL
 		SELECT	'MINOR_CIV_MELBOURNE',		'melbourne_leadericon.dds',		'the Colony of New South Wales','John Batman',					'',					'TPangolin'					UNION ALL
 		SELECT	'MINOR_CIV_MILAN',			'milan_leadericon.dds',			'the Duchy of Milan',			'Gian Galeazzo Visconti', 		'Duke',				'Janboruta'					UNION ALL
-		SELECT	'MINOR_CIV_MOGADISHU',		'mogadishu_leadericon.dds',		'the Fed. Rep. of Somalia',		'Aden Adde',					'President',		'TPangolin'					UNION ALL
+		SELECT	'MINOR_CIV_MOGADISHU',		'mogadishu_leadericon.dds',	'the Sultanate of Mogadishu',	'Abu Bakr ibn Umar',			'Shaikh',			'EmeraldRange'				UNION ALL
 		SELECT	'MINOR_CIV_MOMBASA',		'mombasa_leadericon.dds',		'the Republic of Kenya',		'Jomo Kenyatta',				'President',		'knightmare13'				UNION ALL
 		SELECT	'MINOR_CIV_MONACO',			'monaco_leadericon.dds',		'the Principality of Monaco',	'Rainier III',					'Prince',			'knightmare13'				UNION ALL
 		SELECT	'MINOR_CIV_ORMUS',			'ormus_leadericon.dds',			'the Sultanate of Oman',		'Qaboos bin Said',				'Sultan',			'knightmare13'				UNION ALL
@@ -89,7 +89,8 @@ INSERT INTO MinorCivLeaders(
 --[ALT] SELECT	'MINOR_CIV_MALACCA',		'malacca_leadericon2.dds',		'the Malacca Sultanate',		'Parameswara',					'Sultan',			'TPangolin'					UNION ALL
 --[ALT]	SELECT	'MINOR_CIV_MELBOURNE',		'melbourne_leadericon2.dds',	'the Commonwealth of Australia','Billy Hughes',					'Prime Minister',	'DarthKyofu'				UNION ALL
 --[ALT]	SELECT	'MINOR_CIV_MOMBASA',		'mombasa_leadericon2.dds',		'the Republic of Kenya',		'Jomo Kenyatta',				'President',		'DMS'						UNION ALL
---[ALT]	SELECT	'MINOR_CIV_MOGADISHU',		'mogadishu_leadericon2.dds',	'the Fed. Rep. of Somalia',		'Siad Barre',					'President',		'TopHatPaladin'				UNION ALL
+--[ALT]	SELECT	'MINOR_CIV_MOGADISHU',		'mogadishu_leadericon2.dds',	'the Fed. Rep. of Somalia',		'Aden Adde',					'President',		'TPangolin'					UNION ALL
+--[ALT]	SELECT	'MINOR_CIV_MOGADISHU',		'mogadishu_leadericon3.dds',	'the Fed. Rep. of Somalia',		'Siad Barre',					'President',		'TopHatPaladin'				UNION ALL
 --[ALT] SELECT	'MINOR_CIV_PANAMA_CITY',	'panama_city_leadericon2.dds',	'the Republic of Panama',		'Victoriano Lorenzo',			'General',			'Leugi'						UNION ALL
 --[ALT] SELECT	'MINOR_CIV_RAGUSA',			'ragusa_leadericon2.dds',		'Ragusa',						'Auguste de Marmont',			'Duke',				'Nutty'						UNION ALL
 --[ALT]	SELECT	'MINOR_CIV_SAMARKAND',		'samarkand_leadericon2.dds',	'the Timurid Empire',			'Timur',						'Emir',				'Tomatekh'					UNION ALL

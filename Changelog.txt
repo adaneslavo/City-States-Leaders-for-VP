@@ -5,6 +5,12 @@ v20:
 	- "refreshed" CityStateDiploPopup.lua file (read "made all changes from scratch on fresh file");
 	- added couple of text tags for localizations;
 	- fixed alignment of some icons and texts;
+	- revised colours for traits and personalities;
+	- added jerk info (in QUESTS label) with a tooltip, so you know you are a JERK;
+	- added info about current anchor;
+- replaced leaders:
+	- Mogadishu: Aden Adde --> Abu Bakr ibn Umar;
+	- Nan Madol: Olosohpa --> Isokelekel;
 
 v19:
 - added code for few new leaders from UCS v14;

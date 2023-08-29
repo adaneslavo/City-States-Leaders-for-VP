@@ -301,9 +301,9 @@ function OnDisplay()
 	if strTraitText == L("TXT_KEY_CITY_STATE_CULTURED_ADJECTIVE") then
 		strTraitText = "[ICON_CULTURE] [COLOR_MAGENTA]".. strTraitText .."[ENDCOLOR]"
 	elseif strTraitText == L("TXT_KEY_CITY_STATE_MILITARISTIC_ADJECTIVE") then
-		strTraitText = "[ICON_WAR] [COLOR_RED]".. strTraitText .."[ENDCOLOR]"
+		strTraitText = "[ICON_WAR] [COLOR_YIELD_FOOD]".. strTraitText .."[ENDCOLOR]"
 	elseif strTraitText == L("TXT_KEY_CITY_STATE_MARITIME_ADJECTIVE") then
-		strTraitText = "[ICON_FOOD] [COLOR_CYAN]".. strTraitText .."[ENDCOLOR]"
+		strTraitText = "[ICON_FOOD] [COLOR_CITY_GREEN]".. strTraitText .."[ENDCOLOR]"
 	elseif strTraitText == L("TXT_KEY_CITY_STATE_MERCANTILE_ADJECTIVE") then
 		strTraitText = "[ICON_GOLD] [COLOR_YELLOW]".. strTraitText .."[ENDCOLOR]"
 	elseif strTraitText == L("TXT_KEY_CITY_STATE_RELIGIOUS_ADJECTIVE") then
@@ -320,13 +320,13 @@ function OnDisplay()
 	local iPersonality = minorPlayer:GetPersonality()
 	
 	if iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_FRIENDLY then
-		strPersonalityText = "[ICON_FLOWER] [COLOR_POSITIVE_TEXT]".. L("TXT_KEY_CITY_STATE_PERSONALITY_FRIENDLY") .."[ENDCOLOR]"
+		strPersonalityText = "[ICON_FLOWER] [COLOR_FADING_POSITIVE_TEXT]".. L("TXT_KEY_CITY_STATE_PERSONALITY_FRIENDLY") .."[ENDCOLOR]"
 		strPersonalityTT = L("TXT_KEY_CITY_STATE_PERSONALITY_FRIENDLY_TT")
 	elseif iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_NEUTRAL then
-		strPersonalityText = "[ICON_TEAM_1] [COLOR_FADING_POSITIVE_TEXT]".. L("TXT_KEY_CITY_STATE_PERSONALITY_NEUTRAL") .."[ENDCOLOR]"
+		strPersonalityText = "[ICON_TEAM_1] [COLOR_WHITE]".. L("TXT_KEY_CITY_STATE_PERSONALITY_NEUTRAL") .."[ENDCOLOR]"
 		strPersonalityTT = L("TXT_KEY_CITY_STATE_PERSONALITY_NEUTRAL_TT")
 	elseif iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_HOSTILE then
-		strPersonalityText = "[ICON_RAZING] [COLOR_NEGATIVE_TEXT]".. L("TXT_KEY_CITY_STATE_PERSONALITY_HOSTILE") .."[ENDCOLOR]"
+		strPersonalityText = "[ICON_RAZING] [COLOR_RED]".. L("TXT_KEY_CITY_STATE_PERSONALITY_HOSTILE") .."[ENDCOLOR]"
 		strPersonalityTT = L("TXT_KEY_CITY_STATE_PERSONALITY_HOSTILE_TT")
 	end
 	
@@ -634,11 +634,11 @@ function OnDisplay()
 			
 			if minorPlayer:IsProtectedByMajor(activePlayerID) then
 				strText = L(string.format("TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_PROTECTED_%s", iRandomVisitText))
-			elseif (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_FRIENDLY) then
+			elseif iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_FRIENDLY then
 				strText = L(string.format("TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_FRIENDLY_%s", iRandomVisitText))
-			elseif (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_NEUTRAL) then
+			elseif iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_NEUTRAL then
 				strText = L(string.format("TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_NEUTRAL_%s", iRandomVisitText))
-			elseif (iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_HOSTILE) then
+			elseif iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_HOSTILE then
 				strText = L(string.format("TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_HOSTILE_%s", iRandomVisitText))
 			end
 
@@ -788,7 +788,7 @@ function OnDisplay()
 		Controls.WarButton:SetHide(true)
 	end
 
-	if not minorPlayer:IsMarried(activePlayerID)  then
+	if not minorPlayer:IsMarried(activePlayerID) then
 		local iBuyoutCost = minorPlayer:GetMarriageCost(activePlayerID)
 		local strButtonLabel = L( "TXT_KEY_POP_CSTATE_BUYOUT")
 		local strToolTip = L("TXT_KEY_POP_CSTATE_MARRIAGE_TT", iBuyoutCost)
@@ -944,10 +944,25 @@ function GetCityStateStatusText(majorPlayerID, minorPlayerID)
 		strStatusText = strStatusText .. "[ENDCOLOR]"
 		
 		if not isAtWar then
+			-- Influence
 			strStatusText = strStatusText .. " " .. majorInfluenceWithMinor .. " [ICON_INFLUENCE]"
 			
-			if majorInfluenceWithMinor ~= 0 then
-				strStatusText = strStatusText .. (" (%+2.2g [ICON_INFLUENCE] / "):format(minorPlayer:GetFriendshipChangePerTurnTimes100(majorPlayerID) / 100) .. L("TXT_KEY_DO_TURN") .. ")" --"TXT_KEY_CITY_STATE_TITLE_TOOL_TIP_CURRENT"
+			-- Anchor
+			local iCurrentAnchorLevelWithMinor = minorPlayer:GetMinorCivFriendshipAnchorWithMajor(majorPlayerID)
+			
+			-- Merging...
+			if majorInfluenceWithMinor ~= iCurrentAnchorLevelWithMinor then
+				local sAnchor = ""
+				
+				if iCurrentAnchorLevelWithMinor < 0 then
+					sAnchor = "[COLOR_NEGATIVE_TEXT]" .. iCurrentAnchorLevelWithMinor .. "[ENDCOLOR]"
+				elseif iCurrentAnchorLevelWithMinor > 0 then
+					sAnchor = "[COLOR_POSITIVE_TEXT]" .. iCurrentAnchorLevelWithMinor .. "[ENDCOLOR]"
+				else
+					sAnchor = iCurrentAnchorLevelWithMinor
+				end
+				
+				strStatusText = strStatusText .. (" (%+2.2g [ICON_INFLUENCE] / "):format(minorPlayer:GetFriendshipChangePerTurnTimes100(majorPlayerID) / 100) .. L("TXT_KEY_DO_TURN") .. ": " .. sAnchor .. " [ICON_INFLUENCE])"
 			end
 		end
 	else
@@ -1007,10 +1022,20 @@ end
 -- adan_eslavo <--
 
 function UpdateActiveQuests()
-	local iActivePlayer = Game.GetActivePlayer()
-	local sIconText = GetActiveQuestText(iActivePlayer, g_iMinorCivID)
-	local sToolTipText = GetActiveQuestToolTip(iActivePlayer, g_iMinorCivID)
+	local pMinorPlayer = Players[g_iMinorCivID]
+	local eActivePlayer = Game.GetActivePlayer()
 	
+	local sIconText, sToolTipText = "", ""
+	local iJerkTurns = pMinorPlayer:GetJerkTurnsRemaining(eActivePlayer)
+	
+	if iJerkTurns > 0 then
+		sIconText = "[COLOR_NEGATIVE_TEXT]No quests for " .. iJerkTurns .. " turns."
+		sToolTipText = L("TXT_KEY_CSTATE_JERK_STATUS", iJerkTurns)
+	else
+		sIconText = GetActiveQuestText(eActivePlayer, g_iMinorCivID)
+		sToolTipText = GetActiveQuestToolTip(eActivePlayer, g_iMinorCivID)
+	end
+		
 	Controls.QuestInfo:SetText(sIconText)
 	Controls.QuestInfo:SetToolTipString(sToolTipText)
 	Controls.QuestLabel:SetToolTipString(sToolTipText)
@@ -1533,11 +1558,11 @@ function OnNoQuestInfluenceButtonClicked()
 	
 	if pPlayer:IsQuestInfluenceDisabled(iActivePlayer) then
 		pPlayer:SetQuestInfluenceDisabled(iActivePlayer, false)
-		print("ENABLE")
+		
 		OnCloseTake()
 	else
 		pPlayer:SetQuestInfluenceDisabled(iActivePlayer, true)
-		print("DISABLE")
+		
 		OnCloseTake()
 	end
 end
