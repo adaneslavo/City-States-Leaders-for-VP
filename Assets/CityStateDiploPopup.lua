@@ -254,7 +254,7 @@ function OnDisplay()
 				leaderName = leaderTitle .. " " .. leaderName
 			end
 			
-			leaderName = L("TXT_KEY_POP_CSTATE_UCS_LEADER", leaderName, leaderPlace)
+			leaderName = L("TXT_KEY_CSL_POPUP_LEADER", leaderName, leaderPlace)
 			
 			Controls.TitleIconCSLTrait:SetHide(false)
 			Controls.TitleIconCSLTrait:SetTexture(traitIcon)
@@ -377,7 +377,7 @@ function OnDisplay()
 	
 	if Game.IsResolutionPassed(GameInfoTypes.RESOLUTION_SPHERE_OF_INFLUENCE, minorPlayerID) then
 		strAlly = strAlly .. " [ICON_LOCKED]"
-		strAllyTT = strAllyTT .. "[NEWLINE][NEWLINE]" .. L("TXT_KEY_POP_CSTATE_UCS_UNDER_SOI")
+		strAllyTT = strAllyTT .. "[NEWLINE][NEWLINE]" .. L("TXT_KEY_CSL_POPUP_UNDER_SOI_TT")
 	end
 
 	Controls.AllyText:SetText(strAlly)
@@ -496,11 +496,11 @@ function OnDisplay()
 			end	
 			
 			if pResource.ResourceClassType == "RESOURCECLASS_LUXURY" then	
-				strResourceText = strResourceText .. L("TXT_KEY_POP_CSTATE_RESOURCE_LIST", pResource.IconString, "[COLOR_PLAYER_LIGHT_YELLOW_TEXT]", L(pResource.Description), tResourceBonus[i][3])
+				strResourceText = strResourceText .. L("TXT_KEY_CSL_POPUP_RESOURCE_LIST", pResource.IconString, "[COLOR_PLAYER_LIGHT_YELLOW_TEXT]", L(pResource.Description), tResourceBonus[i][3])
 			elseif pResource.ResourceClassType == "RESOURCECLASS_BONUS"
-				strResourceText = strResourceText .. L("TXT_KEY_POP_CSTATE_RESOURCE_LIST", pResource.IconString, "[COLOR:0:205:105:255]", L(pResource.Description), tResourceBonus[i][3])
+				strResourceText = strResourceText .. L("TXT_KEY_CSL_POPUP_RESOURCE_LIST", pResource.IconString, "[COLOR:0:205:105:255]", L(pResource.Description), tResourceBonus[i][3])
 			else
-				strResourceText = strResourceText .. L("TXT_KEY_POP_CSTATE_RESOURCE_LIST", pResource.IconString, "[COLOR_YIELD_FOOD]", L(pResource.Description), tResourceBonus[i][3])
+				strResourceText = strResourceText .. L("TXT_KEY_CSL_POPUP_RESOURCE_LIST", pResource.IconString, "[COLOR_YIELD_FOOD]", L(pResource.Description), tResourceBonus[i][3])
 			end			
 			
 			iNumResourcesFound = iNumResourcesFound + 1
@@ -538,10 +538,10 @@ function OnDisplay()
 		end
 	end
 
-	local sUCSInfoTitle = L("TXT_KEY_POP_CSTATE_UCS_MAIN_TEXT")
-	local sUCSInfoTT = L("TXT_KEY_POP_CSTATE_UCS_TOOLTIP_TITLE")
-	local sNoUCSBonusesFound = L("TXT_KEY_POP_CSTATE_UCS_NO_BONUS_FOUND")
-	local sTextEnableUCS = L("TXT_KEY_POP_CSTATE_UCS_NO_UCS_FOUND")
+	local sUCSInfoTitle = L("TXT_KEY_CSL_POPUP_UCS_MAIN_TEXT")
+	local sUCSInfoTT = L("TXT_KEY_CSL_POPUP_UCS_TOOLTIP_TITLE")
+	local sNoUCSBonusesFound = L("TXT_KEY_CSL_POPUP_UCS_NO_BONUS_FOUND")
+	local sTextEnableUCS = L("TXT_KEY_CSL_POPUP_UCS_NO_UCS_FOUND")
 	local bBonusFound = false
 	
 	table_insert(tUCSBonuses, sUCSInfoTT)
@@ -929,7 +929,7 @@ function GetContenderInfo(majorPlayerID, minorPlayerID)
 		CivIconHookup(eContender, 32, Controls.ContenderIcon, Controls.ContenderIconBG, Controls.ContenderIconShadow, false, true)
 	end
 
-	return L("TXT_KEY_POP_CSTATE_UCS_CONTENDER_INFLUENCE", tostring(iContInfluence), iMissingInfluenceForContender)
+	return L("TXT_KEY_CSL_POPUP_CONTENDER_INFLUENCE", tostring(iContInfluence), iMissingInfluenceForContender)
 end
 
 function GetCityStateStatusText(majorPlayerID, minorPlayerID)
