@@ -63,7 +63,7 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>Texts/MinorCivDialogs.xml</FileName>
+        <FileName>Texts/MinorCivNewTexts.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -1192,7 +1192,7 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Texts\MinorCivDialogs.xml">
+    <Content Include="Texts\MinorCivNewTexts.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

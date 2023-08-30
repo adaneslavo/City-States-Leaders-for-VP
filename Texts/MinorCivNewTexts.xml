@@ -2,8 +2,8 @@
 <!-- Created by ModBuddy on 11/24/2013 10:24:12 PM -->
 <GameData>
 	<Community>
-		<Row Type="CSL-BONUS_ON">
-			<Value>1</Text>
+		<Row Type="CSL-BONUS-ON">
+			<Value>1</Value>
 		</Row>
 	</Community>
 	
@@ -15,6 +15,10 @@
 		<Update>
 			<Where Tag="TXT_KEY_POP_CSTATE_LABEL_CONTENDER" />
 			<Set Text="CONTENDER:" />
+		</Update>
+		<Update>
+			<Where Tag="TXT_KEY_CITY_STATE_RESOURCES_TT" />
+			<Set Text="These resources are in close range of the City-State''s capital. All [COLOR:0:155:255:255]Strategic[ENDCOLOR] and [COLOR:205:205:0:255]Luxury[ENDCOLOR] resources will be granted to the player, when he becomes an [COLOR_CYAN]Ally[ENDCOLOR] and once the City-State connects them." />
 		</Update>
 		
 		<!-- UCS compatibility -->
@@ -47,6 +51,27 @@
 		<Row Tag="TXT_KEY_CSL_POPUP_RESOURCE_LIST">
 			<Text>{1_Icon} {2_Color}{3_Name} ({4_Amount})[ENDCOLOR]</Text>
 		</Row>
+
+
+		
+		<!-- Mini Civilopedia -->
+		<!--<Row Tag="TXT_KEY_CSL_LEADER_SHORT_MINOR_CIV_ALMATY">
+			<Text>Almaty leader story.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CSL_LEADER_SHORT_MINOR_CIV_ANTANANARIVO">
+			<Text>Antananarivo leader story.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CSL_LEADER_SHORT_MINOR_CIV_ANTWERP">
+			<Text>Antwerp leader story.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CSL_LEADER_SHORT_MINOR_CIV_BELGRADE">
+			<Text>Belgrade leader story.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CSL_LEADER_SHORT_MINOR_CIV_BOGOTA">
+			<Text>Bogota leader story.</Text>
+		</Row>-->
+		
+		
 		
 		<!-- Personality texts -->
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_FRIENDLY_1">
@@ -57,7 +82,6 @@
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_FRIENDLY_3">
 			<Text>Pleased to meet you. Welcome to the benevolent state of [COLOR_CYAN]{1_civ}[ENDCOLOR]. We look forward to sharing our knowledge with you.</Text>
-	
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_FRIENDLY_4">
 			<Text>Hallelujah! We have heard about your mighty empire in [COLOR_CYAN]{1_civ}[ENDCOLOR]. Make yourself at home.</Text>
@@ -116,16 +140,6 @@
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_HOSTILE_7">
 			<Text>Oh, gods! That's just what we needed! A bloodthirsty tyrant in [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
 		</Row>
-		
-		<!--<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_1">
-			<Text>Ahhhh... An omen told [COLOR_CYAN]{1_civ}[ENDCOLOR] that you would one day arrive. We shall do great things together - your empire and ours. We have seen it in the stars!</Text>
-		</Row>
-		<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_2">
-			<Text>I2 [COLOR_CYAN]{1_civ}[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_3">
-			<Text>I3 [COLOR_CYAN]{1_civ}[ENDCOLOR]</Text>
-		</Row>-->
 		
 		<!-- Trait texts -->
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_CULTURED_1">

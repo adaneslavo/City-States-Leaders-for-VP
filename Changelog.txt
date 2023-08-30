@@ -6,9 +6,16 @@ v20:
 	- added couple of text tags for localizations;
 	- fixed alignment of some icons and texts;
 	- revised colours for traits and personalities;
-	- added jerk info (in QUESTS label) with a tooltip, so you know you are a JERK;
-	- added info about current anchor;
-- replaced leaders:
+	- resources tab rework:
+		- now shows also bonus resources by default (you can disable that);
+		- all resources are sorted by the class, amount and name (in this order);
+		- resources now separated with space, instead of comma;
+		- recoloured resource classes;
+	- new stuff:
+		- added jerk info (in QUESTS label) with a tooltip, so you know you are a JERK;
+		- added info about current anchor (red if lower than 0, green if greater than 0);
+		- leader short stories hidden in tooltip (if detected);
+- replaced leaders with new art:
 	- Mogadishu: Aden Adde --> Abu Bakr ibn Umar;
 	- Nan Madol: Olosohpa --> Isokelekel;
 

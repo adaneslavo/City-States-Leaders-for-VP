@@ -227,6 +227,7 @@ function OnDisplay()
 	local leaderIcon = nil
 	local leaderPlace = nil
 	local leaderName = nil
+	local leaderNameTT = nil
 	local leaderTitle = nil
 	local artistName = nil
 
@@ -255,12 +256,20 @@ function OnDisplay()
 			end
 			
 			leaderName = L("TXT_KEY_CSL_POPUP_LEADER", leaderName, leaderPlace)
+			local leaderNameTag = "TXT_KEY_CSL_LEADER_SHORT_" .. realMinorCivType
+			
+			if L(leaderNameTag) == leaderNameTag then
+				leaderNameTT = nil
+			else
+				leaderNameTT = L(leaderNameTag)
+			end
 			
 			Controls.TitleIconCSLTrait:SetHide(false)
 			Controls.TitleIconCSLTrait:SetTexture(traitIcon)
 			Controls.TitleIconCSL:SetHide(false)
 			Controls.TitleIconCSL:SetTexture(leaderIcon)
 			Controls.LeaderLabel:LocalizeAndSetText(leaderName)
+			if leaderNameTT then Controls.LeaderLabel:SetToolTipString(leaderNameTT) else Controls.LeaderLabel:SetToolTipString() end
 			Controls.ArtistLabel:LocalizeAndSetText(artistName)
 		else
 			Controls.TitleIconCSLTrait:SetHide(false)
@@ -410,16 +419,17 @@ function OnDisplay()
 	
 	if pCapital then
 		local strResourceText = ""
-		local tResourceBonus, tResourceLuxury, tResourceStartegic = {}, {}, {}
+		local tResourceBonus, tResourceLuxury, tResourceStrategic = {}, {}, {}
 		
 		local iNumResourcesFound = 0
 
 		local thisX = pCapital:GetX()
 		local thisY = pCapital:GetY()
 
-		local bShowBonus = GameInfo.Community{Type="CSL-BONUS_ON"}().Value == 1
+		local bShowBonusResources = GameInfo.Community{Type="CSL-BONUS-ON"}().Value == 1
 		local iRange = GameDefines.MINOR_CIV_RESOURCE_SEARCH_RADIUS or 5
-		local iCloseRange = math.floor(iRange/2) --2
+		--local iCloseRange = math.floor(iRange / 2)
+		local iCloseRange = 3
 		
 		for iDX = -iRange, iRange, 1 do
 			for iDY = -iRange, iRange, 1 do
@@ -438,24 +448,27 @@ function OnDisplay()
 
 							if iResourceType ~= -1 then
 								if bShowBonusResources or Game.GetResourceUsageType(iResourceType) ~= ResourceUsageTypes.RESOURCEUSAGE_BONUS then
-									if pResource.ResourceClassType == "RESOURCECLASS_LUXURY" then	
+									local sResourceClass = GameInfo.Resources[iResourceType].ResourceClassType
+									local iNumResourceOnTargetPlot = pTargetPlot:GetNumResource()
+									
+									if sResourceClass == "RESOURCECLASS_LUXURY" then	
 										if tResourceLuxury[iResourceType] == nil then
 											tResourceLuxury[iResourceType] = 0
 										end
 										
-										tResourceLuxury[iResourceType] = tResourceLuxury[iResourceType] + pTargetPlot:GetNumResource()
-									elseif pResource.ResourceClassType == "RESOURCECLASS_BONUS"
+										tResourceLuxury[iResourceType] = tResourceLuxury[iResourceType] + iNumResourceOnTargetPlot
+									elseif sResourceClass == "RESOURCECLASS_BONUS" then
 										if tResourceBonus[iResourceType] == nil then
 											tResourceBonus[iResourceType] = 0
 										end
 										
-										tResourceBonus[iResourceType] = tResourceBonus[iResourceType] + pTargetPlot:GetNumResource()
+										tResourceBonus[iResourceType] = tResourceBonus[iResourceType] + iNumResourceOnTargetPlot
 									else
-										if tResourceStartegic[iResourceType] == nil then
-											tResourceStartegic[iResourceType] = 0
+										if tResourceStrategic[iResourceType] == nil then
+											tResourceStrategic[iResourceType] = 0
 										end
 										
-										tResourceStartegic[iResourceType] = tResourceStartegic[iResourceType] + pTargetPlot:GetNumResource()
+										tResourceStrategic[iResourceType] = tResourceStrategic[iResourceType] + iNumResourceOnTargetPlot
 									end	
 								end
 							end
@@ -468,7 +481,7 @@ function OnDisplay()
 		-- making a complete table
 		local tResourceList = {}
 		
-		for iResourceType, iAmount in pairs(tResourceStartegic) do
+		for iResourceType, iAmount in pairs(tResourceStrategic) do
 			table.insert(tResourceList, {0, iResourceType, iAmount})
 		end
 
@@ -479,28 +492,47 @@ function OnDisplay()
 		for iResourceType, iAmount in pairs(tResourceBonus) do
 			table.insert(tResourceList, {2, iResourceType, iAmount})
 		end
-
+		
+		for i = 1, #tResourceList do
+		    print("RESOURCE_LIST_UNSORTED", tResourceList[i][1], tResourceList[i][3], L(GameInfo.Resources[tResourceList[i][2]].Description))
+		end
+		
 		-- sorting a complete table
-		table.sort(tResourceBonus, function (a, b) return a[1] < b[1] end)
-
-		for i = 1, #tResourceBonus do
-		    print(tResourceBonus[i][1], tResourceBonus[i][2], tResourceBonus[i][3])
+		table.sort(tResourceList, function (a, b) 
+			if a[1] ~= b[1] then
+				return a[1] < b[1]
+			else
+				if a[3] ~= b[3] then
+					return a[3] > b[3]
+				else
+					if a[2] ~= b[2] then
+						local sNameA = L(GameInfo.Resources[a[2]].Description)
+						local sNameB = L(GameInfo.Resources[b[2]].Description)
+					
+						return sNameA < sNameB
+					end
+				end
+			end
+		end)
+									
+		for i = 1, #tResourceList do
+		    print("RESOURCE_LIST_SORTED", tResourceList[i][1], tResourceList[i][3], L(GameInfo.Resources[tResourceList[i][2]].Description))
 		end
 
 		-- showing the list on display
-		for i = 1, #tResourceBonus do
-			local pResource = GameInfo.Resources[tResourceBonus[i][2]]
+		for i = 1, #tResourceList do
+			local pResource = GameInfo.Resources[tResourceList[i][2]]
 					
 			if iNumResourcesFound > 0 then
-				strResourceText = strResourceText .. ", "
+				strResourceText = strResourceText .. " "
 			end	
 			
 			if pResource.ResourceClassType == "RESOURCECLASS_LUXURY" then	
-				strResourceText = strResourceText .. L("TXT_KEY_CSL_POPUP_RESOURCE_LIST", pResource.IconString, "[COLOR_PLAYER_LIGHT_YELLOW_TEXT]", L(pResource.Description), tResourceBonus[i][3])
-			elseif pResource.ResourceClassType == "RESOURCECLASS_BONUS"
-				strResourceText = strResourceText .. L("TXT_KEY_CSL_POPUP_RESOURCE_LIST", pResource.IconString, "[COLOR:0:205:105:255]", L(pResource.Description), tResourceBonus[i][3])
+				strResourceText = strResourceText .. L("TXT_KEY_CSL_POPUP_RESOURCE_LIST", pResource.IconString, "[COLOR:205:205:0:255]", L(pResource.Description), tResourceList[i][3])
+			elseif pResource.ResourceClassType == "RESOURCECLASS_BONUS" then
+				strResourceText = strResourceText .. L("TXT_KEY_CSL_POPUP_RESOURCE_LIST", pResource.IconString, "[COLOR:0:205:105:255]", L(pResource.Description), tResourceList[i][3])
 			else
-				strResourceText = strResourceText .. L("TXT_KEY_CSL_POPUP_RESOURCE_LIST", pResource.IconString, "[COLOR_YIELD_FOOD]", L(pResource.Description), tResourceBonus[i][3])
+				strResourceText = strResourceText .. L("TXT_KEY_CSL_POPUP_RESOURCE_LIST", pResource.IconString, "[COLOR:0:155:255:255]", L(pResource.Description), tResourceList[i][3])
 			end			
 			
 			iNumResourcesFound = iNumResourcesFound + 1
