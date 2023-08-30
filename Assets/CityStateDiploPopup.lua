@@ -407,9 +407,9 @@ function OnDisplay()
 	
 	-- Nearby Resources
 	local pCapital = minorPlayer:GetCapitalCity()
+	local bShowBonus = GameInfo.Community{Type="CSL-BONUS_ON"}().Value == 1
 	
 	if pCapital then
-
 		local strResourceText = ""
 
 		local iNumResourcesFound = 0
@@ -437,7 +437,7 @@ function OnDisplay()
 							local iResourceType = pTargetPlot:GetResourceType(Game.GetActiveTeam())
 
 							if iResourceType ~= -1 then
-								if Game.GetResourceUsageType(iResourceType) ~= ResourceUsageTypes.RESOURCEUSAGE_BONUS then
+								if bShowBonusResources or Game.GetResourceUsageType(iResourceType) ~= ResourceUsageTypes.RESOURCEUSAGE_BONUS then
 									if tResourceList[iResourceType] == nil then
 										tResourceList[iResourceType] = 0
 									end
@@ -452,17 +452,24 @@ function OnDisplay()
 		end
 
 		for iResourceType, iAmount in pairs(tResourceList) do
+			local pResource = GameInfo.Resources[iResourceType]
+			local tResourceBonus, tResourceLuxury, tResourceStrategic = {}, {}, {}
+
+			if pResource.ResourceClassType == "RESOURCECLASS_LUXURY" then	
+				strResourceText = strResourceText .. pResource.IconString .. " [COLOR_PLAYER_LIGHT_YELLOW_TEXT]" .. L(pResource.Description) .. " (" .. iAmount .. ") [ENDCOLOR]"
+			elseif pResource.ResourceClassType == "RESOURCECLASS_BONUS"
+				strResourceText = strResourceText .. pResource.IconString .. " [COLOR_YIELD_FOOD]" .. L(pResource.Description) .. " (" .. iAmount .. ") [ENDCOLOR]"
+			else
+				strResourceText = strResourceText .. pResource.IconString .. " [COLOR_YIELD_FOOD]" .. L(pResource.Description) .. " (" .. iAmount .. ") [ENDCOLOR]"
+			end
+			
+			
+			
+			
 			if iNumResourcesFound > 0 then
 				strResourceText = strResourceText .. ", "
 			end
 			
-			local pResource = GameInfo.Resources[iResourceType]
-			
-			if pResource.ResourceClassType == "RESOURCECLASS_LUXURY" then	
-				strResourceText = strResourceText .. pResource.IconString .. " [COLOR_PLAYER_LIGHT_YELLOW_TEXT]" .. L(pResource.Description) .. " (" .. iAmount .. ") [ENDCOLOR]"
-			else
-				strResourceText = strResourceText .. pResource.IconString .. " [COLOR_YIELD_FOOD]" .. L(pResource.Description) .. " (" .. iAmount .. ") [ENDCOLOR]"
-			end
 			
 			iNumResourcesFound = iNumResourcesFound + 1
 		end
