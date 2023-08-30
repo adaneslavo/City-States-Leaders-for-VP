@@ -16,31 +16,35 @@
 			<Where Tag="TXT_KEY_POP_CSTATE_LABEL_CONTENDER" />
 			<Set Text="CONTENDER:" />
 		</Update>
-		<Row Tag="TXT_KEY_POP_CSTATE_RESOURCES_CSL">
-			<Text>RESOURCES:</Text>
-		</Row>
-		<Row Tag="TXT_KEY_POP_CSTATE_UCS_MAIN_TEXT">
+		
+		<!-- UCS compatibility -->
+		<Row Tag="TXT_KEY_CSL_POPUP_UCS_MAIN_TEXT">
 			<Text>Active [ICON_CITY_STATE][NEWLINE]Bonuses</Text>
 		</Row>
-		<Row Tag="TXT_KEY_POP_CSTATE_UCS_TOOLTIP_TITLE">
+		<Row Tag="TXT_KEY_CSL_POPUP_UCS_TOOLTIP_TITLE">
 			<Text>List of active [ICON_CITY_STATE] City-States' bonuses:[NEWLINE]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_POP_CSTATE_UCS_NO_BONUS_FOUND">
+		<Row Tag="TXT_KEY_CSL_POPUP_UCS_NO_BONUS_FOUND">
 			<Text>You have currently no bonuses from [ICON_CITY_STATE] City-States.</Text>
 		</Row>
-		<Row Tag="TXT_KEY_POP_CSTATE_UCS_NO_UCS_FOUND">
+		<Row Tag="TXT_KEY_CSL_POPUP_UCS_NO_UCS_FOUND">
 			<Text>You must enable [COLOR_YELLOW]Unique City-States[ENDCOLOR] mod to gain bonuses from [ICON_CITY_STATE] City-States.</Text>
 		</Row>
-		<Row Tag="TXT_KEY_POP_CSTATE_UCS_LEADER">
+		
+		<!-- New tags -->
+		<Row Tag="TXT_KEY_CSL_POPUP_LEADER">
 			<Text>{1_LeaderName} from {2_LeaderPlace}</Text>
 		</Row>
-		<Row Tag="TXT_KEY_POP_CSTATE_UCS_UNDER_SOI">
+		<Row Tag="TXT_KEY_CSL_POPUP_UNDER_SOI_TT">
 			<Text>This City-State is under the [COLOR_CYAN]Sphere of Influence[ENDCOLOR].</Text>
 		</Row>
-		<Row Tag="TXT_KEY_POP_CSTATE_UCS_CONTENDER_INFLUENCE">
+		<Row Tag="TXT_KEY_CSL_POPUP_CONTENDER_INFLUENCE">
 			<Text>{1_ContenderInf} [ICON_INFLUENCE] ({2_MissingInf} [ICON_INFLUENCE] to be an Ally)</Text>
 		</Row>
-		<Row Tag="TXT_KEY_POP_CSTATE_RESOURCE_LIST">
+		<Row Tag="TXT_KEY_CSL_POPUP_RESOURCE_LABEL">
+			<Text>RESOURCES:</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CSL_POPUP_RESOURCE_LIST">
 			<Text>{1_Icon} {2_Color}{3_Name} ({4_Amount})[ENDCOLOR]</Text>
 		</Row>
 		
