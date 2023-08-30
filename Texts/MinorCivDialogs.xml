@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by ModBuddy on 11/24/2013 10:24:12 PM -->
 <GameData>
+	<Community>
+		<Row Type="CSL-BONUS_ON">
+			<Value>1</Text>
+		</Row>
+	</Community>
+	
 	<Language_en_US>
 		<Update>
 			<Where Tag="TXT_KEY_POP_CSTATE_PROTECTED_BY" />
@@ -33,6 +39,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_POP_CSTATE_UCS_CONTENDER_INFLUENCE">
 			<Text>{1_ContenderInf} [ICON_INFLUENCE] ({2_MissingInf} [ICON_INFLUENCE] to be an Ally)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POP_CSTATE_RESOURCE_LIST">
+			<Text>{1_Icon} {2_Color}{3_Name} ({4_Amount})[ENDCOLOR]</Text>
 		</Row>
 		
 		<!-- Personality texts -->
