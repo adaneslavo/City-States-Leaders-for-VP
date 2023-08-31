@@ -21,7 +21,7 @@ INSERT INTO MinorCivLeaders(
 		SELECT	'MINOR_CIV_BUDAPEST',		'budapest_leadericon.dds',		'the Kingdom of Hungary',		'Stephen I',					'King Saint',		'Janboruta'					UNION ALL
 		SELECT	'MINOR_CIV_BUENOS_AIRES',	'buenos_aires_leadericon.dds',	'the Argentine Republic',		'Eva Peron',					'',					'Leugi'						UNION ALL
 		SELECT	'MINOR_CIV_BYBLOS',			'byblos_leadericon.dds',		'the Kingdom of Byblos ',		'Ahiram',						'King',				'LastSword'					UNION ALL
-		SELECT	'MINOR_CIV_CAHOKIA',		'cahokia_leadericon2.dds',		'the Mississippians',			'Birdman',						'King',				'H. Roe/Nutty'				UNION ALL
+		SELECT	'MINOR_CIV_CAHOKIA',		'cahokia_leadericon2.dds',		'the Mississippians',			'Tuskaloosa',						'Chief',				'H. Roe/Nutty'				UNION ALL
 		SELECT	'MINOR_CIV_CAPE_TOWN',		'cape_town_leadericon.dds',		'the Dutch East India Company',	'Jan van Riebeeck',				'Commander',		'Janboruta'					UNION ALL
 		SELECT	'MINOR_CIV_COLOMBO',		'colombo_leadericon.dds',		'the Dominion of Ceylon',		'D.S. Senanayake',				'Prime Minister',	'knightmare13'				UNION ALL
 		SELECT	'MINOR_CIV_FLORENCE',		'florence_leadericon.dds',		'the Florence Republic',		"Lorenzo de'Medici",	 		'',					'sukritact'					UNION ALL
