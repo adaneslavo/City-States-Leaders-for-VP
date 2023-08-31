@@ -67,8 +67,26 @@
 		<Row Tag="TXT_KEY_CSL_LEADER_SHORT_MINOR_CIV_BELGRADE">
 			<Text>Karadorde Petrovic was a Serbian revolutionary who led the struggle for his country's independence from the Ottoman Empire during the First Serbian Uprising of 1804–1813. He distinguished himself during the Austro-Turkish War of 1788–1791 as a member of the Serbian Free Corps, a militia of Habsburg and Ottoman Serbs, armed and trained by the Austrians.[NEWLINE][NEWLINE]In early 1804, following a massacre of Serb chieftains by renegade Ottoman janissaries known as Dahis, the Serbs of the Pashalik rebelled. Karadorde was unanimously elected to lead the uprising against the Dahis at an assembly of surviving chiefs. Within six months, most of the Dahi leaders had been captured and executed by Karadorde's forces. After the final remnants of Dahi resistance had been crushed, Karadorde and his followers demanded far-reaching autonomy, which Sultan Selim interpreted as the first step towards complete independence. Selim promptly declared jihad against the rebels, but by 1806, the rebels had captured all the major towns in the Pashalik, including Belgrade and Smederevo, and expelled their Muslim inhabitants. Burdened by the demands of the Russo-Turkish War of 1806–1812, Selim offered the Serbs extensive autonomy.</Text>
 		</Row>
-		<!--<Row Tag="TXT_KEY_CSL_LEADER_SHORT_MINOR_CIV_BOGOTA">
+		<Row Tag="TXT_KEY_CSL_LEADER_SHORT_MINOR_CIV_BOGOTA">
 			<Text>Simón Bolívar (El Libertador) was a Venezuelan military and political leader who led independence movements in South America.[NEWLINE][NEWLINE]Bolívar was educated abroad and lived in Spain. From 1803 to 1805, Bolívar embarked on a Grand Tour that ended in Rome, where he swore to end rule of the Spanish Empire, so when their authority in the Americas weakened due to Napoleon's Peninsular War, Bolívar became a zealous combatant and politician in the Spanish American wars of independence.[NEWLINE][NEWLINE]Bolívar fought as a militia officer, fighting Royalist forces for the first and second Venezuelan republics and the United Provinces of New Granada. After Spanish forces subdued New Granada in 1815, Bolívar was forced into exile on Jamaica. In Haiti, Bolívar met and befriended Haitian revolutionary leader Alexandre Pétion. After promising to abolish slavery in Spanish America, Bolívar received military support from Pétion and returned to Venezuela. He established a third republic in 1817 and then crossed the Andes to liberate New Granada in 1819. Bolívar and his allies defeated the Spanish in New Granada in 1819, Venezuela and Panama in 1821, Ecuador in 1822, Peru in 1824, and Bolivia in 1825. Venezuela, New Granada, Ecuador, and Panama were merged into the Republic of Colombia (Gran Colombia), with Bolívar as president.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CSL_LEADER_SHORT_MINOR_CIV_BRATISLAVA">
+			<Text>Svatopluk I governed a principality within Moravia and later became a ruler of Great Moravia, which attained its maximum territorial expansion during his reign (870–871, 871–894).[NEWLINE][NEWLINE]In 870 Svatopluk dethroned Rastislav, who was a vassal of Louis the German, and betrayed him to the Franks, who also imprisoned Svatopluk. After the Moravians rebelled against the Franks, Svatopluk was released and led the rebels to victory over the invaders. Although he was obliged to pay tribute to East Francia under the peace treaty concluded at Forchheim (Germany) in 874, he was able to expand his territories outside the Franks' sphere of interest in the following years. His forces even invaded the March of Pannonia within East Francia in 882.[NEWLINE][NEWLINE]Svatopluk established a good relationship with the popes, and he and his people were formally taken under the protection of the Holy See in 880. Pope Stephen V even addressed him as "King" in a letter written in 885. Svatopluk seems to have wanted to appease the German clergy who opposed the conducting of the liturgy in Old Church Slavonic, and he expelled the disciples of Methodius from Moravia in 886, after their teacher's death.[NEWLINE][NEWLINE]Not long after his death Svatopluk's realm of Great Moravia collapsed in the midst of a power struggle between his sons and the intensifying Hungarian raids.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CSL_LEADER_SHORT_MINOR_CIV_BRUSSELS">
+			<Text></Text>
+		</Row>
+		<Row Tag="TXT_KEY_CSL_LEADER_SHORT_MINOR_CIV_BUCHAREST">
+			<Text></Text>
+		</Row>
+		<Row Tag="TXT_KEY_CSL_LEADER_SHORT_MINOR_CIV_BUDAPEST">
+			<Text></Text>
+		</Row>
+		<Row Tag="TXT_KEY_CSL_LEADER_SHORT_MINOR_CIV_BUENOS_AIRES">
+			<Text></Text>
+		</Row>
+		<!--<Row Tag="TXT_KEY_CSL_LEADER_SHORT_MINOR_CIV_">
+			<Text></Text>
 		</Row>-->
 		
 		
