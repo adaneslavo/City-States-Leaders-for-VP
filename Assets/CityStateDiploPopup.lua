@@ -399,9 +399,6 @@ function OnDisplay()
 	Controls.AllyIconContainer:SetHide(bHideIcon)
 	Controls.AllyText:SetHide(bHideText)
 	
-	-- Contender
-	Controls.ContenderInfo:SetText(GetContenderInfo(activePlayerID, minorPlayerID))
-	
 	-- Protector
 	local sProtectingPlayers = GetProtectingPlayers(minorPlayerID)
 
@@ -414,62 +411,63 @@ function OnDisplay()
 	Controls.ProtectInfo:SetToolTipString(L("TXT_KEY_POP_CSTATE_PROTECTED_BY_TT"))
 	Controls.ProtectLabel:SetToolTipString(L("TXT_KEY_POP_CSTATE_PROTECTED_BY_TT"))
 	
+	-- Contender
+	Controls.ContenderInfo:SetText(GetContenderInfo(activePlayerID, minorPlayerID))
+	
 	-- Nearby Resources
 	local pCapital = minorPlayer:GetCapitalCity()
 	
 	if pCapital then
-		local strResourceText = ""
 		local tResourceBonus, tResourceLuxury, tResourceStrategic = {}, {}, {}
-		
-		local iNumResourcesFound = 0
+			
+		for city in minorPlayer:Cities() do
+			local thisX = city:GetX()
+			local thisY = city:GetY()
 
-		local thisX = pCapital:GetX()
-		local thisY = pCapital:GetY()
+			local bShowBonusResources = GameInfo.Community{Type="CSL-BONUS-ON"}().Value == 1
+			local iRange = GameDefines.MINOR_CIV_RESOURCE_SEARCH_RADIUS or 5
+			local iCloseRange = math.floor(iRange / 2)
+			
+			for iDX = -iRange, iRange, 1 do
+				for iDY = -iRange, iRange, 1 do
+					local pTargetPlot = Map.GetPlotXY(thisX, thisY, iDX, iDY)
 
-		local bShowBonusResources = GameInfo.Community{Type="CSL-BONUS-ON"}().Value == 1
-		local iRange = GameDefines.MINOR_CIV_RESOURCE_SEARCH_RADIUS or 5
-		--local iCloseRange = math.floor(iRange / 2)
-		local iCloseRange = 3
-		
-		for iDX = -iRange, iRange, 1 do
-			for iDY = -iRange, iRange, 1 do
-				local pTargetPlot = Map.GetPlotXY(thisX, thisY, iDX, iDY)
+					if pTargetPlot ~= nil then
+						local iOwner = pTargetPlot:GetOwner()
 
-				if pTargetPlot ~= nil then
-					local iOwner = pTargetPlot:GetOwner()
+						if iOwner == minorPlayerID or iOwner == -1 then
+							local plotX = pTargetPlot:GetX()
+							local plotY = pTargetPlot:GetY()
+							local plotDistance = Map.PlotDistance(thisX, thisY, plotX, plotY)
 
-					if iOwner == minorPlayerID or iOwner == -1 then
-						local plotX = pTargetPlot:GetX()
-						local plotY = pTargetPlot:GetY()
-						local plotDistance = Map.PlotDistance(thisX, thisY, plotX, plotY)
+							if plotDistance <= iRange and (plotDistance <= iCloseRange or iOwner == minorPlayerID) then
+								local iResourceType = pTargetPlot:GetResourceType(Game.GetActiveTeam())
 
-						if plotDistance <= iRange and (plotDistance <= iCloseRange or iOwner == minorPlayerID) then
-							local iResourceType = pTargetPlot:GetResourceType(Game.GetActiveTeam())
-
-							if iResourceType ~= -1 then
-								if bShowBonusResources or Game.GetResourceUsageType(iResourceType) ~= ResourceUsageTypes.RESOURCEUSAGE_BONUS then
-									local sResourceClass = GameInfo.Resources[iResourceType].ResourceClassType
-									local iNumResourceOnTargetPlot = pTargetPlot:GetNumResource()
-									
-									if sResourceClass == "RESOURCECLASS_LUXURY" then	
-										if tResourceLuxury[iResourceType] == nil then
-											tResourceLuxury[iResourceType] = 0
-										end
+								if iResourceType ~= -1 then
+									if bShowBonusResources or Game.GetResourceUsageType(iResourceType) ~= ResourceUsageTypes.RESOURCEUSAGE_BONUS then
+										local sResourceClass = GameInfo.Resources[iResourceType].ResourceClassType
+										local iNumResourceOnTargetPlot = pTargetPlot:GetNumResource()
 										
-										tResourceLuxury[iResourceType] = tResourceLuxury[iResourceType] + iNumResourceOnTargetPlot
-									elseif sResourceClass == "RESOURCECLASS_BONUS" then
-										if tResourceBonus[iResourceType] == nil then
-											tResourceBonus[iResourceType] = 0
-										end
-										
-										tResourceBonus[iResourceType] = tResourceBonus[iResourceType] + iNumResourceOnTargetPlot
-									else
-										if tResourceStrategic[iResourceType] == nil then
-											tResourceStrategic[iResourceType] = 0
-										end
-										
-										tResourceStrategic[iResourceType] = tResourceStrategic[iResourceType] + iNumResourceOnTargetPlot
-									end	
+										if sResourceClass == "RESOURCECLASS_LUXURY" then	
+											if tResourceLuxury[iResourceType] == nil then
+												tResourceLuxury[iResourceType] = 0
+											end
+											
+											tResourceLuxury[iResourceType] = tResourceLuxury[iResourceType] + iNumResourceOnTargetPlot
+										elseif sResourceClass == "RESOURCECLASS_BONUS" then
+											if tResourceBonus[iResourceType] == nil then
+												tResourceBonus[iResourceType] = 0
+											end
+											
+											tResourceBonus[iResourceType] = tResourceBonus[iResourceType] + iNumResourceOnTargetPlot
+										else
+											if tResourceStrategic[iResourceType] == nil then
+												tResourceStrategic[iResourceType] = 0
+											end
+											
+											tResourceStrategic[iResourceType] = tResourceStrategic[iResourceType] + iNumResourceOnTargetPlot
+										end	
+									end
 								end
 							end
 						end
@@ -480,7 +478,9 @@ function OnDisplay()
 
 		-- making a complete table
 		local tResourceList = {}
-		
+		local iNumResourcesFound = 0
+		local strResourceText = ""
+			
 		for iResourceType, iAmount in pairs(tResourceStrategic) do
 			table.insert(tResourceList, {0, iResourceType, iAmount})
 		end

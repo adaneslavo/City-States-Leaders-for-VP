@@ -11,13 +11,16 @@ v20:
 		- all resources are sorted by the class, amount and name (in this order);
 		- resources now separated with space, instead of comma;
 		- recoloured resource classes;
+		- now all cities are taken into account (was only capital);
 	- new stuff:
 		- added jerk info (in QUESTS label) with a tooltip, so you know you are a JERK;
 		- added info about current anchor (red if lower than 0, green if greater than 0);
 		- leader short stories hidden in tooltip (if detected);
 - replaced leaders with new art:
+	- Cahokia: Birdman --> Tuskaloosa;
 	- Mogadishu: Aden Adde --> Abu Bakr ibn Umar;
 	- Nan Madol: Olosohpa --> Isokelekel;
+- added multiple short stories for leaders (they will be added step by step, because it's ton of text to revise);
 
 v19:
 - added code for few new leaders from UCS v14;

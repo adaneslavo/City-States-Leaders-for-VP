@@ -360,11 +360,11 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\cahokia_leadericon.dds">
+    <Content Include="Art\Base\cahokia_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\cahokia_leadericon2.dds">
+    <Content Include="Art\Base\cahokia_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

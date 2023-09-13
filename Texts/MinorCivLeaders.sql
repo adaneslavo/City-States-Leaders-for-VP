@@ -1,3 +1,14 @@
+--------------------------------------------------
+-- one text fix moved from SQL
+UPDATE Language_en_US 
+SET Text='These resources are in close range of the City-State''s cities. All [COLOR:0:155:255:255]Strategic[ENDCOLOR] and [COLOR:205:205:0:255]Luxury[ENDCOLOR] resources will be granted to the player, when he becomes an [COLOR_CYAN]Ally[ENDCOLOR] and once the City-State connects them.'
+WHERE Tag='TXT_KEY_CITY_STATE_RESOURCES_TT';
+--------------------------------------------------
+-- text replacements
+UPDATE Language_en_US SET Text = REPLACE(Text, 'Ally.  You', 'Ally. You') WHERE Tag = 'TXT_KEY_CITY_STATE_ALLY_NOBODY_TT';
+UPDATE Language_en_US SET Text = REPLACE(Text, 'State.  Attacking', 'State. Attacking') WHERE Tag = 'TXT_KEY_POP_CSTATE_PROTECTED_BY_TT';
+--------------------------------------------------
+
 CREATE TABLE IF NOT EXISTS MinorCivLeaders (
 	'ID' INTEGER PRIMARY KEY AUTOINCREMENT,
 	'Type' TEXT NOT NULL UNIQUE,
@@ -21,7 +32,7 @@ INSERT INTO MinorCivLeaders(
 		SELECT	'MINOR_CIV_BUDAPEST',		'budapest_leadericon.dds',		'the Kingdom of Hungary',		'Stephen I',					'King Saint',		'Janboruta'					UNION ALL
 		SELECT	'MINOR_CIV_BUENOS_AIRES',	'buenos_aires_leadericon.dds',	'the Argentine Republic',		'Eva Peron',					'',					'Leugi'						UNION ALL
 		SELECT	'MINOR_CIV_BYBLOS',			'byblos_leadericon.dds',		'the Kingdom of Byblos ',		'Ahiram',						'King',				'LastSword'					UNION ALL
-		SELECT	'MINOR_CIV_CAHOKIA',		'cahokia_leadericon.dds',		'the Mississippians',			'Tuskaloosa',						'Chief',				'H. Roe/Nutty'				UNION ALL
+		SELECT	'MINOR_CIV_CAHOKIA',		'cahokia_leadericon.dds',		'the Mississippians',			'Tuskaloosa',					'Chief',			'H. Roe/Nutty'				UNION ALL
 		SELECT	'MINOR_CIV_CAPE_TOWN',		'cape_town_leadericon.dds',		'the Dutch East India Company',	'Jan van Riebeeck',				'Commander',		'Janboruta'					UNION ALL
 		SELECT	'MINOR_CIV_COLOMBO',		'colombo_leadericon.dds',		'the Dominion of Ceylon',		'D.S. Senanayake',				'Prime Minister',	'knightmare13'				UNION ALL
 		SELECT	'MINOR_CIV_FLORENCE',		'florence_leadericon.dds',		'the Florence Republic',		"Lorenzo de'Medici",	 		'',					'sukritact'					UNION ALL
@@ -43,7 +54,7 @@ INSERT INTO MinorCivLeaders(
 		SELECT	'MINOR_CIV_MBANZA_KONGO',	'mbanza_kongo_leadericon.dds',	'the Ambundu Kingdoms',			'Ana Nzingha Mbande',			'Ngola',			'Leugi'						UNION ALL
 		SELECT	'MINOR_CIV_MELBOURNE',		'melbourne_leadericon.dds',		'the Colony of New South Wales','John Batman',					'',					'TPangolin'					UNION ALL
 		SELECT	'MINOR_CIV_MILAN',			'milan_leadericon.dds',			'the Duchy of Milan',			'Gian Galeazzo Visconti', 		'Duke',				'Janboruta'					UNION ALL
-		SELECT	'MINOR_CIV_MOGADISHU',		'mogadishu_leadericon.dds',	'the Sultanate of Mogadishu',	'Abu Bakr ibn Umar',			'Shaikh',			'EmeraldRange'				UNION ALL
+		SELECT	'MINOR_CIV_MOGADISHU',		'mogadishu_leadericon.dds',		'the Sultanate of Mogadishu',	'Abu Bakr ibn Umar',			'Shaikh',			'EmeraldRange'				UNION ALL
 		SELECT	'MINOR_CIV_MOMBASA',		'mombasa_leadericon.dds',		'the Republic of Kenya',		'Jomo Kenyatta',				'President',		'knightmare13'				UNION ALL
 		SELECT	'MINOR_CIV_MONACO',			'monaco_leadericon.dds',		'the Principality of Monaco',	'Rainier III',					'Prince',			'knightmare13'				UNION ALL
 		SELECT	'MINOR_CIV_ORMUS',			'ormus_leadericon.dds',			'the Sultanate of Oman',		'Qaboos bin Said',				'Sultan',			'knightmare13'				UNION ALL
