@@ -122,6 +122,7 @@
 		
 		
 		<!-- Personality texts -->
+		<!-- First meeting texts (7) -->
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_FRIENDLY_1">
 			<Text>Greetings, great leader. We represent [COLOR_CYAN]{1_civ}[ENDCOLOR]. We hope that we can forge a strong and lasting peace with your mighty empire.</Text>
 		</Row>
@@ -143,7 +144,7 @@
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_FRIENDLY_7">
 			<Text>Nice to see such a mighty ruler in [COLOR_CYAN]{1_civ}[ENDCOLOR]. We hope you have big plans for us!</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_NEUTRAL_1">
 			<Text>Greetings. We are the people of [COLOR_CYAN]{1_civ}[ENDCOLOR]. Treat us fairly and we shall have peace.</Text>
 		</Row>
@@ -165,8 +166,7 @@
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_NEUTRAL_7">
 			<Text>Greetings, traveler. How did you find [COLOR_CYAN]{1_civ}[ENDCOLOR]? We have avoided outside contact so far.</Text>
 		</Row>
-		
-		
+
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_HOSTILE_1">
 			<Text>Halt, Stranger! We are the mighty people of [COLOR_CYAN]{1_civ}[ENDCOLOR]. Trifle with us at your own peril!</Text>
 		</Row>
@@ -188,8 +188,31 @@
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_HOSTILE_7">
 			<Text>Oh, gods! That's just what we needed! A bloodthirsty tyrant in [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
 		</Row>
-		
-		<!-- Trait texts -->
+
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_1">
+			<Text>IRRATIONAL_FIRST_1 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_2">
+			<Text>IRRATIONAL_FIRST_2 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_3">
+			<Text>IRRATIONAL_FIRST_3 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_4">
+			<Text>IRRATIONAL_FIRST_4 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_5">
+			<Text>IRRATIONAL_FIRST_5 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_6">
+			<Text>IRRATIONAL_FIRST_6 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_7">
+			<Text>IRRATIONAL_FIRST_7 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
+
+
+		<!-- Trait texts (7) -->
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_CULTURED_1">
 			<Text>Different cultures can always benefit from each other.</Text>
 		</Row>
@@ -211,7 +234,7 @@
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_CULTURED_7">
 			<Text>We want you to adopt our culture. Are you ok with that?</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MILITARISTIC_1">
 			<Text>We have great military knowledge. We can increase the strength of your army.</Text>
 		</Row>
@@ -233,7 +256,7 @@
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MILITARISTIC_7">
 			<Text>Sometimes, war is pointless. But sometimes, it's the only option.</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MARITIME_1">
 			<Text>We can help accelerate your civilization&apos;s growth.</Text>
 		</Row>
@@ -255,7 +278,7 @@
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MARITIME_7">
 			<Text>Check our fruits! Taste our vegetables! Smell our fish! Enjoy our spices!</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MERCANTILE_1">
 			<Text>We have many luxuries that can make your citizens happy.</Text>
 		</Row>
@@ -277,7 +300,7 @@
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_MERCANTILE_7">
 			<Text>Our guilds, banks, mints, and markets make dreams possible. What are your dreams?</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_RELIGIOUS_1">
 			<Text>We can help nurture your religious traditions.</Text>
 		</Row>
@@ -299,8 +322,9 @@
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_RELIGIOUS_7">
 			<Text>Are you here to confess your sins?</Text>
 		</Row>
+
 		
-		<!-- Bonus texts -->
+		<!-- Bonus texts (7) -->
 		<Row Tag="TXT_KEY_MINOR_CIV_FIRST_CONTACT_BONUS_GOLD_1">
 			<Text>We amassed some gold in our treasury. {1_Value} [ICON_GOLD] Gold for you from our nation.</Text>
 		</Row>
@@ -411,7 +435,8 @@
 			<Text>We heard you need a [COLOR_CYAN]{1_Value}[ENDCOLOR]. We can provide you with one!</Text>
 		</Row>
 		
-		<!-- Friendship texts -->
+		
+		<!-- Greeting texts (when not first) (8) -->
 		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_FRIENDLY_1">
 			<Text>Welcome! Your appearance in [COLOR_CYAN]{1_civ}[ENDCOLOR] amazed us! Become our friend, please!</Text>
 		</Row>
@@ -436,7 +461,7 @@
 		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_FRIENDLY_8">
 			<Text>What a surprise! We're sincerely sorry we cannot give you anything. Please, feel welcome in [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_NEUTRAL_1">
 			<Text>Greetings. We have nothing for you. Walk away from [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
 		</Row>
@@ -461,7 +486,7 @@
 		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_NEUTRAL_8">
 			<Text>Good morning, stranger. We want to tell you that [COLOR_CYAN]{1_civ}[ENDCOLOR] is not eager to be involved in any conflict.</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_HOSTILE_1">
 			<Text>Hi. Don't think you get anything from [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
 		</Row>
@@ -486,14 +511,40 @@
 		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_HOSTILE_8">
 			<Text>Who told you about [COLOR_CYAN]{1_civ}[ENDCOLOR]? We will kill them!</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_IRRATIONAL_1">
+			<Text>IRRATIONAL_REGULAR_1 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_IRRATIONAL_2">
+			<Text>IRRATIONAL_REGULAR_2 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_IRRATIONAL_3">
+			<Text>IRRATIONAL_REGULAR_3 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_IRRATIONAL_4">
+			<Text>IRRATIONAL_REGULAR_4 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_IRRATIONAL_5">
+			<Text>IRRATIONAL_REGULAR_5 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_IRRATIONAL_6">
+			<Text>IRRATIONAL_REGULAR_6 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_IRRATIONAL_7">
+			<Text>IRRATIONAL_REGULAR_7 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_IRRATIONAL_8">
+			<Text>IRRATIONAL_REGULAR_8 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+		</Row>
 		
-		<!-- Nothing texts -->
+		
+		<!-- Nothing -->
 		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_NOTHING_1">
 			<Text>Just nothing.</Text>
 		</Row>
 		
 		
-		<!-- Visit texts -->
+		<!-- Visit texts (10) -->
 		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_PROTECTED_1">
 			<Text>Here comes our protector! May the gods will be with you!</Text>
 		</Row>
@@ -616,6 +667,37 @@
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_HOSTILE_10">
 			<Text>We thought we could work together. How wrong we were! Begone!</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_1">
+			<Text>IRRATIONAL_MEET_1</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_2">
+			<Text>IRRATIONAL_MEET_2</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_3">
+			<Text>IRRATIONAL_MEET_3</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_4">
+			<Text>IRRATIONAL_MEET_4</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_5">
+			<Text>IRRATIONAL_MEET_5</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_6">
+			<Text>IRRATIONAL_MEET_6</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_7">
+			<Text>IRRATIONAL_MEET_7</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_8">
+			<Text>IRRATIONAL_MEET_8</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_9">
+			<Text>IRRATIONAL_MEET_9</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_10">
+			<Text>IRRATIONAL_MEET_10</Text>
 		</Row>
 	</Language_en_US>
 </GameData>

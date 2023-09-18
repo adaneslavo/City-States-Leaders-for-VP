@@ -41,7 +41,7 @@ local kiGreet = 9
 local iRandomPersonalityText
 local iRandomTraitText
 local iRandomBonusText
-local iRandomFrienshipText
+local iRandomFriendshipText
 local iRandomVisitText
 
 local table_insert = table.insert
@@ -106,7 +106,7 @@ function ShowHideHandler(bIsHide, bInitState)
 			iRandomPersonalityText = tostring(math.random(7))
 			iRandomTraitText = tostring(math.random(7))
 			iRandomBonusText = tostring(math.random(7))
-			iRandomFrienshipText = tostring(math.random(8))
+			iRandomFriendshipText = tostring(math.random(8))
 			iRandomVisitText = tostring(math.random(10))
 
 			OnDisplay()
@@ -312,7 +312,7 @@ function OnDisplay()
 	elseif strTraitText == L("TXT_KEY_CITY_STATE_MILITARISTIC_ADJECTIVE") then
 		strTraitText = "[ICON_WAR] [COLOR_YIELD_FOOD]".. strTraitText .."[ENDCOLOR]"
 	elseif strTraitText == L("TXT_KEY_CITY_STATE_MARITIME_ADJECTIVE") then
-		strTraitText = "[ICON_FOOD] [COLOR_CITY_GREEN]".. strTraitText .."[ENDCOLOR]"
+		strTraitText = "[ICON_FOOD] [COLOR:105:205:0:255]".. strTraitText .."[ENDCOLOR]"
 	elseif strTraitText == L("TXT_KEY_CITY_STATE_MERCANTILE_ADJECTIVE") then
 		strTraitText = "[ICON_GOLD] [COLOR_YELLOW]".. strTraitText .."[ENDCOLOR]"
 	elseif strTraitText == L("TXT_KEY_CITY_STATE_RELIGIOUS_ADJECTIVE") then
@@ -329,7 +329,7 @@ function OnDisplay()
 	local iPersonality = minorPlayer:GetPersonality()
 	
 	if iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_FRIENDLY then
-		strPersonalityText = "[ICON_FLOWER] [COLOR_FADING_POSITIVE_TEXT]".. L("TXT_KEY_CITY_STATE_PERSONALITY_FRIENDLY") .."[ENDCOLOR]"
+		strPersonalityText = "[ICON_FLOWER] [COLOR:205:255:105:255]".. L("TXT_KEY_CITY_STATE_PERSONALITY_FRIENDLY") .."[ENDCOLOR]"
 		strPersonalityTT = L("TXT_KEY_CITY_STATE_PERSONALITY_FRIENDLY_TT")
 	elseif iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_NEUTRAL then
 		strPersonalityText = "[ICON_TEAM_1] [COLOR_WHITE]".. L("TXT_KEY_CITY_STATE_PERSONALITY_NEUTRAL") .."[ENDCOLOR]"
@@ -337,6 +337,9 @@ function OnDisplay()
 	elseif iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_HOSTILE then
 		strPersonalityText = "[ICON_RAZING] [COLOR_RED]".. L("TXT_KEY_CITY_STATE_PERSONALITY_HOSTILE") .."[ENDCOLOR]"
 		strPersonalityTT = L("TXT_KEY_CITY_STATE_PERSONALITY_HOSTILE_TT")
+	elseif iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_IRRATIONAL then
+		strPersonalityText = "[ICON_INQUISITOR] [COLOR:240:105:255:255]".. L("TXT_KEY_CITY_STATE_PERSONALITY_IRRATIONAL") .."[ENDCOLOR]"
+		strPersonalityTT = L("TXT_KEY_CITY_STATE_PERSONALITY_IRRATIONAL_TT")
 	end
 	
 	Controls.PersonalityInfo:SetText(strPersonalityText)
@@ -619,16 +622,20 @@ function OnDisplay()
 			local sRandPersonality1, sRandPersonality2, sRandTrait1, sRandTrait2, sRandBonus1, sRandBonus2, sRandFriendship, strGiftString = "", "", "", "", "", "", "", ""
 
 			if iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_FRIENDLY then
-				sRandFriendship = string.format("TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_FRIENDLY_%s", iRandomFrienshipText)
+				sRandFriendship = string.format("TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_FRIENDLY_%s", iRandomFriendshipText)
 				sRandPersonality1 = string.format("TXT_KEY_CITY_STATE_GREETING_FRIENDLY_%s", iRandomPersonalityText)
 				sRandPersonality2 = Locale.Lookup(sRandPersonality1, leaderPlace)
 			elseif iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_NEUTRAL then
-				sRandFriendship = string.format("TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_NEUTRAL_%s", iRandomFrienshipText)
+				sRandFriendship = string.format("TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_NEUTRAL_%s", iRandomFriendshipText)
 				sRandPersonality1 = string.format("TXT_KEY_CITY_STATE_GREETING_NEUTRAL_%s", iRandomPersonalityText)
 				sRandPersonality2 = Locale.Lookup(sRandPersonality1, leaderPlace)
 			elseif iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_HOSTILE then
-				sRandFriendship = string.format("TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_HOSTILE_%s", iRandomFrienshipText)
+				sRandFriendship = string.format("TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_HOSTILE_%s", iRandomFriendshipText)
 				sRandPersonality1 = string.format("TXT_KEY_CITY_STATE_GREETING_HOSTILE_%s", iRandomPersonalityText)
+				sRandPersonality2 = Locale.Lookup(sRandPersonality1, leaderPlace)
+			elseif iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_IRRATIONAL then
+				sRandFriendship = string.format("TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_IRRATIONAL_%s", iRandomFriendshipText)
+				sRandPersonality1 = string.format("TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_%s", iRandomPersonalityText)
 				sRandPersonality2 = Locale.Lookup(sRandPersonality1, leaderPlace)
 			end
 
@@ -711,6 +718,8 @@ function OnDisplay()
 				strText = L(string.format("TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_NEUTRAL_%s", iRandomVisitText))
 			elseif iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_HOSTILE then
 				strText = L(string.format("TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_HOSTILE_%s", iRandomVisitText))
+			elseif iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_IRRATIONAL then
+				strText = L(string.format("TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_%s", iRandomVisitText))
 			end
 
 			local strQuestString = ""

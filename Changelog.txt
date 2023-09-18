@@ -1,4 +1,8 @@
 Changelog:
+v21:
+- added missing Irrational (Enigmatic) personality with new texts;
+- changed a bit colouring of traits and personalities so they do not fade into background;
+
 v20:
 - added code for few new leaders from UCS v15;
 - City-State screen:	
