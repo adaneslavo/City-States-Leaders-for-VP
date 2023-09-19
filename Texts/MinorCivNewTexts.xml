@@ -190,7 +190,7 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_1">
-			<Text>IRRATIONAL_FIRST_1 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+			<Text>We are the ones who knock, but now you are first, so I guess we are not the only ones, so... nevermind. Welcome to [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_2">
 			<Text>IRRATIONAL_FIRST_2 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
@@ -513,16 +513,16 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_IRRATIONAL_1">
-			<Text>IRRATIONAL_REGULAR_1 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+			<Text>What should we do with you, huh? There were rumours about a mighty ruler, but are you the one? Would such a person visit [COLOR_CYAN]{1_civ}[ENDCOLOR]?</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_IRRATIONAL_2">
-			<Text>IRRATIONAL_REGULAR_2 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+			<Text>We don't know if we should kill you or spare your life... Though decision... Normally [COLOR_CYAN]{1_civ}[ENDCOLOR] does not tolerate unexpected visits.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_IRRATIONAL_3">
-			<Text>IRRATIONAL_REGULAR_3 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+			<Text>We meet new people every day. We killed many of those who had not fullfiled the standards of [COLOR_CYAN]{1_civ}[ENDCOLOR]. Are you the one?</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_IRRATIONAL_4">
-			<Text>IRRATIONAL_REGULAR_4 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+			<Text>To be, or not to be? These are the questions we ask in [COLOR_CYAN]{1_civ}[ENDCOLOR]. Can you help us to resolve this old dilemma?</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_IRRATIONAL_5">
 			<Text>IRRATIONAL_REGULAR_5 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
