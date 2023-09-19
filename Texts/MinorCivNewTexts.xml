@@ -670,34 +670,34 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_1">
-			<Text>We are not in the mood to talk with you. Maybe tomorrow. Maybe never.</Text>
+			<Text>We are not in the mood to talk with you, right now. Maybe tomorrow. Maybe never.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_2">
-			<Text>Ah! It's you again! Good to see you. We were about to bring up a subject, but... what was that!?</Text>
+			<Text>Ah! It's you again! It's always good to see you. We were about to bring up a subject, but... what was that!?</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_3">
-			<Text>Uh, oh! What are you doing here today?! Weren't we arranged for tomorrow? Hmm... I guess we need to change our plans, right?</Text>
+			<Text>Uh-oh, what are you doing here today?! Weren't we arranged for tomorrow? Hmm... Seems we need to change our plans then, right?</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_4">
-			<Text>We love meetings like this one. We can chitchat a bit. We are friends, right? Maybe yesterday we wanted to backstab you, but, you know, it was one of these days when we hated everyone on the planet. Including you and the God itself.</Text>
+			<Text>We love meetings like this one. We can chitchat a bit. We are friends, right? Maybe yesterday we wanted to backstab you, but, you know, it was one of those days where we hated everyone on the planet. Including you and even God itself.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_5">
-			<Text>Maybe at least once you could announce your arrival?! Don't you think other people have some personal bussinesses, too? Huh?! Selfish bastard...</Text>
+			<Text>Maybe at least once you could announce your arrival?! Don't you think other people have some personal business too, huh?! Selfish bastard...</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_6">
-			<Text>It's good to see you! Sit down, please. Maybe wine? Steak? We were about to serve a meal, and there's always one additional seat for unexpected guest, so we guess that's you today! Tell me what do you want?</Text>
+			<Text>It's good to see you! Sit down, please. Maybe wine? Steak? We were about to serve a meal, and there's always one additional seat for an unexpected guest, and it seems that's you today! Tell us, what do you want?</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_7">
-			<Text>I know you want to discover our secrets, but not this time. Tell us what do you need and go away keeping yours!</Text>
+			<Text>We know you want to discover our secrets, but not this time. Tell us what do you need and go away keeping yours!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_8">
-			<Text>Can you see that moon? Can you read the signs? No? Huh, that's very bad...</Text>
+			<Text>Can you see that Moon? Can you read the signs? No? Huh, that's very bad...</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_9">
-			<Text>One man comes, other leaves us. That's the natural process we are used to. Are you the first or the latter?</Text>
+			<Text>One man comes, another leaves us. This is how it's always been for us. Will you be the former or the latter?</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_DIPLO_HELLO_PEACE_IRRATIONAL_10">
-			<Text>When we look at you, then some strange feeling comes up... Our astrologer should said more about that. Do you want to know more?</Text>
+			<Text>When we look at you, we get a strange feeling... Our astrologer should be able to say more about it, would you like to know more?</Text>
 		</Row>
 	</Language_en_US>
 </GameData>

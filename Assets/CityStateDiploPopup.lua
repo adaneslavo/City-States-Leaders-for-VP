@@ -496,10 +496,6 @@ function OnDisplay()
 			table.insert(tResourceList, {2, iResourceType, iAmount})
 		end
 		
-		for i = 1, #tResourceList do
-		    print("RESOURCE_LIST_UNSORTED", tResourceList[i][1], tResourceList[i][3], L(GameInfo.Resources[tResourceList[i][2]].Description))
-		end
-		
 		-- sorting a complete table
 		table.sort(tResourceList, function (a, b) 
 			if a[1] ~= b[1] then
@@ -517,10 +513,6 @@ function OnDisplay()
 				end
 			end
 		end)
-									
-		for i = 1, #tResourceList do
-		    print("RESOURCE_LIST_SORTED", tResourceList[i][1], tResourceList[i][3], L(GameInfo.Resources[tResourceList[i][2]].Description))
-		end
 
 		-- showing the list on display
 		for i = 1, #tResourceList do
