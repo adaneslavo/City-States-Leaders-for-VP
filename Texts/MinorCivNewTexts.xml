@@ -193,22 +193,22 @@
 			<Text>We are the ones who knock, but now you are first, so I guess we are not the only ones, so... nevermind. Welcome to [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_2">
-			<Text>IRRATIONAL_FIRST_2 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+			<Text>Gods send us a Prophet! Let the people of [COLOR_CYAN]{1_civ}[ENDCOLOR] be grateful for such a gift!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_3">
-			<Text>IRRATIONAL_FIRST_3 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+			<Text>Really?! Are you supposed to be our master? We don't think [COLOR_CYAN]{1_civ}[ENDCOLOR] needs any. But we can talk about that, right?</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_4">
-			<Text>IRRATIONAL_FIRST_4 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+			<Text>We wondered why scouts are not visiting [COLOR_CYAN]{1_civ}[ENDCOLOR], such a beautiful country... Then we thought that we are not that great... And now there's you. What to do? Huh, what to do...</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_5">
-			<Text>IRRATIONAL_FIRST_5 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+			<Text>Are you the star that hit the ground yesterday? We saw that and all people of [COLOR_CYAN]{1_civ}[ENDCOLOR] were waiting for your visit.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_6">
-			<Text>IRRATIONAL_FIRST_6 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+			<Text>Why [COLOR_CYAN]{1_civ}[ENDCOLOR] should even look at you? Do you think you are the special one? What makes you better than us? Clothes? Weapons? There many more things, and we can teach you to look beyond your plain imagination.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_7">
-			<Text>IRRATIONAL_FIRST_7 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+			<Text>Oh, oh, finally! We looked for someone to help [COLOR_CYAN]{1_civ}[ENDCOLOR] in our troubles. Everyone has troubles, but we have the serious troubles. Do you know what serious troubles are? Ah, no? Then you will...</Text>
 		</Row>
 
 
@@ -525,16 +525,16 @@
 			<Text>To be, or not to be? These are the questions we ask in [COLOR_CYAN]{1_civ}[ENDCOLOR]. Can you help us to resolve this old dilemma?</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_IRRATIONAL_5">
-			<Text>IRRATIONAL_REGULAR_5 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+			<Text>Oh, are you back? We thought you left [COLOR_CYAN]{1_civ}[ENDCOLOR] yesterday? Ah! You are not the one we thought you are. Sorry, you are so similar...</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_IRRATIONAL_6">
-			<Text>IRRATIONAL_REGULAR_6 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+			<Text>Many civilizations will turn into ashes until [COLOR_CYAN]{1_civ}[ENDCOLOR] finds someone of a godd will. Don't pretend to be the chosen one!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_IRRATIONAL_7">
-			<Text>IRRATIONAL_REGULAR_7 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+			<Text>Welcome to [COLOR_CYAN]{1_civ}[ENDCOLOR], where we feed you and talk about great things. Unless you try to deceive us... Then we will kill you without any hesitation. Be warned!</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_IRRATIONAL_8">
-			<Text>IRRATIONAL_REGULAR_8 [COLOR_CYAN]{1_civ}[ENDCOLOR].</Text>
+			<Text>Go away! Too many people tried to deceive us thinking we are vulnerable... We, [COLOR_CYAN]{1_civ}[ENDCOLOR], are only a small nation. We do great things. We help each other. Don't try to destroy that like the others!</Text>
 		</Row>
 		
 		
