@@ -388,7 +388,9 @@ function OnDisplay()
 	end
 	
 	if Game.IsResolutionPassed(GameInfoTypes.RESOLUTION_SPHERE_OF_INFLUENCE, minorPlayerID) then
-		strAlly = strAlly .. " [ICON_LOCKED]"
+		bHideText = false
+		local sIconLocked = not bHideIcon and "      [ICON_LOCKED]" or " [ICON_LOCKED]"
+		strAlly = strAlly .. sIconLocked
 		strAllyTT = strAllyTT .. "[NEWLINE][NEWLINE]" .. L("TXT_KEY_CSL_POPUP_UNDER_SOI_TT")
 	end
 
