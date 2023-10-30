@@ -1103,7 +1103,7 @@ function UpdateActiveQuests()
 	local iJerkTurns = pMinorPlayer:GetJerkTurnsRemaining(eActivePlayer)
 	
 	if iJerkTurns > 0 then
-		sIconText = "[COLOR_NEGATIVE_TEXT]No quests for " .. iJerkTurns .. " turns."
+		sIconText = L("TXT_KEY_CSL_POPUP_JERK_NO_QUESTS", iJerkTurns)
 		sToolTipText = L("TXT_KEY_CSTATE_JERK_STATUS", iJerkTurns)
 	else
 		sIconText = GetActiveQuestText(eActivePlayer, g_iMinorCivID)
