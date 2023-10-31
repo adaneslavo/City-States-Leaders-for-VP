@@ -1,4 +1,7 @@
 Changelog:
+v22:
+- review of the names, added unique letters to some, corrected few;
+
 v21.1:
 - fixd SoI icon if non active player is the SoI owner;
 
