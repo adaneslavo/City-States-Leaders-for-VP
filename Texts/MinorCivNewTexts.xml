@@ -51,9 +51,12 @@
 		<Row Tag="TXT_KEY_CSL_POPUP_RESOURCE_LIST">
 			<Text>{1_Icon} {2_Color}{3_Name} ({4_Amount})[ENDCOLOR]</Text>
 		</Row>
-
-
+		<Row Tag="TXT_KEY_CSL_POPUP_JERK_NO_QUESTS">
+			<Text>[COLOR_NEGATIVE_TEXT]No quests for {1_JerkTurns} turns.[ENDCOLOR]</Text>
+		</Row>
 		
+
+
 		<!-- Mini Civilopedia -->
 		<Row Tag="TXT_KEY_CSL_LEADER_SHORT_MINOR_CIV_ALMATY">
 			<Text>Janibek Khan was a descendant of Genghis Khan and a co-founder and second Khan of the Kazakh Khanate from 1473 to 1480, following a successful rebellion against the Uzbek Khan Abu'l-Khayr Khan in 1465 and 1466.[NEWLINE][NEWLINE]He was a son of Barak, Khan of the Golden Horde from 1422 to 1427, who was poisoned by the emirs of the former White Horde. Barak Khan's father was Koirichak, grandson of Urus Khan, a direct descendant of Genghis Khan. Genghis Khan is Jochi Khan's father, Jochi Khan's son Tukai-Timur, Tukai-Timur's son Uz-Timur, Uz-Timur's son Khodja, Khodja's son Badakun-Uglan, Badakun-Uglan's son Urus Khan, Urus Khan's son Koirchak-khan, Koirchak-khan's son Barak Khan, and Barak Khan is Zhanibek/Janibek's father.[NEWLINE][NEWLINE]He led the splinter group along with Kerei, his relative, who was also a descendant of the famous Urus Khan of the White Horde. For his wisdom, he was given the title "Az", meaning "the wise" in the Kazakh language, and so was called Az-Janibek. His son, Kasym Khan, codified the laws of his people.</Text>
