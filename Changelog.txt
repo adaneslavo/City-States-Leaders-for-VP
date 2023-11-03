@@ -1,6 +1,7 @@
 Changelog:
 v22:
 - review of the names, added unique letters to some, corrected few;
+	- fixed UTF-8 encoding of the text files;
 - added new tag (no quests for jerk);
 
 v21.1:
