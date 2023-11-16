@@ -70,6 +70,7 @@ WHERE Type = 'CSL-UCS' AND EXISTS (SELECT * FROM MinorCivilizations WHERE Type='
 		SELECT	'MINOR_CIV_OC_EO',			'oc_eo_leadericon.dds',			'the Funan Kingdom' /*Fúnán*/,					'Soma',									'Queen',				'Grant'								WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
 		SELECT	'MINOR_CIV_ODENSO',			'odenso_leadericon.dds',		'the Republic of Finland',						'Karl Gustaf Mannerheim',				'Baron',				'Hypereon'							WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
 		SELECT	'MINOR_CIV_OUIDAH',			'ouidah_leadericon.dds',		'the Kingdom of Whydah',						'Haffon',								'King',					'Hoop Thrower'						WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
+		SELECT	'MINOR_CIV_PALMYRA',		'palmyra_leadericon.dds',		'the Palmyrene Empire',							'Bat-Zabbai' /*Septima Zenobia*/,		'Queen',				'TPangolin'							WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
 		SELECT	'MINOR_CIV_PELYM',			'pelym_leadericon.dds',			'the Permians',									'Azykay',								'Grand Duke',			'Grant'								WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
 		SELECT	'MINOR_CIV_PHANOTEUS',		'phanoteus_leadericon.dds',		'the Phocis',									'Onomarchus',							'General',				'Mosile'							WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
 --[ALT]	SELECT	'MINOR_CIV_PHANOTEUS',		'phanoteus_leadericon2.dds',	'the Phocis',									'Onomarchus',							'General',				'Merrick'							WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
@@ -97,8 +98,6 @@ WHERE Type = 'CSL-UCS' AND EXISTS (SELECT * FROM MinorCivilizations WHERE Type='
 		SELECT	'MINOR_CIV_YANGCHENG',		'yangcheng_leadericon.dds',		'the Xia Dynasty',								'Yu',									'Emperor',				'janboruta'							WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1);
 		
 		/*
-		
-		
 		SELECT	'MINOR_CIV_SHAHRAZUR',		'shahrazur_leadericon.dds',		'the Principality of Ardalan',					'Bani Ardalan',							'King',					'Darth'								WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
 		SELECT	'MINOR_CIV_YAIUWA',			'yaiuwa_leadericon.dds',		'the Haush',									'Tenenisk',								'Shaman',				'Grant'								WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CSL-UCS' AND Value= 1) UNION ALL	
 		*/

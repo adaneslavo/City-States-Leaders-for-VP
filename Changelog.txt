@@ -1,4 +1,7 @@
 Changelog:
+v22:
+- added compatibility with Palmyra CS;
+
 v21.2:
 - review of the names, added unique letters to some, corrected few;
 	- fixed UTF-8 encoding of the text files;
