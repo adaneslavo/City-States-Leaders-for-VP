@@ -1,6 +1,6 @@
 Changelog:
 v22:
-- added compatibility with Palmyra CS;
+- added compatibility with UCS v16;
 
 v21.2:
 - review of the names, added unique letters to some, corrected few;
