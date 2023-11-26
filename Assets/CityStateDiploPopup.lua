@@ -1478,7 +1478,7 @@ function PopulateTakeChoices()
 -- END
 	ttText = pPlayer:GetMajorBullyUnitDetails(iActivePlayer)
 	
-	if not pPlayer:CanMajorBullyUnit(iActivePlayer) then
+	if not pPlayer:CanMajorBullyUnit(iActivePlayer) or not HasActivePersonalQuestText(iActivePlayer, g_iMinorCivID) then
 		buttonText = "[COLOR_WARNING_TEXT]" .. buttonText .. "[ENDCOLOR]"
 		Controls.UnitTributeAnim:SetHide(true)
 	else
@@ -1598,7 +1598,7 @@ function OnUnitTributeButtonClicked()
 	local pPlayer = Players[g_iMinorCivID]
 	local iActivePlayer = Game.GetActivePlayer()
 	
-	if pPlayer:CanMajorBullyUnit(iActivePlayer) then
+	if pPlayer:CanMajorBullyUnit(iActivePlayer) and HasActivePersonalQuestText(iActivePlayer, g_iMinorCivID) then
 		m_iPendingAction = kiBulliedUnit
 		
 		OnBullyButtonClicked()

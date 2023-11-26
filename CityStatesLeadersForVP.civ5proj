@@ -96,10 +96,6 @@
     <Folder Include="Texts" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Art\!Queue\balkh_leadericon.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
     <Content Include="Art\!Queue\ishiyama_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
@@ -896,6 +892,10 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="Art\UCS\balkh_leadericon.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="Art\UCS\bedulu_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -913,6 +913,10 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Art\UCS\honiara_leadericon.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Art\UCS\irunea_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
