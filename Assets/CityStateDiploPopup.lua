@@ -287,8 +287,35 @@ function OnDisplay()
 	local iconColor = textColor
 	IconHookup(civInfo.PortraitIndex, 32, civInfo.AlphaIconAtlas, Controls.CivIcon)
 	Controls.CivIcon:SetColor(iconColor)
-
+	
+	local isAtWar = activeTeam:IsAtWar(minorTeamID)
+	local majorInfluenceWithMinor = minorPlayer:GetMinorCivFriendshipWithMajor(activePlayerID)
+	
 	local strStatusText = GetCityStateStatusText(activePlayerID, minorPlayerID)
+	
+	if not isAtWar then
+		-- Influence
+		strStatusText = strStatusText .. " " .. majorInfluenceWithMinor .. " [ICON_INFLUENCE]"
+		
+		-- Anchor
+		local iCurrentAnchorLevelWithMinor = minorPlayer:GetMinorCivFriendshipAnchorWithMajor(activePlayerID)
+		
+		-- Merging...
+		if majorInfluenceWithMinor ~= iCurrentAnchorLevelWithMinor then
+			local sAnchor = ""
+			
+			if iCurrentAnchorLevelWithMinor < 0 then
+				sAnchor = "[COLOR_NEGATIVE_TEXT]" .. iCurrentAnchorLevelWithMinor .. "[ENDCOLOR]"
+			elseif iCurrentAnchorLevelWithMinor > 0 then
+				sAnchor = "[COLOR_POSITIVE_TEXT]" .. iCurrentAnchorLevelWithMinor .. "[ENDCOLOR]"
+			else
+				sAnchor = iCurrentAnchorLevelWithMinor
+			end
+				
+			strStatusText = strStatusText .. (" (%+2.2g [ICON_INFLUENCE] / "):format(minorPlayer:GetFriendshipChangePerTurnTimes100(activePlayerID) / 100) .. L("TXT_KEY_DO_TURN") .. ": " .. sAnchor .. " [ICON_INFLUENCE])"
+		end
+	end
+		
 	local strStatusTT = GetCityStateStatusToolTip(activePlayerID, minorPlayerID, true)
 	
 	UpdateCityStateStatusUI(activePlayerID, minorPlayerID, Controls.PositiveStatusMeter, Controls.NegativeStatusMeter, Controls.StatusMeterMarker, Controls.StatusIconBG)
@@ -965,85 +992,6 @@ function GetContenderInfo(majorPlayerID, minorPlayerID)
 	end
 
 	return L("TXT_KEY_CSL_POPUP_CONTENDER_INFLUENCE", tostring(iContInfluence), iMissingInfluenceForContender)
-end
-
-function GetCityStateStatusText(majorPlayerID, minorPlayerID)
-	local majorPlayer = Players[majorPlayerID]
-	local minorPlayer = Players[minorPlayerID]
-	local strStatusText = ""
-
-	if majorPlayer and minorPlayer then
-		local majorTeamID = majorPlayer:GetTeam()
-		local minorTeamID = minorPlayer:GetTeam()
-		local majorTeam = Teams[majorTeamID]
-
-		local isAtWar = majorTeam:IsAtWar(minorTeamID)
-		local majorInfluenceWithMinor = minorPlayer:GetMinorCivFriendshipWithMajor(majorPlayerID)
-
-		-- Status:
-		-- Allies
-		if minorPlayer:IsAllies(majorPlayerID) then
-			strStatusText = "[COLOR_CYAN]" .. L("TXT_KEY_ALLIES")
-		
-		-- Friends
-		elseif minorPlayer:IsFriends(majorPlayerID) then
-			strStatusText = "[COLOR_POSITIVE_TEXT]" .. L("TXT_KEY_FRIENDS")
-		
-		-- Permanent War
-		elseif minorPlayer:IsMinorPermanentWar(majorTeamID) then
-			strStatusText = "[COLOR_NEGATIVE_TEXT]" .. L("TXT_KEY_PERMANENT_WAR")
-		
-		-- Peace blocked by being at war with ally
-		elseif minorPlayer:IsPeaceBlocked(majorTeamID) then
-			strStatusText = "[COLOR_FADING_NEGATIVE_TEXT]" .. L("TXT_KEY_PEACE_BLOCKED")
-		
-		-- War
-		elseif isAtWar then
-			strStatusText = "[COLOR_NEGATIVE_TEXT]" .. L("TXT_KEY_WAR")
-
-		elseif majorInfluenceWithMinor < GameDefines.FRIENDSHIP_THRESHOLD_NEUTRAL then
-			-- Afraid
-			if minorPlayer:CanMajorBullyGold(majorPlayerID) then
-				strStatusText = "[COLOR_PLAYER_LIGHT_ORANGE_TEXT]"..L("TXT_KEY_AFRAID").."[ENDCOLOR]"
-			-- Angry
-			else
-				strStatusText = "[COLOR_MAGENTA]"..L("TXT_KEY_ANGRY")
-			end
-		
-		-- Neutral
-		else
-			strStatusText = "[COLOR_WHITE]" .. L("TXT_KEY_NEUTRAL_CSTATE")
-		end
-		
-		strStatusText = strStatusText .. "[ENDCOLOR]"
-		
-		if not isAtWar then
-			-- Influence
-			strStatusText = strStatusText .. " " .. majorInfluenceWithMinor .. " [ICON_INFLUENCE]"
-			
-			-- Anchor
-			local iCurrentAnchorLevelWithMinor = minorPlayer:GetMinorCivFriendshipAnchorWithMajor(majorPlayerID)
-			
-			-- Merging...
-			if majorInfluenceWithMinor ~= iCurrentAnchorLevelWithMinor then
-				local sAnchor = ""
-				
-				if iCurrentAnchorLevelWithMinor < 0 then
-					sAnchor = "[COLOR_NEGATIVE_TEXT]" .. iCurrentAnchorLevelWithMinor .. "[ENDCOLOR]"
-				elseif iCurrentAnchorLevelWithMinor > 0 then
-					sAnchor = "[COLOR_POSITIVE_TEXT]" .. iCurrentAnchorLevelWithMinor .. "[ENDCOLOR]"
-				else
-					sAnchor = iCurrentAnchorLevelWithMinor
-				end
-				
-				strStatusText = strStatusText .. (" (%+2.2g [ICON_INFLUENCE] / "):format(minorPlayer:GetFriendshipChangePerTurnTimes100(majorPlayerID) / 100) .. L("TXT_KEY_DO_TURN") .. ": " .. sAnchor .. " [ICON_INFLUENCE])"
-			end
-		end
-	else
-		print("Lua error - invalid player index")
-	end
-
-	return strStatusText
 end
 -- adan_eslavo <--
 ----------------------------------------------------------------

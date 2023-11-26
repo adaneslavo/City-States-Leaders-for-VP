@@ -1,6 +1,7 @@
 Changelog:
 v22:
 - added compatibility with UCS v16;
+	- modified CitystateDipploPopup.lua to show new CS Attitide; deleted double function;
 - added new changes from congress #6;
 
 v21.2:
