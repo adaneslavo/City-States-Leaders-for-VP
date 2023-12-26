@@ -445,6 +445,7 @@ function OnDisplay()
 	
 	-- Contender
 	Controls.ContenderInfo:SetText(GetContenderInfo(activePlayerID, minorPlayerID))
+	Controls.ContenderInfo:SetToolTipString(GetContenderInfoTT(activePlayerID, minorPlayerID))
 	
 	-- Nearby Resources
 	local pCapital = minorPlayer:GetCapitalCity()
@@ -1390,8 +1391,8 @@ Controls.ExitGiveButton:RegisterCallback(Mouse.eLClick, OnCloseGive)
 -- TAKE MENU
 --================================================================================--
 --================================================================================--
-local iBullyGoldInfluenceLost = (GameDefines["MINOR_FRIENDSHIP_DROP_BULLY_GOLD_SUCCESS"] / 100) * -1 -- Since XML value is times 100 for fidelity, and negative
-local iBullyUnitInfluenceLost = (GameDefines["MINOR_FRIENDSHIP_DROP_BULLY_WORKER_SUCCESS"] / 100) * -1 -- Since XML value is times 100 for fidelity, and negative
+local iBullyGoldInfluenceLost = (GameDefines.MINOR_FRIENDSHIP_DROP_BULLY_GOLD_SUCCESS / 100) * -1; -- Since XML value is times 100 for fidelity, and negative
+local iBullyUnitInfluenceLost = (GameDefines.MINOR_FRIENDSHIP_DROP_BULLY_WORKER_SUCCESS / 100) * -1; -- Since XML value is times 100 for fidelity, and negative
 local iBullyUnitMinimumPop = 4 --antonjs: todo: XML
 
 function PopulateTakeChoices()
@@ -1400,11 +1401,21 @@ function PopulateTakeChoices()
 	local buttonText = ""
 	local ttText = ""
 	
-	local iBullyGold = pPlayer:GetMinorCivBullyGoldAmount(iActivePlayer)
-	
-	buttonText = Locale.Lookup("TXT_KEY_POPUP_MINOR_BULLY_GOLD_AMOUNT", iBullyGold, iBullyGoldInfluenceLost)
-	
-	ttText = pPlayer:GetMajorBullyGoldDetails(iActivePlayer)
+	local iRestingInfluence = minorPlayer:GetRestingPointChange(iActivePlayer);
+	local iCurrentInfluence = minorPlayer:GetMinorCivFriendshipWithMajor(iActivePlayer);
+	local iFinalBullyGoldInfluenceLost = iBullyGoldInfluenceLost;
+	local iFinalBullyUnitInfluenceLost = iBullyUnitInfluenceLost;
+
+	if iCurrentInfluence >= iRestingInfluence then
+		iFinalBullyGoldInfluenceLost = iFinalBullyGoldInfluenceLost + iCurrentInfluence - iRestingInfluence;
+		iFinalBullyUnitInfluenceLost = iFinalBullyUnitInfluenceLost + iCurrentInfluence - iRestingInfluence;
+	end
+
+	local iBullyGold = minorPlayer:GetMinorCivBullyGoldAmount(iActivePlayer);
+
+	buttonText = Locale.Lookup("TXT_KEY_POPUP_MINOR_BULLY_GOLD_AMOUNT", iBullyGold, iFinalBullyGoldInfluenceLost);
+
+	ttText = minorPlayer:GetMajorBullyGoldDetails(activePlayerID);
 
 	if not pPlayer:CanMajorBullyGold(iActivePlayer) then
 		buttonText = "[COLOR_WARNING_TEXT]" .. buttonText .. "[ENDCOLOR]"
@@ -1422,7 +1433,7 @@ function PopulateTakeChoices()
 	local iGoldTribute = pPlayer:GetMinorCivBullyGoldAmount(iActivePlayer, true)
 	local pMajor = Players[iActivePlayer]
 	
-	buttonText = Locale.Lookup("TXT_KEY_POPUP_MINOR_BULLY_UNIT_AMOUNT", iGoldTribute, iBullyUnitInfluenceLost)
+	buttonText = Locale.Lookup("TXT_KEY_POPUP_MINOR_BULLY_UNIT_AMOUNT", iGoldTribute, iFinalBullyUnitInfluenceLost)
 -- END
 	ttText = pPlayer:GetMajorBullyUnitDetails(iActivePlayer)
 	
