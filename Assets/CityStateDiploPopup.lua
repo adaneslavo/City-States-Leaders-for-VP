@@ -1401,8 +1401,8 @@ function PopulateTakeChoices()
 	local buttonText = ""
 	local ttText = ""
 	
-	local iRestingInfluence = minorPlayer:GetRestingPointChange(iActivePlayer);
-	local iCurrentInfluence = minorPlayer:GetMinorCivFriendshipWithMajor(iActivePlayer);
+	local iRestingInfluence = pPlayer:GetRestingPointChange(iActivePlayer);
+	local iCurrentInfluence = pPlayer:GetMinorCivFriendshipWithMajor(iActivePlayer);
 	local iFinalBullyGoldInfluenceLost = iBullyGoldInfluenceLost;
 	local iFinalBullyUnitInfluenceLost = iBullyUnitInfluenceLost;
 
@@ -1411,11 +1411,11 @@ function PopulateTakeChoices()
 		iFinalBullyUnitInfluenceLost = iFinalBullyUnitInfluenceLost + iCurrentInfluence - iRestingInfluence;
 	end
 
-	local iBullyGold = minorPlayer:GetMinorCivBullyGoldAmount(iActivePlayer);
+	local iBullyGold = pPlayer:GetMinorCivBullyGoldAmount(iActivePlayer);
 
 	buttonText = Locale.Lookup("TXT_KEY_POPUP_MINOR_BULLY_GOLD_AMOUNT", iBullyGold, iFinalBullyGoldInfluenceLost);
 
-	ttText = minorPlayer:GetMajorBullyGoldDetails(activePlayerID);
+	ttText = pPlayer:GetMajorBullyGoldDetails(activePlayerID);
 
 	if not pPlayer:CanMajorBullyGold(iActivePlayer) then
 		buttonText = "[COLOR_WARNING_TEXT]" .. buttonText .. "[ENDCOLOR]"
