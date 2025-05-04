@@ -1,4 +1,15 @@
 Changelog:
+v23:
+- added X new leaders: 
+	- Bani Ardalan (Sanandaj),
+	- Haci I Giray (Baghcasaray),
+	- Idris Alauma (Ngazargamu),
+	- Johann II (Vaduz),
+	- Lawtiliwadlin (Kagyrgyn), 
+	- Njenjema (Matonjeni),
+	- Somerled (Balley y Chashtal).
+- added 3 new leader stories.
+
 v22.0.1 and v22.0.2:
 - fixed lua bug;
 
