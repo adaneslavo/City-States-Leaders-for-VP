@@ -85,1128 +85,1150 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Art" />
-    <Folder Include="Art\!Unfinished\Mar" />
-    <Folder Include="Art\!Unfinished\Mer" />
-    <Folder Include="Art\!Unfinished\Mil" />
-    <Folder Include="Art\!Unfinished\Cul" />
-    <Folder Include="Art\!Unfinished\Rel" />
-    <Folder Include="Art\Base" />
-    <Folder Include="Art\Backgrounds" />
-    <Folder Include="Art\!Unfinished" />
-    <Folder Include="Art\!Reserve" />
-    <Folder Include="Art\!Queue" />
-    <Folder Include="Art\!Finished" />
-    <Folder Include="Art\UCS" />
+    <Folder Include="Art\0A.Unfinished\Mar" />
+    <Folder Include="Art\0A.Unfinished\Mer" />
+    <Folder Include="Art\0A.Unfinished\Mil" />
+    <Folder Include="Art\0A.Unfinished\Cul" />
+    <Folder Include="Art\0A.Unfinished\Rel" />
+    <Folder Include="Art\1.Base" />
+    <Folder Include="Art\_Backgrounds" />
+    <Folder Include="Art\0A.Unfinished" />
+    <Folder Include="Art\!Rejected" />
+    <Folder Include="Art\0B.Queue" />
+    <Folder Include="Art\0C.Finished" />
+    <Folder Include="Art\1.Base\Variants" />
+    <Folder Include="Art\2.UCS" />
+    <Folder Include="Art\2.UCS\Variants" />
     <Folder Include="Compatibility" />
     <Folder Include="Assets" />
     <Folder Include="Texts" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Art\!Queue\ishiyama_leadericon.dds">
+    <Content Include="Art\0B.Queue\ishiyama_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Queue\yaiuwa_leadericon.dds">
+    <Content Include="Art\0B.Queue\yaiuwa_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\brunaboinne_leadericon.dds">
+    <Content Include="Art\!Rejected\brunaboinne_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\bukhara_leadericon.dds">
+    <Content Include="Art\!Rejected\bukhara_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\elea_leadericon.dds">
+    <Content Include="Art\!Rejected\elea_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\isca_leadericon.dds">
+    <Content Include="Art\!Rejected\isca_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\muarojambi_leadericon.dds">
+    <Content Include="Art\!Rejected\muarojambi_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\pskov_leadericon.dds">
+    <Content Include="Art\!Rejected\pskov_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\sanggyeong_leadericon.dds">
+    <Content Include="Art\!Rejected\sanggyeong_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\tholing_leadericon.dds">
+    <Content Include="Art\!Rejected\tholing_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\sahuyn_leadericon.dds">
+    <Content Include="Art\!Rejected\sahuyn_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\agadez_leadericon.dds">
+    <Content Include="Art\!Rejected\agadez_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\ashdod_leadericon.dds">
+    <Content Include="Art\!Rejected\ashdod_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\baguio_leadericon.dds">
+    <Content Include="Art\!Rejected\baguio_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\ghazni_leadericon.dds">
+    <Content Include="Art\!Rejected\ghazni_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\gonur_leadericon.dds">
+    <Content Include="Art\!Rejected\gonur_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\halicarnassus_leadericon.dds">
+    <Content Include="Art\!Rejected\halicarnassus_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\ithaca_leadericon.dds">
+    <Content Include="Art\!Rejected\ithaca_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\kanonwalohale_leadericon.dds">
+    <Content Include="Art\!Rejected\kanonwalohale_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\kespukwitk_leadericon.dds">
+    <Content Include="Art\!Rejected\kespukwitk_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\luangprabang_leadericon.dds">
+    <Content Include="Art\!Rejected\luangprabang_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\shuri_leadericon.dds">
+    <Content Include="Art\!Rejected\shuri_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\susa_leadericon.dds">
+    <Content Include="Art\!Rejected\susa_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\tartessos_leadericon.dds">
+    <Content Include="Art\!Rejected\tartessos_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\tintagel_leadericon.dds">
+    <Content Include="Art\!Rejected\tintagel_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\tintagel_leadericon2.dds">
+    <Content Include="Art\!Rejected\tintagel_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\ujjain_leadericon.dds">
+    <Content Include="Art\!Rejected\ujjain_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Reserve\yambio_leadericon.dds">
+    <Content Include="Art\!Rejected\yambio_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Cul\cararies_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Cul\cararies_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Cul\kitcisipirinik_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Cul\kitcisipirinik_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Cul\kokand_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Cul\kokand_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Cul\mohenjodaro_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Cul\mohenjodaro_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Cul\mutawaynatji_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Cul\mutawaynatji_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Cul\shamakhi_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Cul\shamakhi_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Cul\thababosiu_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Cul\thababosiu_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Cul\tula_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Cul\tula_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Cul\victoria_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Cul\victoria_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mar\asmara_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mar\asmara_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mar\caral_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mar\caral_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mar\dakar_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mar\dakar_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mar\kariatebike_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mar\kariatebike_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mar\madurai_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mar\madurai_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mar\okak_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mar\okak_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mar\reykjavik_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mar\reykjavik_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mar\skara_brae_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mar\skara_brae_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mer\abalessa_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mer\abalessa_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mer\azeba_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mer\azeba_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mer\gaborone_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mer\gaborone_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mer\hanthawaddy_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mer\hanthawaddy_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mer\luxembourg_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mer\luxembourg_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mer\nyeni_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mer\nyeni_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mer\ouagadougou_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mer\ouagadougou_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mer\pomberuk_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mer\pomberuk_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mer\ugarit_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mer\ugarit_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mil\diego_garcia_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mil\diego_garcia_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mil\gungnae_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mil\gungnae_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mil\macaco_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mil\macaco_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mil\manthimba_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mil\manthimba_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mil\oristano_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mil\oristano_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mil\pontotoc_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mil\pontotoc_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mil\purukcahu_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mil\purukcahu_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mil\scodra_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mil\scodra_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mil\tittawan_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mil\tittawan_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mil\tilantongo_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mil\tilantongo_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mil\vaitape_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mil\vaitape_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mil\valjala_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mil\valjala_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Mil\waitikubuli_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Mil\waitikubuli_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Rel\avi_kwa_ame_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Rel\avi_kwa_ame_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Rel\cahuachi_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Rel\cahuachi_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Rel\cairo_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Rel\cairo_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Rel\camutins_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Rel\camutins_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Rel\dongola_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Rel\dongola_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Rel\gondar_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Rel\gondar_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Rel\grozny_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Rel\grozny_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Rel\sambaa_ke_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Rel\sambaa_ke_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Rel\tura_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Rel\tura_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\!Unfinished\Rel\yirrkala_leadericon.dds">
+    <Content Include="Art\0A.Unfinished\Rel\yirrkala_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Backgrounds\CityStatePopupTop100.dds">
+    <Content Include="Art\1.Base\bratislava_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Backgrounds\CityStatePopupTop200.dds">
+    <Content Include="Art\1.Base\la_venta_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Backgrounds\CityStatePopupTop300.dds">
+    <Content Include="Art\1.Base\mbanza_kongo_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Backgrounds\CityStatePopupTop400.dds">
+    <Content Include="Art\1.Base\singapore_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Backgrounds\CityStatePopupTop500.dds">
+    <Content Include="Art\1.Base\Variants\bratislava_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Backgrounds\CityStatePopupTopCSLBG.dds">
+    <Content Include="Art\1.Base\Variants\la_venta_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Backgrounds\CityStatePopupTopCSLBNWBG.dds">
+    <Content Include="Art\1.Base\Variants\mbanza_kongo_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Backgrounds\CityStatePopupTopCSLBNWCultured.dds">
+    <Content Include="Art\1.Base\Variants\singapore_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Backgrounds\CityStatePopupTopCSLBNWMaritime.dds">
+    <Content Include="Art\1.Base\Variants\yerevan_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Backgrounds\CityStatePopupTopCSLBNWMercantile.dds">
+    <Content Include="Art\1.Base\yerevan_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Backgrounds\CityStatePopupTopCSLBNWMilitaristic.dds">
+    <Content Include="Art\2.UCS\andorra_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Backgrounds\CityStatePopupTopCSLBNWReligious.dds">
+    <Content Include="Art\2.UCS\Variants\andorra_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\almaty_leadericon.dds">
+    <Content Include="Art\_Backgrounds\CityStatePopupTop100.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\almaty_leadericon2.dds">
+    <Content Include="Art\_Backgrounds\CityStatePopupTop200.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\antananarivo_leadericon.dds">
+    <Content Include="Art\_Backgrounds\CityStatePopupTop300.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\antananarivo_leadericon2.dds">
+    <Content Include="Art\_Backgrounds\CityStatePopupTop400.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\antananarivo_leadericon3.dds">
+    <Content Include="Art\_Backgrounds\CityStatePopupTop500.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\antwerp_leadericon.dds">
+    <Content Include="Art\_Backgrounds\CityStatePopupTopCSLBG.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\belgrade_leadericon.dds">
+    <Content Include="Art\_Backgrounds\CityStatePopupTopCSLBNWBG.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\belgrade_leadericon2.dds">
+    <Content Include="Art\_Backgrounds\CityStatePopupTopCSLBNWCultured.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\bogota_leadericon.dds">
+    <Content Include="Art\_Backgrounds\CityStatePopupTopCSLBNWMaritime.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\bratislava_leadericon.dds">
+    <Content Include="Art\_Backgrounds\CityStatePopupTopCSLBNWMercantile.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\brussels_leadericon.dds">
+    <Content Include="Art\_Backgrounds\CityStatePopupTopCSLBNWMilitaristic.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\brussels_leadericon2.dds">
+    <Content Include="Art\_Backgrounds\CityStatePopupTopCSLBNWReligious.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\bucharest_leadericon.dds">
+    <Content Include="Art\1.Base\almaty_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\budapest_leadericon.dds">
+    <Content Include="Art\1.Base\antananarivo_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\buenos_aires_leadericon.dds">
+    <Content Include="Art\1.Base\antwerp_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\buenos_aires_leadericon2.dds">
+    <Content Include="Art\1.Base\belgrade_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\byblos_leadericon.dds">
+    <Content Include="Art\1.Base\bogota_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\cahokia_leadericon2.dds">
+    <Content Include="Art\1.Base\brussels_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\cahokia_leadericon.dds">
+    <Content Include="Art\1.Base\bucharest_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\cape_town_leadericon.dds">
+    <Content Include="Art\1.Base\budapest_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\colombo_leadericon.dds">
+    <Content Include="Art\1.Base\buenos_aires_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\dublin_leadericon.dds">
+    <Content Include="Art\1.Base\byblos_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\edinburgh_leadericon.dds">
+    <Content Include="Art\1.Base\cahokia_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\florence_leadericon.dds">
+    <Content Include="Art\1.Base\cape_town_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\geneva_leadericon.dds">
+    <Content Include="Art\1.Base\colombo_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\genoa_leadericon.dds">
+    <Content Include="Art\1.Base\florence_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\hanoi_leadericon.dds">
+    <Content Include="Art\1.Base\geneva_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\hanoi_leadericon2.dds">
+    <Content Include="Art\1.Base\genoa_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\hanoi_leadericon3.dds">
+    <Content Include="Art\1.Base\hanoi_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\helsinki_leadericon.dds">
+    <Content Include="Art\1.Base\hong_kong_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\hong_kong_leadericon.dds">
+    <Content Include="Art\1.Base\ife_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\ife_leadericon.dds">
+    <Content Include="Art\1.Base\jerusalem_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\jerusalem_leadericon.dds">
+    <Content Include="Art\1.Base\kabul_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\kabul_leadericon.dds">
+    <Content Include="Art\1.Base\kathmandu_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\kabul_leadericon2.dds">
+    <Content Include="Art\1.Base\kiev_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\kabul_leadericon3.dds">
+    <Content Include="Art\1.Base\kuala_lumpur_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\kathmandu_leadericon.dds">
+    <Content Include="Art\1.Base\kyzyl_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\kathmandu_leadericon2.dds">
+    <Content Include="Art\1.Base\lhasa_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\kiev_leadericon.dds">
+    <Content Include="Art\1.Base\malacca_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\kuala_lumpur_leadericon.dds">
+    <Content Include="Art\1.Base\manila_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\kyzyl_leadericon.dds">
+    <Content Include="Art\1.Base\melbourne_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\la_venta_leadericon.dds">
+    <Content Include="Art\1.Base\milan_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\la_venta_leadericon2.dds">
+    <Content Include="Art\1.Base\mogadishu_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\la_venta_leadericon3.dds">
+    <Content Include="Art\1.Base\mombasa_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\lhasa_leadericon.dds">
+    <Content Include="Art\1.Base\monaco_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\lisbon_leadericon2.dds">
+    <Content Include="Art\1.Base\ormus_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\malacca_leadericon.dds">
+    <Content Include="Art\1.Base\panama_city_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\malacca_leadericon2.dds">
+    <Content Include="Art\1.Base\prague_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\malacca_leadericon3.dds">
+    <Content Include="Art\1.Base\quebec_city_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\manila_leadericon.dds">
+    <Content Include="Art\1.Base\ragusa_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\mbanza_kongo_leadericon.dds">
+    <Content Include="Art\1.Base\riga_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\melbourne_leadericon.dds">
+    <Content Include="Art\1.Base\samarkand_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\melbourne_leadericon2.dds">
+    <Content Include="Art\1.Base\sidon_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\milan_leadericon.dds">
+    <Content Include="Art\1.Base\sofia_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\mogadishu_leadericon.dds">
+    <Content Include="Art\1.Base\sydney_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\mogadishu_leadericon2.dds">
+    <Content Include="Art\1.Base\tyre_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\mogadishu_leadericon3.dds">
+    <Content Include="Art\1.Base\ur_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\mombasa_leadericon.dds">
+    <Content Include="Art\1.Base\valletta_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\mombasa_leadericon2.dds">
+    <Content Include="Art\1.Base\vancouver_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\monaco_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\almaty_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\ormus_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\antananarivo_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\panama_city_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\antananarivo_leadericon3.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\panama_city_leadericon2.dds">
+    <Content Include="Art\1.Base\Variants\belgrade_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\prague_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\brussels_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\quebec_city_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\buenos_aires_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\ragusa_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\cahokia_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\ragusa_leadericon2.dds">
+    <Content Include="Art\1.Base\Variants\dublin_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\riga_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\edinburgh_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\samarkand_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\hanoi_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\samarkand_leadericon2.dds">
+    <Content Include="Art\1.Base\Variants\hanoi_leadericon3.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\sidon_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\helsinki_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\singapore_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\kabul_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\singapore_leadericon2.dds">
+    <Content Include="Art\1.Base\Variants\kabul_leadericon3.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\sofia_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\kathmandu_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\sofia_leadericon2.dds">
+    <Content Include="Art\1.Base\Variants\la_venta_leadericon3.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\sydney_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\la_venta_leadericon4.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\sydney_leadericon2.dds">
+    <Content Include="Art\1.Base\Variants\lisbon_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\tyre_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\malacca_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\ur_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\malacca_leadericon3.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\valletta_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\melbourne_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\vancouver_leadericon2.dds">
+    <Content Include="Art\1.Base\Variants\mogadishu_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\vancouver_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\mogadishu_leadericon3.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\vatican_city_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\mombasa_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\vatican_city_leadericon2.dds">
+    <Content Include="Art\1.Base\Variants\panama_city_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\vilnius_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\ragusa_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\vilnius_leadericon2.dds">
+    <Content Include="Art\1.Base\Variants\samarkand_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\wellington_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\singapore_leadericon3.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\wellington_leadericon2.dds">
+    <Content Include="Art\1.Base\Variants\sofia_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\wellington_leadericon3.dds">
+    <Content Include="Art\1.Base\Variants\sydney_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\wittenberg_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\vancouver_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\yerevan_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\vilnius_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\yerevan_leadericon2.dds">
+    <Content Include="Art\1.Base\Variants\wellington_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\zanzibar_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\wellington_leadericon3.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\zurich_leadericon.dds">
+    <Content Include="Art\1.Base\Variants\yerevan_leadericon3.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\Base\zurich_leadericon2.dds">
+    <Content Include="Art\1.Base\Variants\zurich_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\adeje_leadericon.dds">
+    <Content Include="Art\1.Base\vatican_city_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\al_tirabin_leadericon.dds">
+    <Content Include="Art\1.Base\vatican_city_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\ambracia_leadericon.dds">
+    <Content Include="Art\1.Base\vilnius_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\anangula_leadericon.dds">
+    <Content Include="Art\1.Base\wellington_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\andorra_leadericon.dds">
+    <Content Include="Art\1.Base\wittenberg_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\andorra_leadericon2.dds">
+    <Content Include="Art\1.Base\zanzibar_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\armagh_leadericon.dds">
+    <Content Include="Art\1.Base\zurich_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\ayutthaya_leadericon.dds">
+    <Content Include="Art\2.UCS\adeje_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\bagan_leadericon.dds">
+    <Content Include="Art\2.UCS\al_tirabin_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\baghcasaray_leadericon.dds">
+    <Content Include="Art\2.UCS\ambracia_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\balkh_leadericon.dds">
+    <Content Include="Art\2.UCS\anangula_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\balley_leadericon.dds">
+    <Content Include="Art\2.UCS\armagh_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\bedulu_leadericon.dds">
+    <Content Include="Art\2.UCS\ayutthaya_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\dakkar_leadericon.dds">
+    <Content Include="Art\2.UCS\bagan_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\dano_leadericon.dds">
+    <Content Include="Art\2.UCS\baghcasaray_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\hanuabada_leadericon.dds">
+    <Content Include="Art\2.UCS\balkh_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\honiara_leadericon.dds">
+    <Content Include="Art\2.UCS\balley_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\irunea_leadericon.dds">
+    <Content Include="Art\2.UCS\bedulu_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\irunea_leadericon2.dds">
+    <Content Include="Art\2.UCS\dakkar_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\jetarkte_leadericon.dds">
+    <Content Include="Art\2.UCS\dano_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\juyubit_leadericon.dds">
+    <Content Include="Art\2.UCS\hanuabada_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\kagyrgyn_leadericon.dds">
+    <Content Include="Art\2.UCS\honiara_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\karasjohka_leadericon.dds">
+    <Content Include="Art\2.UCS\irunea_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\karyes_leadericon.dds">
+    <Content Include="Art\2.UCS\jetarkte_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\katende_leadericon.dds">
+    <Content Include="Art\2.UCS\juyubit_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\lahore_leadericon.dds">
+    <Content Include="Art\2.UCS\kagyrgyn_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\longyan_leadericon.dds">
+    <Content Include="Art\2.UCS\karasjohka_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\longyan_leadericon2.dds">
+    <Content Include="Art\2.UCS\karyes_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\leluh_leadericon.dds">
+    <Content Include="Art\2.UCS\katende_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\matonjeni_leadericon.dds">
+    <Content Include="Art\2.UCS\lahore_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\mbabane_leadericon.dds">
+    <Content Include="Art\2.UCS\longyan_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\mendyarrup_leadericon.dds">
+    <Content Include="Art\2.UCS\leluh_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\ngazargamu_leadericon.dds">
+    <Content Include="Art\2.UCS\matonjeni_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\nyaryana_marq_leadericon.dds">
+    <Content Include="Art\2.UCS\mbabane_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\ouidah_leadericon.dds">
+    <Content Include="Art\2.UCS\mendyarrup_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\palmyra_leadericon.dds">
+    <Content Include="Art\2.UCS\ngazargamu_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\pelym_leadericon.dds">
+    <Content Include="Art\2.UCS\nyaryana_marq_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\pokrovka_leadericon.dds">
+    <Content Include="Art\2.UCS\ouidah_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\saddarvazeh_leadericon.dds">
+    <Content Include="Art\2.UCS\palmyra_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\sanaa_leadericon.dds">
+    <Content Include="Art\2.UCS\pelym_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\sanaa_leadericon2.dds">
+    <Content Include="Art\2.UCS\pokrovka_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\sanandaj_leadericon.dds">
+    <Content Include="Art\2.UCS\saddarvazeh_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\sarnath_leadericon.dds">
+    <Content Include="Art\2.UCS\sanaa_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\sarnath_leadericon2.dds">
+    <Content Include="Art\2.UCS\sanandaj_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\sgang_leadericon.dds">
+    <Content Include="Art\2.UCS\sarnath_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\sgang_leadericon2.dds">
+    <Content Include="Art\2.UCS\sgang_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\suceava_leadericon.dds">
+    <Content Include="Art\2.UCS\suceava_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\surrey_leadericon.dds">
+    <Content Include="Art\2.UCS\surrey_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\canossa_leadericon.dds">
+    <Content Include="Art\2.UCS\canossa_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\chevak_leadericon.dds">
+    <Content Include="Art\2.UCS\chevak_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\clermont_leadericon.dds">
+    <Content Include="Art\2.UCS\clermont_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\clermont_leadericon2.dds">
+    <Content Include="Art\2.UCS\dali_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\dali_leadericon.dds">
+    <Content Include="Art\2.UCS\djibouti_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\djibouti_leadericon.dds">
+    <Content Include="Art\2.UCS\dodoma_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\dodoma_leadericon.dds">
+    <Content Include="Art\2.UCS\douala_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\douala_leadericon.dds">
+    <Content Include="Art\2.UCS\faya_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\faya_leadericon.dds">
+    <Content Include="Art\2.UCS\granada_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\faya_leadericon2.dds">
+    <Content Include="Art\2.UCS\gwynedd_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\granada_leadericon.dds">
+    <Content Include="Art\2.UCS\honduras_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\granada_leadericon2.dds">
+    <Content Include="Art\2.UCS\iskanwaya_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\gwynedd_leadericon.dds">
+    <Content Include="Art\2.UCS\kigali_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\honduras_leadericon.dds">
+    <Content Include="Art\2.UCS\lacedaemon_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\iskanwaya_leadericon.dds">
+    <Content Include="Art\2.UCS\levuka_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\kigali_leadericon.dds">
+    <Content Include="Art\2.UCS\managua_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\lacedaemon_leadericon.dds">
+    <Content Include="Art\2.UCS\muisca_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\leluh_leadericon2.dds">
+    <Content Include="Art\2.UCS\multan_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\levuka_leadericon.dds">
+    <Content Include="Art\2.UCS\muscat_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\managua_leadericon.dds">
+    <Content Include="Art\2.UCS\mutitjulu_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\managua_leadericon2.dds">
+    <Content Include="Art\2.UCS\oc_eo_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\muisca_leadericon.dds">
+    <Content Include="Art\2.UCS\odenso_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\multan_leadericon.dds">
+    <Content Include="Art\2.UCS\parihaka_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\muscat_leadericon.dds">
+    <Content Include="Art\2.UCS\phanoteus_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\mutitjulu_leadericon.dds">
+    <Content Include="Art\2.UCS\quelimane_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\oc_eo_leadericon.dds">
+    <Content Include="Art\2.UCS\rishikesh_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\odenso_leadericon.dds">
+    <Content Include="Art\2.UCS\santo_domingo_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\parihaka_leadericon.dds">
+    <Content Include="Art\2.UCS\sierra_leone_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\phanoteus_leadericon.dds">
+    <Content Include="Art\2.UCS\taipei_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\phanoteus_leadericon2.dds">
+    <Content Include="Art\2.UCS\tbilisi_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\quelimane_leadericon.dds">
+    <Content Include="Art\2.UCS\thimphu_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\rishikesh_leadericon.dds">
+    <Content Include="Art\2.UCS\tiwanaku_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\santo_domingo_leadericon.dds">
+    <Content Include="Art\2.UCS\tunis_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\sierra_leone_leadericon.dds">
+    <Content Include="Art\2.UCS\vaduz_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\surrey_leadericon2.dds">
+    <Content Include="Art\2.UCS\Variants\clermont_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\taipei_leadericon.dds">
+    <Content Include="Art\2.UCS\Variants\faya_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\taipei_leadericon2.dds">
+    <Content Include="Art\2.UCS\Variants\granada_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\tbilisi_leadericon.dds">
+    <Content Include="Art\2.UCS\Variants\irunea_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\tbilisi_leadericon2.dds">
+    <Content Include="Art\2.UCS\Variants\leluh_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\thimphu_leadericon.dds">
+    <Content Include="Art\2.UCS\Variants\longyan_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\tiwanaku_leadericon.dds">
+    <Content Include="Art\2.UCS\Variants\managua_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\tunis_leadericon.dds">
+    <Content Include="Art\2.UCS\Variants\phanoteus_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\vaduz_leadericon.dds">
+    <Content Include="Art\2.UCS\Variants\sanaa_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\wootei_niicie_leadericon.dds">
+    <Content Include="Art\2.UCS\Variants\sarnath_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Art\UCS\yangcheng_leadericon.dds">
+    <Content Include="Art\2.UCS\Variants\sgang_leadericon2.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Art\2.UCS\Variants\surrey_leadericon2.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Art\2.UCS\Variants\taipei_leadericon2.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Art\2.UCS\Variants\tbilisi_leadericon2.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Art\2.UCS\wootei_niicie_leadericon.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Art\2.UCS\yangcheng_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
