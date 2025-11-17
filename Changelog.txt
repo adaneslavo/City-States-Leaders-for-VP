@@ -1,6 +1,6 @@
 Changelog:
 v23:
-- added X new leaders: 
+- added 7 new leaders: 
 	- Bani Ardalan (Sanandaj),
 	- Haci I Giray (Baghcasaray),
 	- Idris Alauma (Ngazargamu),

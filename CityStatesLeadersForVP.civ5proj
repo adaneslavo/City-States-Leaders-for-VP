@@ -94,7 +94,7 @@
     <Folder Include="Art\_Backgrounds" />
     <Folder Include="Art\0A.Unfinished" />
     <Folder Include="Art\!Rejected" />
-    <Folder Include="Art\0B.Queue" />
+    <Folder Include="Art\0B.Queued" />
     <Folder Include="Art\0C.Finished" />
     <Folder Include="Art\1.Base\Variants" />
     <Folder Include="Art\2.UCS" />
@@ -104,11 +104,11 @@
     <Folder Include="Texts" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Art\0B.Queue\ishiyama_leadericon.dds">
+    <Content Include="Art\0B.Queued\ishiyama_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Art\0B.Queue\yaiuwa_leadericon.dds">
+    <Content Include="Art\0B.Queued\yaiuwa_leadericon.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -441,6 +441,10 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Art\1.Base\Variants\singapore_leadericon2.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Art\1.Base\Variants\vatican_city_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -841,10 +845,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Art\1.Base\vatican_city_leadericon.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="Art\1.Base\vatican_city_leadericon2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
