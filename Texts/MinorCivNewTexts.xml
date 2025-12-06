@@ -2,6 +2,7 @@
 <!-- Created by ModBuddy on 11/24/2013 10:24:12 PM -->
 <GameData>
 	<Community>
+		<!-- Shows Bonus Resources in the Resource list on CityStateDiploPopup screen -->
 		<Row Type="CSL-BONUS-ON">
 			<Value>1</Value>
 		</Row>
@@ -16,10 +17,6 @@
 			<Where Tag="TXT_KEY_POP_CSTATE_LABEL_CONTENDER" />
 			<Set Text="CONTENDER:" />
 		</Update>
-		<!-- <Update>
-			<Where Tag="TXT_KEY_CITY_STATE_RESOURCES_TT" />
-			<Set Text="These resources are in close range of the City-State&#39;s capital. All [COLOR:0:155:255:255]Strategic[ENDCOLOR] and [COLOR:205:205:0:255]Luxury[ENDCOLOR] resources will be granted to the player, when he becomes an [COLOR_CYAN]Ally[ENDCOLOR] and once the City-State connects them." />
-		</Update> moved to SQL because of an apostrophe issue -->
 		
 		<!-- UCS compatibility -->
 		<Row Tag="TXT_KEY_CSL_POPUP_UCS_MAIN_TEXT">

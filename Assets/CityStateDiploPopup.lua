@@ -47,6 +47,8 @@ local iRandomVisitText
 local table_insert = table.insert
 local table_concat = table.concat
 local L = Locale.ConvertTextKey
+
+local bIsUCSEnabled = GameInfo.BuildingClasses['BUILDINGCLASS_DUMMY_CSL_UCS'] ~= nil
 -- adan_eslavo <--
 
 --================================================================================--
@@ -295,7 +297,9 @@ function OnDisplay()
 	
 	if not isAtWar then
 		-- Influence
-		strStatusText = strStatusText .. " " .. majorInfluenceWithMinor .. " [ICON_INFLUENCE]"
+		if bIsUCSEnabled then
+			strStatusText = strStatusText .. " " .. majorInfluenceWithMinor .. " [ICON_INFLUENCE]"
+		end
 		
 		-- Anchor
 		local iCurrentAnchorLevelWithMinor = minorPlayer:GetMinorCivFriendshipAnchorWithMajor(activePlayerID)

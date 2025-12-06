@@ -1,4 +1,8 @@
 Changelog:
+v24:
+- changed mod compatibility checking functions (now order of mods is irrelevant);
+- fixed doubled Influence icon in CityStatePopup screen;
+
 v23:
 - added 7 new leaders: 
 	- Bani Ardalan (Sanandaj),
