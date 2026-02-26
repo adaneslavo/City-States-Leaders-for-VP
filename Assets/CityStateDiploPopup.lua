@@ -449,7 +449,9 @@ function OnDisplay()
 	
 	-- Contender
 	Controls.ContenderInfo:SetText(GetContenderInfo(activePlayerID, minorPlayerID))
-	Controls.ContenderInfo:SetToolTipString(GetContenderInfoTT(activePlayerID, minorPlayerID))
+	if bIsUCSEnabled then
+		Controls.ContenderInfo:SetToolTipString(GetContenderInfoTT(activePlayerID, minorPlayerID))
+	end
 	
 	-- Nearby Resources
 	local pCapital = minorPlayer:GetCapitalCity()
@@ -592,8 +594,8 @@ function OnDisplay()
 	local sUCSInfoHide = true
 	local tUCSBonuses = {}
 	
-	for option in GameInfo.Community{Type="CSL-UCS"} do
-		if option.Value == 1 then
+	for buildingclass in GameInfo.BuildingClasses() do
+		if buildingclass == 'BUILDINGCLASS_DUMMY_CSL_UCS' or 'BUILDINGCLASS_DUMMY_CSL_UCS_TRG' then
 			sUCSInfoHide = false
 			break
 		end
@@ -645,60 +647,53 @@ function OnDisplay()
 		-- Gifts
 		if m_iLastAction == kiGreet then
 			local bFirstMajorCiv = m_PopupInfo.Option1
-			local sRandPersonality1, sRandPersonality2, sRandTrait1, sRandTrait2, sRandBonus1, sRandBonus2, sRandFriendship, strGiftString = "", "", "", "", "", "", "", ""
+			local sQuoteFirstGreeting, sQuoteSubsequentGreeting, sQuoteTrait, sQuoteBonus, strGiftString = "", "", "", "", ""
+			
+			print("CS_MEET", bFirstMajorCiv, m_PopupInfo.Text, m_PopupInfo.Data2, m_PopupInfo.Data3)
 
 			if iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_FRIENDLY then
-				sRandFriendship = string.format("TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_FRIENDLY_%s", iRandomFriendshipText)
-				sRandPersonality1 = string.format("TXT_KEY_CITY_STATE_GREETING_FRIENDLY_%s", iRandomPersonalityText)
-				sRandPersonality2 = Locale.Lookup(sRandPersonality1, leaderPlace)
+				sQuoteFirstGreeting = L(string.format("TXT_KEY_MINOR_CIV_FIRST_CONTACT_GREETING_FRIENDLY_%s", iRandomPersonalityText), leaderPlace)
+				sQuoteSubsequentGreeting = L(string.format("TXT_KEY_MINOR_CIV_CONTACT_GREETING_FRIENDLY_%s", iRandomFriendshipText), leaderPlace)
 			elseif iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_NEUTRAL then
-				sRandFriendship = string.format("TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_NEUTRAL_%s", iRandomFriendshipText)
-				sRandPersonality1 = string.format("TXT_KEY_CITY_STATE_GREETING_NEUTRAL_%s", iRandomPersonalityText)
-				sRandPersonality2 = Locale.Lookup(sRandPersonality1, leaderPlace)
+				sQuoteFirstGreeting = L(string.format("TXT_KEY_MINOR_CIV_FIRST_CONTACT_GREETING_NEUTRAL_%s", iRandomPersonalityText), leaderPlace)
+				sQuoteSubsequentGreeting = L(string.format("TXT_KEY_MINOR_CIV_CONTACT_GREETING_NEUTRAL_%s", iRandomFriendshipText), leaderPlace)
 			elseif iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_HOSTILE then
-				sRandFriendship = string.format("TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_HOSTILE_%s", iRandomFriendshipText)
-				sRandPersonality1 = string.format("TXT_KEY_CITY_STATE_GREETING_HOSTILE_%s", iRandomPersonalityText)
-				sRandPersonality2 = Locale.Lookup(sRandPersonality1, leaderPlace)
+				sQuoteFirstGreeting = L(string.format("TXT_KEY_MINOR_CIV_FIRST_CONTACT_GREETING_HOSTILE_%s", iRandomPersonalityText), leaderPlace)
+				sQuoteSubsequentGreeting = L(string.format("TXT_KEY_MINOR_CIV_CONTACT_GREETING_HOSTILE_%s", iRandomFriendshipText), leaderPlace)
 			elseif iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_IRRATIONAL then
-				sRandFriendship = string.format("TXT_KEY_MINOR_CIV_CONTACT_BONUS_FRIENDSHIP_IRRATIONAL_%s", iRandomFriendshipText)
-				sRandPersonality1 = string.format("TXT_KEY_CITY_STATE_GREETING_IRRATIONAL_%s", iRandomPersonalityText)
-				sRandPersonality2 = Locale.Lookup(sRandPersonality1, leaderPlace)
+				sQuoteFirstGreeting = L(string.format("TXT_KEY_MINOR_CIV_FIRST_CONTACT_GREETING_IRRATIONAL_%s", iRandomPersonalityText), leaderPlace)
+				sQuoteSubsequentGreeting = L(string.format("TXT_KEY_MINOR_CIV_CONTACT_GREETING_IRRATIONAL_%s", iRandomFriendshipText), leaderPlace)
 			end
 
 			if m_PopupInfo.Text == "GOLD" then
-				sRandTrait1 = string.format("TXT_KEY_CITY_STATE_GREETING_MERCANTILE_%s", iRandomTraitText)
-				sRandTrait2 = sRandPersonality2 .. " " .. L(sRandTrait1)
+				sQuoteTrait = L(string.format("TXT_KEY_MINOR_CIV_GREETING_MERCANTILE_%s", iRandomTraitText))
 			elseif m_PopupInfo.Text == "FAITH" then
-				sRandTrait1 = string.format("TXT_KEY_CITY_STATE_GREETING_RELIGIOUS_%s", iRandomTraitText)
-				sRandTrait2 = sRandPersonality2 .. " " .. L(sRandTrait1)
+				sQuoteTrait = L(string.format("TXT_KEY_MINOR_CIV_GREETING_RELIGIOUS_%s", iRandomTraitText))
 			elseif m_PopupInfo.Text == "CULTURE" then
-				sRandTrait1 = string.format("TXT_KEY_CITY_STATE_GREETING_CULTURED_%s", iRandomTraitText)
-				sRandTrait2 = sRandPersonality2 .. " " .. L(sRandTrait1)
+				sQuoteTrait = L(string.format("TXT_KEY_MINOR_CIV_GREETING_CULTURED_%s", iRandomTraitText))
 			elseif m_PopupInfo.Text == "FOOD" then
-				sRandTrait1 = string.format("TXT_KEY_CITY_STATE_GREETING_MARITIME_%s", iRandomTraitText)
-				sRandTrait2 = sRandPersonality2 .. " " .. L(sRandTrait1)
+				sQuoteTrait = L(string.format("TXT_KEY_MINOR_CIV_GREETING_MARITIME_%s", iRandomTraitText))
 			else
-				sRandTrait1 = string.format("TXT_KEY_CITY_STATE_GREETING_MILITARISTIC_%s", iRandomTraitText)
-				sRandTrait2 = sRandPersonality2 .. " " .. L(sRandTrait1)
+				sQuoteTrait = L(string.format("TXT_KEY_MINOR_CIV_GREETING_MILITARISTIC_%s", iRandomTraitText))
 			end
 			
-			local sRandBonus1 = string.format("TXT_KEY_MINOR_CIV_%sCONTACT_BONUS_%s_%s", (bFirstMajorCiv and "FIRST_" or ""), m_PopupInfo.Text, iRandomBonusText)
+			local sQuoteBonus = string.format("TXT_KEY_MINOR_CIV_%sCONTACT_BONUS_%s_%s", (bFirstMajorCiv and "FIRST_" or ""), m_PopupInfo.Text, iRandomBonusText)
 
 			if m_PopupInfo.Data3 == 0 then
-				strGiftString = L("TXT_KEY_MINOR_CIV_CONTACT_BONUS_NOTHING_1")
+				strGiftString = L("TXT_KEY_MINOR_CIV_CONTACT_BONUS_JUST_NOTHING")
 			else
 				if bFirstMajorCiv then
 					if m_PopupInfo.Text == "UNIT" then
 						if m_PopupInfo.Data2 ~= 0 then
-							strGiftString = sRandTrait2 .. " " .. L(sRandBonus1, GameInfo.Units[m_PopupInfo.Data2].Description)
+							strGiftString = sQuoteFirstGreeting .. " " .. sQuoteTrait .. L(sQuoteBonus, GameInfo.Units[m_PopupInfo.Data2].Description)
 						else
-							strGiftString = Locale.Lookup(sRandFriendship, leaderPlace) .. " " .. L(sRandTrait1)
+							strGiftString = sQuoteSubsequentGreeting .. " " .. sQuoteTrait
 						end
 					else
-						strGiftString = sRandTrait2 .. " " .. L(sRandBonus1, m_PopupInfo.Data2)
+						strGiftString = sQuoteFirstGreeting .. " " .. sQuoteTrait .. " " .. L(sQuoteBonus, m_PopupInfo.Data2)
 					end
 				else
-					strGiftString = Locale.Lookup(sRandFriendship, leaderPlace) .. " " .. L(sRandTrait1)
+					strGiftString = sQuoteSubsequentGreeting .. " " .. L(sQuoteBonus, m_PopupInfo.Data2)
 				end
 			end
 			

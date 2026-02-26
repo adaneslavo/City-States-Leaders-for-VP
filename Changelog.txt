@@ -1,4 +1,10 @@
 Changelog:
+v25:
+- changed greeting tags (now much more obvious and restructured);
+- added new bonus texts (7 for each trait) on each contact after the first contact;
+- now contender tooltip is shown only with UCS enabled (VP deleted it and only UCS changes CityStateStatusHelper file);
+- fixed UCS detection in lua file;
+
 v24:
 - changed mod compatibility checking functions (now order of mods is irrelevant);
 - fixed doubled Influence icon in CityStatePopup screen;

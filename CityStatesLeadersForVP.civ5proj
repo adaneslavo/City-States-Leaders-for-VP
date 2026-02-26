@@ -5,7 +5,7 @@
     <ProjectGuid>{426fb8f7-3ce1-488c-ac01-2afa6c26603b}</ProjectGuid>
     <Name>(ui) City-States Leaders for VP</Name>
     <Guid>5594cb50-a30e-4abf-a249-69704fc95da9</Guid>
-    <ModVersion>24</ModVersion>
+    <ModVersion>25</ModVersion>
     <Stability>Stable</Stability>
     <Teaser>Adds leader icons to city state screens, making it easier to remember who is who</Teaser>
     <Description>Adds leader icons to city state screens, making it easier to remember who is who. This is an modification to "City-States Leaders" by mihaifx and "City-State Leaders II" by Nutty.</Description>
