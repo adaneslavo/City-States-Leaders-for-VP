@@ -649,7 +649,7 @@ function OnDisplay()
 			local bFirstMajorCiv = m_PopupInfo.Option1
 			local sQuoteFirstGreeting, sQuoteSubsequentGreeting, sQuoteTrait, sQuoteBonus, strGiftString = "", "", "", "", ""
 			
-			print("CS_MEET", bFirstMajorCiv, m_PopupInfo.Text, m_PopupInfo.Data2, m_PopupInfo.Data3)
+			--print("CS_MEET", bFirstMajorCiv, m_PopupInfo.Text, m_PopupInfo.Data2, m_PopupInfo.Data3)
 
 			if iPersonality == MinorCivPersonalityTypes.MINOR_CIV_PERSONALITY_FRIENDLY then
 				sQuoteFirstGreeting = L(string.format("TXT_KEY_MINOR_CIV_FIRST_CONTACT_GREETING_FRIENDLY_%s", iRandomPersonalityText), leaderPlace)

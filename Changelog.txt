@@ -1,4 +1,23 @@
 Changelog:
+v26:
+- added 13 new leaders to the game:
+	- Tin Hinan (Abalessa)
+	- P'küee (Camutins)
+	- Gudit (Gondar)
+	- Tem Binoka (Kariatebike);
+	- Tessouat (Kitcisipirini)
+	- Ermesinde II (Luxembourg);
+	- Zumbi (Macaco)
+	- Tarenorerer (Mutawaynatji);
+	- Javraganak (Okak);
+	- Thanadelthur (Sambaa K'e)
+	- Teihotu Matarua (Vaitape)
+	- France-Albert René (Victoria)
+	- Kairouane (Waitukubuli)
+- added new alternate icons for:
+	- Chevak: Qillerkavialuk;
+	- Luxembourg: Ermesinde II;
+
 v25:
 - changed greeting tags (now much more obvious and restructured);
 - added new bonus texts (7 for each trait) on each contact after the first contact;
